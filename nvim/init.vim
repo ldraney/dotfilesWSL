@@ -148,7 +148,7 @@ set undofile
 set incsearch
 set backspace
 set autoread
-set scrolloff=10
+set scrolloff=20
 set colorcolumn=80
 set clipboard=unnamed,unnamedplus
 set relativenumber
