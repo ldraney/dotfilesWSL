@@ -7,11 +7,11 @@
 #or perhaps
 ##git stash store "$(git stash create)"
 
-cd $HOME/github/dotfiles
+cd $HOME/github/dotfilesWSL
 git config pull.rebase true
 git config rebase.autoStash true
 git pull && git add -A && git commit -m $1 && git push
-cd $HOME/github/ansible_desktop_setup
+cd $HOME/github/ansible_desktop_setup_WSL
 git config pull.rebase true
 git config rebase.autoStash true
 git pull && git add -A && git commit -m $1 && git push

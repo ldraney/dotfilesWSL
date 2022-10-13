@@ -6,9 +6,9 @@
 #git config rebase.autoStash true
 #or perhaps
 ##git stash store "$(git stash create)"
-cd $HOME/github/dotfiles
+cd $HOME/github/dotfilesWSL
 git status
-cd $HOME/github/ansible_desktop_setup
+cd $HOME/github/ansible_desktop_setup_WSL
 git status
 cd $HOME/github/sensitive
 git status
