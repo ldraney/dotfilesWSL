@@ -1,0 +1,10 @@
+[user]
+	email = draneylucas@gmail.com
+	;email = ldraney@recondynamics.com
+	;email = lucas@ubuntu
+	;email = mreverymorning@gmail.com
+	name = ldraney
+	;name = lucas
+[safe]
+	directory = /mnt/hgfs/VMShare/AutomateWindows
+	directory = /mnt/hgfs/VMShare/Recon/tv/dev-setup
