@@ -117,9 +117,15 @@ let g:clipboard = {
           \   'cache_enabled': 0,
           \ }
 
+"set statusline=%!MyStatusLine()
+"function! MyStatusLine()
+
+set statusline+=%F
+
 let mapleader=" "
 "
 "set splitright
+"set tabline
 set conceallevel=0
 set autochdir
 set ignorecase
@@ -483,7 +489,7 @@ nnoremap <leader><leader>sl :set scb!<CR>
 nmap <silent> <leader>no :set hlsearch!<CR>
 
 "nmap <Tab> :tabn<CR>
-"nmap <S-Tab> :tabp<CR>
+"nmap <S-Tset -g status-left "#{pane_current_path}"ab> :tabp<CR>
 
 " view current buffers and type the number you want to go to.
 ":bd to delete a single buffer
