@@ -1,7 +1,5 @@
-=======
 acropolis:~/pillar/acropolis
 ansibleBase:~/github/ansible_desktop_setup_WSL/roles/base/tasks
-ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 ansibleDisplay:~/github/ansible_desktop_setup_WSL/roles/displayCustomizations/tasks
 ansibleDocker:~/github/ansible_desktop_setup_WSL/roles/docker/tasks
 ansibleDotfiles:~/github/ansible_desktop_setup_WSL/roles/dotfiles/tasks
@@ -9,9 +7,10 @@ ansibleLook:~/github/ansible_desktop_setup_WSL/look
 ansibleRecon:~/github/ansible_desktop_setup_WSL/roles/recon/tasks
 ansibleReconVpn:~/github/ansible_desktop_setup_WSL/roles/reconVpn/tasks
 ansibleTvp:~/github/ansible_desktop_setup_WSL/roles/tvp/tasks
+ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 athena:~/pillar/athena
-atlasAppBackendWorkers:~/pillar/atlas/app/backend/workers
 atlas:~/pillar/atlas
+atlasAppBackendWorkers:~/pillar/atlas/app/backend/workers
 autoWindow:/mnt/hgfs/VMShare/AutomateWindows
 baseRoleAnsible:~/github/ansible_desktop_setup_WSL/roles/base/tasks
 concurrentRoleAnsible:~/github/ansible_desktop_setup_WSL/roles/concurrent/tasks
@@ -19,21 +18,22 @@ customCommands:~/.customCommands
 darkSkyTest:~/pillar/atlas/tests/workers
 dev-setup:~/recon/tv/dev-setup
 dotfilesWSL:~/github/dotfilesWSL
->>>>>>> ead1896 (recon git repos symlinks)
 github:~/github
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
-<<<<<<< HEAD
 init.vim:~/.config/nvim
+oddball:~/oddball/devops-challenge
+openvpn:/mnt/c/Users/drane/OpenVpn/config
 pillar:~/pillar
 regolith-look:/usr/share/regolith-look
 sanctum:~/pillar/sanctum
 sensitive:~/github/sensitive
 ssh_keys:~/github/ssh_keys
 timeseries:~/pillar/atlas/app/database/timeseries
-tvplatform:~/recon/tv/tvplatform
 tv:~/recon/tv
-vmshare:/mnt/hgfs/VMShare
+tvplatform:~/recon/tv/tvplatform
+vmshare:/mnt/c/Users/drane/Desktop/VMShare
 vpn:~/recon/vpn
 windows:/mnt/c/Users/drane
+wsl-openvpn:/mnt/c/Users/drane/Desktop/VMShare/vpn/wsl-openvpn/conf
 zshCustom:~/.oh-my-zsh/custom/plugins
 zshSyntaxHighlighting:~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
