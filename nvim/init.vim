@@ -21,9 +21,14 @@ autocmd BufWinEnter * silent! loadview
     """/home/ldraney/.local/share/nvim/view/
 "endif
 
-
 call plug#begin()
+"Start using vim with googgle docs :)))
+"Plug 'aadv1k/gdoc.vim', {'do': './install.py'}
+
+"
 "Plug 'easymotion/vim-easymotion'
+"
+"Trying to get tmux and vim splits to split more evently 
 Plug 'christoomey/vim-tmux-navigator'
 "
 "LSP stuff

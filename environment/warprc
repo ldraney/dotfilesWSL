@@ -24,6 +24,7 @@ init.vim:~/.config/nvim
 oddball:~/oddball/devops-challenge
 openvpn:/mnt/c/Users/drane/OpenVpn/config
 pillar:~/pillar
+recongoogledrive:/mnt/c/Users/drane/My Drive (ldraney@recondynamics.com)
 regolith-look:/usr/share/regolith-look
 sanctum:~/pillar/sanctum
 sensitive:~/github/sensitive
