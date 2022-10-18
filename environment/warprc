@@ -34,6 +34,6 @@ tvplatform:~/recon/tv/tvplatform
 vmshare:/mnt/c/Users/drane/Desktop/VMShare
 vpn:~/recon/vpn
 windows:/mnt/c/Users/drane
-wsl-openvpn:/mnt/c/Users/drane/Desktop/VMShare/vpn/wsl-openvpn/conf
+wsl-openvpn:~/wsl-openvpn
 zshCustom:~/.oh-my-zsh/custom/plugins
 zshSyntaxHighlighting:~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
