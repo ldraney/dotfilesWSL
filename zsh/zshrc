@@ -56,7 +56,7 @@ plugins=(
     #virtualenv 
     #pip
     #pipenv
-    #pyenv
+	pyenv
     #virtualenv
     #virtualenvwrapper
 )
