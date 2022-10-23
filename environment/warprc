@@ -19,9 +19,11 @@ darkSkyTest:~/pillar/atlas/tests/workers
 dev-setup:~/recon/tv/dev-setup
 dotfilesWSL:~/github/dotfilesWSL
 github:~/github
+goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 init.vim:~/.config/nvim
 oddball:~/oddball/devops-challenge
+oddballChallenge:~/github/oddballChallenge
 openvpn:/mnt/c/Users/drane/OpenVpn/config
 pillar:~/pillar
 recongoogledrive:/mnt/c/Users/drane/My Drive (ldraney@recondynamics.com)
