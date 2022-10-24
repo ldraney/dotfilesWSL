@@ -18,4 +18,36 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  home.package = [
+	#pkgs.unzip
+	pkgs.wget
+]
+
+  #zsh setup
+  home.file.zshrc.source = ./zshrc
+  home.file.zshrc.source = ./zshenv
+
+  environment.binsh = "${pkgs.zsh}/bin/zsh";
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+  #programs.zsh = {
+    #... # Your zsh config
+    #ohMyZsh = {
+      #enable = true;
+      #plugins = [ "git" "thefuck" ];
+      #theme = "robbyrussell";
+    #};
+  #};
+  programs.zsh = {
+  enable = true;
+  shellAliases = {
+	lt = "echo 'hi mom'";
+    update = "sudo nixos-rebuild switch";
+  };
+  history = {
+    size = 10000;
+    path = "${config.xdg.dataHome}/zsh/history";
+  };
+};
 }
