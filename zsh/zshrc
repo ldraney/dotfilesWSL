@@ -132,3 +132,26 @@ complete -C '/usr/local/bin/aws_completer' aws
 #for terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
+
+#for NIX interactive shell
+#!@bashInteractive@/bin/bash
+
+# when using nix-shell, we will be invoked like this:
+#
+#     /path/to/result --rcfile /path/to/file
+#
+# When using nix-shell -i, we will be invoked like this:
+#
+#     /path/to/result /path/to/file
+#
+# We use the presence of --rcfile to decide if we're supposed
+# to be run interactively or not.
+nix-zshell () {
+if [[ $1 = "--rcfile" ]]; then
+  rcfile="$2"
+  source "$rcfile"
+  exec @zsh@/bin/zsh --emulate zsh
+else
+  exec @bashInteractive@/bin/bash "$@"
+fi
+}
