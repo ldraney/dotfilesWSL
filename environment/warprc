@@ -22,6 +22,7 @@ github:~/github
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 init.vim:~/.config/nvim
+nixpkgs:~/.config/nixpkgs
 oddball:~/oddball/devops-challenge
 oddballChallenge:~/github/oddballChallenge
 openvpn:/mnt/c/Users/drane/OpenVpn/config
