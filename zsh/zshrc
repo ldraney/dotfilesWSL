@@ -155,8 +155,10 @@ fi
 }
 
 ##gcloud autocomplete
-source $HOME/google-cloud-sdk/completion.zsh.inc
-source $HOME/google-cloud-sdk/path.zsh.inc
+source $HOME/github/dotfilesWSL/google-cloud-sdk/completion.zsh.inc
+source $HOME/github/dotfilesWSL/google-cloud-sdk/path.zsh.inc
+#source $HOME/google-cloud-sdk/completion.zsh.inc
+#source $HOME/google-cloud-sdk/path.zsh.inc
 #
 #kubectl autocomplete
 source <(kubectl completion zsh)
