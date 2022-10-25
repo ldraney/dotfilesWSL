@@ -7,5 +7,5 @@ git config pull.rebase true
 git config rebase.autoStash true
 
 #git stash store "$(git stash create)"
-git pull && git add -A && git commit -m $1 && git push
+git pull && git add -A && git commit -m "$1" && git push
 #git add -A && git commit -m $1 && git push

@@ -108,22 +108,13 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-"WSL2 is currently working better without this after fresh install of
-"Ubuntu2204
-"for windows clipboard
-"let g:clipboard = {
-			  "\   'name': 'win32yank-wsl',
-          "\   'copy': {
-			  "\      '+': 'win32yank.exe -i --crlf',
-          "\      '*': 'win32yank.exe -i --crlf',
-          "\    },
-          "\   'paste': {
-			  "\      '+': 'win32yank.exe -o --lf',
-          "\      '*': 'win32yank.exe -o --lf',
-          "\   },
-          "\   'cache_enabled': 0,
-          "\ }
-
+"system clipboard on wsl2
+if system('uname -r') =~ "microsoft"
+  augroup Yank
+  autocmd!
+  autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+  augroup END
+endif
 "set statusline=%!MyStatusLine()
 "function! MyStatusLine()
 
