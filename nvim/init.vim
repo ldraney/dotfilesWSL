@@ -1,4 +1,3 @@
-
 "use alt-/ to search within a highlighted visual field
 vnoremap <M-/> <Esc>/\%V
 "
@@ -121,6 +120,7 @@ endif
 set statusline+=%F
 
 let mapleader=" "
+let g:netrw_keepdir= 0
 "
 "set splitright
 "set tabline
@@ -210,6 +210,11 @@ autocmd InsertLeave * set nocul
 nnoremap <C-s> <C-c>:w<CR>
 inoremap <C-c> <Esc><right>
 inoremap <Esc> <Esc><right>
+
+
+"netrw to automatically change working directory
+au FileType netrw nmap <buffer> <leader>k mt:!tmux split-window -h -c;tmux select-layout even-horizontal<CR>
+"tmux split-window -h -c "#{pane_current_path}"; tmux select-layout even-horizontal
 
 "OVERCOMING ANNOYING LITTLE VIM THINGS
 "nnoremap <CR> <CR><left>
