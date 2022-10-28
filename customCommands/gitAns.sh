@@ -20,7 +20,7 @@ cd $HOME/github/ansible_desktop_setup_WSL
 #git config rebase.autoStash true
 git pull && git add -A && git commit -m $1 && git push
 
-ansible-playbook local.yml
+sudo ansible-playbook local.yml
 #
 #
 #sudo ansible-pull -U git@github.com:ldraney/ansible_desktop_setup_WSL.git --key-file /home/ldraney/.ssh/id_ed25519 
