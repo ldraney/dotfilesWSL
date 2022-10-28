@@ -122,6 +122,8 @@ set statusline+=%F
 let mapleader=" "
 let g:netrw_keepdir= 0
 "
+set formatoptions-=cro
+set nopaste
 "set splitright
 "set tabline
 set conceallevel=0
