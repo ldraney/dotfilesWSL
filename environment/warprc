@@ -12,6 +12,7 @@ athena:~/pillar/athena
 atlas:~/pillar/atlas
 atlasAppBackendWorkers:~/pillar/atlas/app/backend/workers
 autoWindow:/mnt/hgfs/VMShare/AutomateWindows
+automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
 baseRoleAnsible:~/github/ansible_desktop_setup_WSL/roles/base/tasks
 concurrentRoleAnsible:~/github/ansible_desktop_setup_WSL/roles/concurrent/tasks
 customCommands:~/.customCommands
@@ -31,6 +32,7 @@ recongoogledrive:/mnt/c/Users/drane/My Drive (ldraney@recondynamics.com)
 regolith-look:/usr/share/regolith-look
 sanctum:~/pillar/sanctum
 sensitive:~/github/sensitive
+settings.json.WindowsTerminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
 ssh_keys:~/github/ssh_keys
 timeseries:~/pillar/atlas/app/database/timeseries
 tv:~/recon/tv

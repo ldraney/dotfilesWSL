@@ -41,11 +41,13 @@ plugins=(
     vi-mode
     zsh-syntax-highlighting 
     zsh-autosuggestions
+	pyenv
+	wd
+	cd-gitroot
+	command-not-found
     #docker
     #docker-compose
 	#git 
-	wd
-	cd-gitroot
 	#tmux
     #python
     #zsh-navigation-tools
@@ -59,7 +61,6 @@ plugins=(
     #virtualenv 
     #pip
     #pipenv
-	pyenv
     #virtualenv
     #virtualenvwrapper
 )
@@ -85,7 +86,8 @@ source $ZSH/oh-my-zsh.sh
 
 #if tmux isn't running, run it:
 if tmux info &> /dev/null; then 
-  echo Tmux is running. Enjoy!
+  #echo Tmux is running. Enjoy!
+  pwd
 else
 	#tmux attach-session -t default
 	tmux new-session -s default || tmux attach-session -t default
@@ -112,10 +114,6 @@ findword() {
 #ZSH_HIGHLIGHT_STYLES[root]='bg=red'
 #: ${ZSH_HIGHLIGHT_STYLES[comment]:='bg=purple'}
 #ZSH_HIGHLIGHT_HIGHLIGHTERS+=(acme)
-
-#for pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
