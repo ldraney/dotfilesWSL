@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/bash
 #set up a stash system so all conflicts are handled with stashes rather than the 
 #main repo, thus taking the risk of accidentally overwriting the current branch 
 #or losing local changes
