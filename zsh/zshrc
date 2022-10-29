@@ -70,15 +70,17 @@ plugins=(
 
 # Yank to the system clipboard
 # may need to change for Windows
-function vi-yank-xclip {
-    zle vi-yank
-   #echo "$CUTBUFFER" | xclip -i
-   #echo "$CUTBUFFER" | 'clip.exe'
-   #echo "$CUTBUFFER" | win32yank.exe -i
-   echo "$CUTBUFFER" | powershell.exe -Command "Set-Clipboard -Value \$input"
-}
-zle -N vi-yank-xclip
-bindkey -M vicmd 'y' vi-yank-xclip
+#function vi-yank-xclip {
+    #zle vi-yank
+   ##echo "$CUTBUFFER" | xclip -i
+   ##echo "$CUTBUFFER" | 'clip.exe'
+   ##echo "$CUTBUFFER" | win32yank.exe -i
+   ##echo "$CUTBUFFER" 
+   ##echo "$CUTBUFFER" | powershell.exe -Command "Set-Clipboard -Value \$input"
+#}
+#zle -N vi-yank-xclip
+#bindkey -M vicmd 'y' vi-yank-xclip
+#zle vi-yank
 
 #for tmuxinator, use this: 
 # wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
