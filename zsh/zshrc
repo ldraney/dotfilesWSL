@@ -177,3 +177,12 @@ complete -o nospace -C /nix/store/q3q9mbv4w48hkwrpkbqvfnbn6r8v1967-terraform-1.3
 
 #aws autocomplete
 complete -C 'aws_completer' aws
+
+
+#compctl -K _gh gh
+
+
+# github cli autocomplete
+# https://www.ajfriesen.com/github-cli-auto-completion-with-oh-my-zsh/
+autoload -U compinit
+compinit -i

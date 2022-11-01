@@ -24,7 +24,8 @@ goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 init.vim:~/.config/nvim
 nixpkgs:~/.config/nixpkgs
-oddball:~/oddball/devops-challenge
+notifications-api:~/oddball/notification-api
+oddball:~/oddball
 oddballChallenge:~/github/oddballChallenge
 openvpn:/mnt/c/Users/drane/OpenVpn/config
 pillar:~/pillar
@@ -36,6 +37,8 @@ ssh_keys:~/github/ssh_keys
 timeseries:~/pillar/atlas/app/database/timeseries
 tv:~/recon/tv
 tvplatform:~/recon/tv/tvplatform
+vanotify-infra:~/oddball/vanotify-infra
+vanotify-team:~/oddball/vanotify-team
 vmshare:/mnt/c/Users/drane/Desktop/VMShare
 vpn:~/recon/vpn
 windows.settings.json.windows.terminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
