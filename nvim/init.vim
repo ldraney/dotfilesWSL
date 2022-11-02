@@ -219,8 +219,15 @@ inoremap <Esc> <Esc><right>
 au FileType netrw nmap <buffer> <leader>k mt:!tmux split-window -h;tmux select-layout even-horizontal<CR>
 au FileType netrw nmap <buffer> <leader>z mt:!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
 nnoremap <leader>z :!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
-"tmux split-window -h -c "#{pane_current_path}"; tmux select-layout even-horizontal
 
+"netrw copy a file
+au FileType netrw nmap <buffer> <leader>yp mt:!cp -r <C-R><C-F> ./<C-R><C-F>
+"netrw delete under cursor
+au FileType netrw nmap <buffer> <leader>x mt:!rm -rf <C-R><C-F><CR><CR>
+"netrw mkdir command
+au FileType netrw nmap <buffer> <leader>mkdir mt:!mkdir -p 
+
+":!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
 "OVERCOMING ANNOYING LITTLE VIM THINGS
 "nnoremap <CR> <CR><left>
 "inoremap <CR> <CR><left>
