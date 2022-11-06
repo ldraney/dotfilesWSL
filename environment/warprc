@@ -1,6 +1,7 @@
+ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
 dotfilesWSL:~/github/dotfilesWSL
-github:~/github
+githubPersonal:~/github
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 notifications-api:~/oddball/notification-api
@@ -11,3 +12,4 @@ vanotify-infra:~/oddball/vanotify-infra
 vanotify-team:~/oddball/vanotify-team
 windows.settings.json.windows.terminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
 windows:/mnt/c/Users/drane
+workflows:~/oddball/notification-api/.github/workflows
