@@ -216,7 +216,7 @@ inoremap <Esc> <Esc><right>
 
 
 "netrw to automatically change working directory
-au FileType netrw nmap <buffer> <leader>k mt:!tmux split-window -h;tmux select-layout even-horizontal<CR>
+au FileType netrw nmap <buffer> <leader>% mt:!tmux split-window -h;tmux select-layout even-horizontal<CR>
 au FileType netrw nmap <buffer> <leader>z mt:!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
 nnoremap <leader>z :!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
 

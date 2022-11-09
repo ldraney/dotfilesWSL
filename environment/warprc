@@ -1,6 +1,7 @@
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
 dev-personal:~/github/notification-api-personal/cd/application-deployment/dev
+devops:~/oddball/vanotify-team/Engineering/DevOps
 dotfilesWSL:~/github/dotfilesWSL
 engineering:~/oddball/vanotify-team/Engineering
 githubPersonal:~/github
@@ -13,6 +14,7 @@ oddball:~/oddball
 oddballChallenge:~/github/oddballChallenge
 oddball_helps:~/github/oddball_helps
 sensitive:~/github/sensitive
+vanotify-api:~/oddball/notification-api
 vanotify-infra:~/oddball/vanotify-infra
 vanotify-team:~/oddball/vanotify-team
 windows.settings.json.windows.terminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
