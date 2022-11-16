@@ -1,13 +1,16 @@
+#poetry stuff
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 #source prefix/etc/profile.d/nix.sh
 
 #Pyenv stuff
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-## setting the default global pyenv version
-export PYENV_VERSION=3.8.10
-#pyenv-virtualenv: prompt changing will be removed from future release. configure `export PYENV_VIRTUALENV_DISABLE_PROMPT=1' to simulate the behavior.
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init --path)"
+### setting the default global pyenv version
+#export PYENV_VERSION=3.8.10
+##pyenv-virtualenv: prompt changing will be removed from future release. configure `export PYENV_VIRTUALENV_DISABLE_PROMPT=1' to simulate the behavior.
+#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
-#virtualenv
-eval "$(pyenv virtualenv-init -)"
+##virtualenv
+#eval "$(pyenv virtualenv-init -)"

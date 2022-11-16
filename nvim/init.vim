@@ -219,6 +219,7 @@ inoremap <Esc> <Esc><right>
 au FileType netrw nmap <buffer> <leader>% mt:!tmux split-window -h;tmux select-layout even-horizontal<CR>
 au FileType netrw nmap <buffer> <leader>z mt:!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
 nnoremap <leader>z :!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
+nnoremap <leader>% mt:!tmux split-window -h;tmux select-layout even-horizontal<CR>
 
 "netrw copy a file
 au FileType netrw nmap <buffer> <leader>yp mt:!cp -r <C-R><C-F> ./<C-R><C-F>

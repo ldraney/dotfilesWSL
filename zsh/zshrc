@@ -41,7 +41,9 @@ plugins=(
     vi-mode
     zsh-syntax-highlighting 
     zsh-autosuggestions
-	pyenv
+	#pyenv
+	#virtualenv 
+	#virtualenvwrapper 
 	wd
 	cd-gitroot
 	command-not-found
@@ -58,12 +60,8 @@ plugins=(
     #tmuxinator
 	#terraform
 	#npm
-    #virtualenvwrapper 
-    #virtualenv 
     #pip
     #pipenv
-    #virtualenv
-    #virtualenvwrapper
 )
 #
 # vi mode
