@@ -2,6 +2,8 @@
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 #source prefix/etc/profile.d/nix.sh
+source ~/poetry.zsh
+#source $(poetry env info --path)/bin/activate
 
 #Pyenv stuff
 #export PYENV_ROOT="$HOME/.pyenv"
