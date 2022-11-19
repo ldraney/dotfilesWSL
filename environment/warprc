@@ -1,5 +1,8 @@
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
+cheat:~/github/dotfilesWSL/cheat
+cheatCommunity:~/github/dotfilesWSL/cheat/cheatsheets/community
+cheatPersonal:~/github/dotfilesWSL/cheat/cheatsheets/personal
 dev-personal:~/github/notification-api-personal/cd/application-deployment/dev
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps

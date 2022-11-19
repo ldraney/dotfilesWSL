@@ -1,0 +1,16 @@
+mutation createEpic {
+  createEpic(input: {
+      issue: {
+          repositoryId: "REPOSITORY_ID",
+          title: "My new epic"
+      }
+  }) {
+      epic {
+          id
+          issue {
+              id
+              title
+          }
+      }
+  }
+}

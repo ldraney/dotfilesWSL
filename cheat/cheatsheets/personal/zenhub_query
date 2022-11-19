@@ -1,0 +1,18 @@
+query {
+viewer {
+  id
+  searchWorkspaces(query: "VA Notify") {
+      nodes {
+          id
+          name
+          repositoriesConnection {
+              nodes {
+                  id
+                  name
+              }
+          }
+      }
+  }
+}
+}
+

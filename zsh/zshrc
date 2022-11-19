@@ -47,7 +47,6 @@ plugins=(
 	#virtualenvwrapper 
 	wd
 	cd-gitroot
-	command-not-found
 	aws
     #docker
     #docker-compose

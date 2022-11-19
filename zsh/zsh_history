@@ -1,1 +1,6 @@
 : 1663277653:0;git init
+: 1668891465:0;pwd
+: 1668891470:0;wd ansible_desktop_setup_WSL
+: 1668891471:0;vim .
+: 1668891545:0;cdg
+: 1668891554:0;sudo ansible-playbook local.yml

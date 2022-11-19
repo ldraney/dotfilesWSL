@@ -1,0 +1,31 @@
+curl 'https://api.zenhub.com/public/graphql' \
+  -X POST \
+  -H "Authorization: Token $GRAPHQL_ZENHUB" \
+  -H 'content-type: application/json' \
+  --data zenhub_query.txt
+
+curl 'https://api.zenhub.com/public/graphql' \
+-v \
+-H "Content-Type: application/json" \
+-H "Authorization: Token $GRAPHQL_ZENHUB" \
+-d "{\"query\": \"{searchIssuesByPipeline {pipelineId:\"New\",filters:{labels:{in: [\"Notify\"]}}}}\"}"
+
+curl 'https://api.zenhub.com/public/graphql' \
+-v \
+-H "Content-Type: application/json" \
+-H "Authorization: Token $GRAPHQL_ZENHUB" \
+-d @zenhub_query.txt
+
+
+https://www.yelp.com/developers/graphql/guides/intro
+
+curl https://api.yelp.com/v3/graphql -X POST -H "Authorization: Bearer ACCESS_TOKEN" -H "Content-Type: application/graphql"  --data '
+{
+    business(id: "garaje-san-francisco") {
+        name
+        id
+        alias
+        rating
+        url
+    }
+}'
