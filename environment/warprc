@@ -3,6 +3,7 @@ automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
 cheat:~/github/dotfilesWSL/cheat
 cheatCommunity:~/github/dotfilesWSL/cheat/cheatsheets/community
 cheatPersonal:~/github/dotfilesWSL/cheat/cheatsheets/personal
+completions:~/.oh-my-zsh/completions
 dev-personal:~/github/notification-api-personal/cd/application-deployment/dev
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps

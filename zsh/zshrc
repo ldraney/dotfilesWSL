@@ -183,6 +183,12 @@ complete -C '/home/ldraney/.nix-profile/bin/aws_completer' aws
 autoload -U compinit
 compinit -i
 
+#autoload -U compinit promptinit
 
-# cheatsheet autocomplete
-#/home/ldraney/.zfunc/cheat.zsh
+#promptinit
+
+my_cheats()
+{
+  cheats=("${(f)$(cheat -l -t personal | tail -n +2 | cut -d' ' -f1)}")
+  _describe -t cheats 'cheats' cheats
+}
