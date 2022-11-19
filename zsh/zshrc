@@ -38,6 +38,7 @@ ZSH_THEME="cloud"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
+	aliases
     vi-mode
     zsh-syntax-highlighting 
     zsh-autosuggestions
@@ -182,3 +183,7 @@ complete -C '/home/ldraney/.nix-profile/bin/aws_completer' aws
 # https://www.ajfriesen.com/github-cli-auto-completion-with-oh-my-zsh/
 autoload -U compinit
 compinit -i
+
+
+# cheatsheet autocomplete
+#/home/ldraney/.zfunc/cheat.zsh
