@@ -206,6 +206,7 @@ set termguicolors
 set guicursor=i:block-Cursor-blinkon1
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
+
 "set timeout timeoutlen=1000 ttimeoutlen=100
 "inoremap <C-c> <Esc>:w<CR>
 "

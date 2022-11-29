@@ -23,3 +23,6 @@ gh gist create hello.py -d "my Hello-World program in Python" -w -p
 
 # Create a custom label for issues and prs
 gh label create do-not-merge
+
+# running workflows
+gh workflow run -F ref=[branch or commit] -F lambdaDeploy=true dev_deploy.yml -r  [branch]

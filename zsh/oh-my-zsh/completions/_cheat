@@ -34,7 +34,7 @@ _cheat() {
     #'(--init)--init[Write a default config file to stdout]: :->none' \
     #'(-c --colorize)'{-c,--colorize}'[Colorize output]: :->none' \
     #'(-d --directories)'{-d,--directories}'[List cheatsheet directories]: :->none' \
-    #'(-e --edit)'{-e,--edit}'[Edit <sheet>]: :->personal' \
+	#'(-e --edit)'{-e,--edit}'[Edit <sheet>]: :->personal' \
     #'(-l --list)'{-l,--list}'[List cheatsheets]: :->full' \
     #'(-p --path)'{-p,--path}'[Return only sheets found on path <name>]: :->pathlist' \
     #'(-r --regex)'{-r,--regex}'[Treat search <phrase> as a regex]: :->none' \

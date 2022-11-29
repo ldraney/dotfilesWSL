@@ -6,3 +6,6 @@ rename 's/sometext/replacedby/' *
 
 # To remove .md extension from all files in current directory
 rename 's/\.md//' *
+
+# remove '.md' from files that begin with .md
+rename 's/.md//' .md**
