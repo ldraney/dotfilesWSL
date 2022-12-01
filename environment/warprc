@@ -11,7 +11,6 @@ engineering:~/oddball/vanotify-team/Engineering
 githubPersonal:~/github
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
-infra-workflows:~/oddball/vanotify-infra/.github/workflows
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 notifications-api-personal:~/github/notification-api-personal
 notifications-api:~/oddball/notification-api
@@ -26,4 +25,5 @@ vanotify-infra:~/oddball/vanotify-infra
 vanotify-team:~/oddball/vanotify-team
 windows.settings.json.windows.terminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
 windows:/mnt/c/Users/drane
-workflows:~/oddball/notification-api/.github/workflows
+workflows-api:~/oddball/notification-api/.github/workflows
+workflows-infra:~/oddball/vanotify-infra/.github/workflows
