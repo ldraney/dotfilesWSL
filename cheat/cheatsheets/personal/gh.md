@@ -1,28 +1,12 @@
----
-syntax: bash
-tags: [ git, github, vcs ]
----
-
-# View README.md:
-gh repo view
-
-# View issue list:
-gh issue list
-
-# View specific issue (e.g., the first being #1):
-gh issue view 1
-
-# Create issue (start an interactive CLI):
-gh issue create
-
-# Create pull request from a feature branch (start an interactive CLI):
-gh pr create
-
-# Create a public gist and open web browser to it:
-gh gist create hello.py -d "my Hello-World program in Python" -w -p
-
-# Create a custom label for issues and prs
-gh label create do-not-merge
-
-# running workflows
+## running workflows
 gh workflow run -F ref=[branch or commit] -F lambdaDeploy=true dev_deploy.yml -r  [branch]
+
+## Making a new branch linked to an issue
+```
+gh issue develop \
+--base master \
+--checkout \
+--issue-repo department-of-veterans-affairs/vanotify-infra \
+--name 662-understand-datadog \
+662
+```
