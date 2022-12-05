@@ -10,6 +10,7 @@ vim /tmp/[template]
 
 ## create the issue (ticket)
 ```
+wd [related repo]
 gh issue create \
 -F /tmp/template \
 --title "Datadog Optimization for AWS Services" \

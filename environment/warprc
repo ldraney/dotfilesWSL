@@ -1,9 +1,8 @@
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
-cheat-community:~/github/dotfilesWSL/cheat/cheatsheets/community
-cheat-personal:~/github/dotfilesWSL/cheat/cheatsheets/personal
-cheat:~/github/dotfilesWSL/cheat
+cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
 completions:~/.oh-my-zsh/completions
+datadog:~/oddball/vanotify-infra/cd/utility-infrastructure
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
 dotfilesWSL:~/github/dotfilesWSL
@@ -12,7 +11,6 @@ githubPersonal:~/github
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
-notifications-api-personal:~/github/notification-api-personal
 notifications-api:~/oddball/notification-api
 oddball:~/oddball
 oddballChallenge:~/github/oddballChallenge
