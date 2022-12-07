@@ -111,10 +111,13 @@ findSecondword(){
 }
 secondwordToFile(){
 	#first input is the word, second input is the files from findwordToFile
-	cat /tmp/$2.txt | xargs -o -n 1 grep -i -l -s $1 > /tmp/$1.txt
+	cat /tmp/$1.txt | xargs -o -n 1 grep -i -l -s $2 > /tmp/$2.txt
 }
 
 edit() {
+	nvim < /tmp/$1.txt
+}
+check() {
 	xargs -o -n 1 nvim < /tmp/$1.txt
 }
 
