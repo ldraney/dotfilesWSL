@@ -21,6 +21,7 @@ va-qa:~/oddball/notification-api-qa
 vanotify-api:~/oddball/notification-api
 vanotify-infra:~/oddball/vanotify-infra
 vanotify-team:~/oddball/vanotify-team
+vmshare:/mnt/c/Users/drane/OneDrive/Desktop/VMShare
 windows.settings.json.windows.terminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
 windows:/mnt/c/Users/drane
 workflows-api:~/oddball/notification-api/.github/workflows

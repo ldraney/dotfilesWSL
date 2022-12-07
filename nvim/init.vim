@@ -201,9 +201,10 @@ set termguicolors
 "CURSOR SETTINGS
 "cursor settings MUST COME AFTER set TERMGUICOLORS
 "https://github.com/neovim/neovim/wiki/FAQ#nvim-shows-weird-symbols-2-q-when-changing-modes
-"highlight Cursor guifg=yellow guibg=yellow
 "highlight Cursor guifg=blue guibg=blue
-set guicursor=i:block-Cursor-blinkon1
+"set guicursor=i:block-Cursor-blinkon1
+"set guicursor=i:hor
+highlight Cursor guifg=blue guibg=blue
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
 
