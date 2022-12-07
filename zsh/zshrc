@@ -100,14 +100,14 @@ findwordexact() {
 findword() {
     find . -exec grep -i -l -s $1 {} \;
 }
-
 findwordToFile(){
 	findword $1 > /tmp/$1.txt
 }
 
 findSecondword(){
-	#first input is the word, second input is the files from findwordToFile
-	xargs -o -n 1 grep -i -l -s $1 < /tmp/$2.txt
+	# must run findwordToFile first
+	#first input is the word, second input is the output file from findwordToFile
+	xargs -o -n 1 grep -i -l -s $2 < /tmp/$1.txt
 }
 secondwordToFile(){
 	#first input is the word, second input is the files from findwordToFile
