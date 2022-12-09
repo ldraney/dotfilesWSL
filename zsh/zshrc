@@ -121,6 +121,17 @@ check() {
 	xargs -o -n 1 nvim < /tmp/$1.txt
 }
 
+#list only file names in current directory
+findcur(){
+	find ./ -printf "%f\n"
+}
+
+#add a new cheat file
+#I releazed this isn't necessary, since any community file you edit is automatically moved to personal! and both coummnity and personal are already in my repo
+#cheatAdd(){
+#vim /home/ldraney/github/dotfilesWSL/cheat/cheatsheets/personal/$1.md
+#}
+
 #```zsh
 #ZSH_HIGHLIGHT_STYLES[comment]='bg=red'
 #```
