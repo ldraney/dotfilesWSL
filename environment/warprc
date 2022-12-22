@@ -1,5 +1,6 @@
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
+aws-cli-script:~/github/oddball_helps/scripts/aws-cli-script
 cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
 completions:~/.oh-my-zsh/completions
 datadog:~/oddball/vanotify-infra/cd/utility-infrastructure
@@ -13,9 +14,9 @@ gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 notifications-api:~/oddball/notification-api
 oddball:~/oddball
-oddballChallenge:~/github/oddballChallenge
 oddball_helps:~/github/oddball_helps
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
+queries:~/github/oddball_helps/scripts/aws/queries
 sensitive:~/github/sensitive
 va-qa:~/oddball/notification-api-qa
 vanotify-api:~/oddball/notification-api
