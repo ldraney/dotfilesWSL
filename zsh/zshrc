@@ -149,7 +149,7 @@ findcur(){
 #
 #for terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
+complete -o nospace -C $(whereis terraform | cut -c 12-) terraform
 
 #for NIX interactive shell
 #!@bashInteractive@/bin/bash

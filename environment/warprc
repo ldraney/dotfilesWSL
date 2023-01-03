@@ -9,6 +9,8 @@ devops:~/oddball/vanotify-team/Engineering/DevOps
 dotfilesWSL:~/github/dotfilesWSL
 engineering:~/oddball/vanotify-team/Engineering
 githubPersonal:~/github
+go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kids-token
+go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
@@ -18,10 +20,14 @@ oddball_helps:~/github/oddball_helps
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
 queries:~/github/oddball_helps/scripts/aws/queries
 sensitive:~/github/sensitive
+terraform-aws-wordpress:~/github/terraform-aws-wordpress
+terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
+utility-infrastructure:~/oddball/vanotify-infra/cd/utility-infrastructure
 va-qa:~/oddball/notification-api-qa
 vanotify-api:~/oddball/notification-api
 vanotify-infra:~/oddball/vanotify-infra
 vanotify-team:~/oddball/vanotify-team
+vmshare-tmp:/mnt/c/Users/drane/OneDrive/Desktop/VMShare/tmp
 vmshare:/mnt/c/Users/drane/OneDrive/Desktop/VMShare
 windows.settings.json.windows.terminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
 windows:/mnt/c/Users/drane

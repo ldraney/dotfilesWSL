@@ -16,17 +16,9 @@ vim ~/.zshenv
 ```
 
 ## aws start query in AWS CloudWatch Logs
-```
-aws logs start-query-result \
---start-time $((`date -d "2021-08-07 00:00:00" -u +"%s"` * 1000)) \
---end-time $((`date -d "2021-08-08 00:00:00" -u +"%s"` * 1000)) \
---limit 1000 \
---log-group-name "my-server-log" \
---query-string 'field @timestamp, @logStream, @message | filter @message like "Connection Error"'
-```
-
-## go to log queries
+1. ensure updated SAML token and then:
 wd queries
+./[query_script].sh
 
 ## list all potential log-group names for queries
 aws logs describe-log-groups --region us-gov-west-1
