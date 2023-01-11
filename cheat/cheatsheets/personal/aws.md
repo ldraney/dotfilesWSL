@@ -14,6 +14,10 @@ sudo ./aws/install
 vim aws-credentials.sh
 vim ~/.zshenv
 ```
+***first time***
+5. ```
+ln -sf /home/ldraney/github/oddball_helps/scripts/aws-cli-script/credentials /home/ldraney/.aws/credentials
+```
 
 ## aws start query in AWS CloudWatch Logs
 1. ensure updated SAML token and then:
@@ -22,3 +26,6 @@ wd queries
 
 ## list all potential log-group names for queries
 aws logs describe-log-groups --region us-gov-west-1
+
+## filter the output of a command
+aws rds describe-db-instances --query 'DBInstances[?Engine==`aurora-postgresql`].Engine'

@@ -1,6 +1,11 @@
 ## running workflows
-gh workflow run -F ref=[branch or commit] -F lambdaDeploy=true dev_deploy.yml -r  [branch]
-
+```
+gh workflow run utilities_workflow.yml \
+-F ref=470-surface-metrics-datadog \
+-r 470-surface-metrics-datadog
+-F tf_group=utility-infrastructure \
+-F on_pr=false 
+```
 ## Making a new branch linked to an issue
 ```
 gh issue develop \
