@@ -237,8 +237,8 @@ au FileType netrw nmap <buffer> <leader>mkdir mt:!mkdir -p
 "nnoremap o o<left>
 
 "highlight search settings
-highlight link Searchlight Incsearch
-hi Search guibg=white guifg=green
+"highlight link Searchlight Incsearch
+"hi Search guibg=white guifg=green
 "hi Search cterm=NONE ctermfg=grey ctermbg=blue
 """ PLUGIN CONFIGURATIONS
 

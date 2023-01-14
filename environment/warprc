@@ -18,6 +18,7 @@ gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 lua:~/github/dotfilesWSL/nvim/lua
 notifications-api:~/oddball/notification-api
+nvim:~/.config/nvim
 oddball:~/oddball
 oddball_helps:~/github/oddball_helps
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
