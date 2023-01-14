@@ -21,6 +21,8 @@ autocmd BufWinEnter * silent! loadview
 "endif
 
 call plug#begin()
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 "Start using vim with googgle docs :)))
 "Plug 'aadv1k/gdoc.vim', {'do': './install.py'}
 
@@ -135,7 +137,7 @@ set indentexpr=''
 "set autoindent
 "set smarttab
 "set incsearch ignorecase smartcase hlsearch
-"set nohlsearch
+set nohlsearch
 "set hlsearch!
 set wildmode=longest,list,full wildmenu
 set ruler laststatus=2 showcmd showmode
@@ -432,11 +434,11 @@ autocmd FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
 """ Custom Functions
 
 " Trim Whitespaces
-function! TrimWhitespace()
-    let l:save = winsaveview()
-    %s/\\\@<!\s\+$//e
-    call winrestview(l:save)
-endfunction
+"function! TrimWhitespace()
+    "let l:save = winsaveview()
+    "%s/\\\@<!\s\+$//e
+    "call winrestview(l:save)
+"endfunction
 
 """ CUSTOM MAPPINGS
 
@@ -455,8 +457,8 @@ nmap <C-t> <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
 "nnoremap <leader>e :CHADopen<CR>
 "nnoremap <leader>3 :CHADopen --always-focus<CR>
 
-nnoremap  <leader>e :Vexplore<CR><C-w>r
-nnoremap  <leader>E :Ex<CR>
+"nnoremap  <leader>e :Vexplore<CR><C-w>r
+"nnoremap  <leader>E :Ex<CR>
 
 "Tagbar
 "nmap <leader>w :TagbarToggle<CR>
@@ -466,7 +468,7 @@ nnoremap  <leader>E :Ex<CR>
 nmap <leader>R :so ~/.config/nvim/init.vim<CR>
 
 
-nmap <leader>t :call TrimWhitespace()<CR>
+"nmap <leader>t :call TrimWhitespace()<CR>
 "nmap <leader>y <C-w>v<C-w>l:HackerNews best<CR>J
 "nmap <leader>p <Plug>(pydocstring)
 

@@ -92,6 +92,20 @@ fi
 #fix the tmux autocomplete color for Zsh
 export TERM=xterm-256color 
 
+#aliases
+alias gq='$HOME/.customCommands/gitScript.sh'
+alias setLoginBackground='$HOME/.customCommands/setLoginBackground'
+alias gansPre='$HOME/.customCommands/gansPre.sh'
+alias gans='$HOME/.customCommands/gitAns.sh'
+alias gqAll='$HOME/.customCommands/gqAll.sh'
+alias lt='ls -lt --color=always'
+#alias lt='echo "hi mom"'
+alias cdg=cd-gitroot
+alias k=kubectl
+alias ter=terraform
+alias vim=nvim
+alias cheat='cheat -e'
+
 findfile() {
     find .  -name $1
 }

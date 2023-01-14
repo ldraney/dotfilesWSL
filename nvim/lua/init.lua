@@ -8,6 +8,7 @@ vim.g.mapleader = " "
 
 local inspect = require('inspect')
 require('ldraneyLua/sudoCheckSave')
+require('hotkeys')
 
 
 vim.opt.list = true

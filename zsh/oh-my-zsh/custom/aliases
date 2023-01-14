@@ -1,0 +1,2 @@
+alias gq='echo $($HOME/.customCommands/gitScript.sh && ls)'
+alias himom='pizza'
