@@ -1,16 +1,9 @@
-vim.g.mapleader = " "
-
-
-
-
-
-
-
 local inspect = require('inspect')
 require('ldraneyLua/sudoCheckSave')
 require('hotkeys')
+require('netrw/netrw')
 
-
+--Global options
 vim.opt.list = true
 --vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:↴")
@@ -24,6 +17,10 @@ require("indent_blankline").setup {
 --https://www.reddit.com/r/neovim/comments/sqld76/stop_automatic_newline_continuation_of_comments/
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+
+
+
+
 --
 --
 --

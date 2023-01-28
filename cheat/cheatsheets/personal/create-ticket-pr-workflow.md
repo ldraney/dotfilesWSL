@@ -6,6 +6,7 @@
 wd issue_templates
 cp [template] /tmp/[template]
 vim /tmp/[template]
+#delete the first part of the ticket (e.g. assignee) as these are used in the command
 ```
 
 ## create the issue (ticket)
@@ -112,5 +113,6 @@ Maybe ask a leader if you can add the ticket to the current sprint, and adjust i
 ## deleting your branch
 once you finish this whole flow with an approved PR (congratulations!), we no longer need your branch: 
 ```
-git push origin -d [development branch name]
+git checkout -D [branch]
+git push origin -d [branch]
 ```

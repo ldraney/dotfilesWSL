@@ -10,3 +10,5 @@
 	;directory = /mnt/hgfs/VMShare/Recon/tv/dev-setup
 [credential]
 	helper = cache --timeout=600
+[merge]
+	tool = nvimdiff

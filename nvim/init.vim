@@ -20,6 +20,9 @@ autocmd BufWinEnter * silent! loadview
     """/home/ldraney/.local/share/nvim/view/
 "endif
 
+" current directory to match netrw browsing
+let g:netrw_keepdir= 0
+
 call plug#begin()
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -116,12 +119,19 @@ if system('uname -r') =~ "microsoft"
   autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
   augroup END
 endif
+
+"  SETS
+"set startdir=$NVIM_PWD
+
+
 "set statusline=%!MyStatusLine()
 "function! MyStatusLine()
-
 set statusline+=%F
 let g:netrw_keepdir= 0
-"
+
+" this should open help in a vertical split
+set splitright
+
 set formatoptions-=cro
 set nopaste
 "set splitright
@@ -276,32 +286,6 @@ let g:indentLine_defaultGroup = 'NonText'
 
 " TagBar
 let g:tagbar_width = 40
-
-" fzf-vim
-"let g:fzf_action = {
-  "\ 'ctrl-t': 'tab split',
-  "\ 'ctrl-s': 'split',
-  "\ 'ctrl-v': 'vsplit' }
-
-
-
-"let g:fzf_colors =
-"\ { 'fg':      ['fg', 'Normal'],
-  "\ 'bg':      ['bg', 'Normal'],
-  "\ 'hl':      ['fg', 'Comment'],
-  "\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  "\ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  "\ 'hl+':     ['fg', 'Statement'],
-  "\ 'info':    ['fg', 'Type'],
-  "\ 'border':  ['fg', 'Constant'],
-  "\ 'prompt':  ['fg', 'Character'],
-  "\ 'pointer': ['fg', 'Exception'],
-  "\ 'marker':  ['fg', 'Keyword'],
-  "\ 'spinner': ['fg', 'Label'],
-  "\ 'header':  ['fg', 'Comment'] }
-
-" Bat theme for syntax coloring when viewing files in fzf
-"let $BAT_THEME='base16'
 
 " Limelight
 let g:limelight_conceal_ctermfg = 'gray'
