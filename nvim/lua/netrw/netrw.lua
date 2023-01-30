@@ -30,7 +30,7 @@ local os_execute = os.execute
 local os_getenv = os.getenv
 
 local pwd = os.getenv('PWD')
-print(pwd)
+--print(pwd)
 
 --
 --

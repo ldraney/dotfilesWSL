@@ -96,6 +96,7 @@ alias gansPre='$HOME/.customCommands/gansPre.sh'
 alias gans='$HOME/.customCommands/gitAns.sh'
 alias gqAll='$HOME/.customCommands/gqAll.sh'
 alias lt='ls -lt --color=always'
+alias ltt='ls -lt --color=always | head'
 #alias lt='echo "hi mom"'
 alias cdg=cd-gitroot
 alias k=kubectl
@@ -195,7 +196,7 @@ autoload -Uz compinit && compinit -i
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $(whereis terraform | cut -c 12-) terraform
 
-complete -o nospace -C /nix/store/q3q9mbv4w48hkwrpkbqvfnbn6r8v1967-terraform-1.3.3/bin/terraform terraform
+#complete -o nospace -C /nix/store/q3q9mbv4w48hkwrpkbqvfnbn6r8v1967-terraform-1.3.3/bin/terraform terraform
 
 #aws autocomplete
 #complete -C '/usr/local/bin/aws_completer' aws
@@ -227,3 +228,5 @@ export NVM_DIR="$HOME/.nvm"
   #shell=${1-$SHELL}
   #for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 #}
+
+complete -o nospace -C /home/ldraney/.tfenv/versions/1.1.3/terraform terraform
