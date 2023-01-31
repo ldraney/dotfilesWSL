@@ -24,6 +24,7 @@ autocmd BufWinEnter * silent! loadview
 let g:netrw_keepdir= 0
 
 call plug#begin()
+Plug 'hashivim/vim-terraform'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 "Start using vim with googgle docs :)))
