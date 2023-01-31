@@ -23,8 +23,20 @@ autocmd BufWinEnter * silent! loadview
 " current directory to match netrw browsing
 let g:netrw_keepdir= 0
 
+"au BufRead,BufNewFile *.sh setfiletype zsh
+"set syn=sh
+
 call plug#begin()
+Plug 'github/copilot.vim'
+
+"bash script syntax highlighting
+Plug 'godlygeek/tabular'
+Plug 'arzg/vim-sh'
+
+"Terraform Syntax highlighting
 Plug 'hashivim/vim-terraform'
+
+" Telescope stuff
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 "Start using vim with googgle docs :)))
