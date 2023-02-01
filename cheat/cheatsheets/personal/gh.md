@@ -26,8 +26,17 @@ gh api \
 ```
 gh api \
   -H "Accept: application/vnd.github+json" \
-  /repos/department-of-veterans-affairs/vanotify-infra/actions/runs
+  /repos/department-of-veterans-affairs/vanotify-infra/tree/494-datadog-forwarder-lambda/actions/runs
 ```
+```
+$ gh api repository/{owner}/{repo}/actions/runs?ref={branch} --query '[0].head_sha' -H 'Accept: application/vnd.github+json'
+```
+```
+gh api \
+  -H "Accept: application/vnd.github+json" \
+  /repos/department-of-veterans-affairs/vanotify-infra/actions/runs?ref=494-datadog-forwarder-lambda --query '[0].head_sha'
+```
+
 
 ## working on my tickets
 ```

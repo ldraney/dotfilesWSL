@@ -24,6 +24,7 @@ gh issue create \
 ## Create and Checkout new branch for your issue 
 ** this won't work if the issue was not created in the repo you are editing.  
 ** If they are different, run `git checkout -b [new-branch`
+** If you already created a branch, skip this and go to the "Create a draft PR" section
 ```
 gh issue develop \
 --base master \
@@ -56,12 +57,12 @@ you are now on the new branch.
 copy the draft pr template and then edit it for the branch and issue
 ```
 wd pr-template
-cp pull-request-draft.md /tmp/pull-request-draft.md 
-vim /tmp/pull-request-draft.md
+cp pull-request-draft.md /tmp/pr-[branch-name].md 
+vim /tmp/pr-[branch-name].md
 ```
 
 ## Connect the branch to pr draft 
-- apply as many labels as you want (see example)
+- apply as many labels as you want (see example) -- there are some labels that shouldn't be added
 - your branch will need to be at least one commit different from master for this to work
 - don't put the Notify label as it creates duplicates!  (That label should only be on the issue)
 ```
@@ -106,7 +107,7 @@ Unfortunately, have to do this through the GUI: https://github.com/department-of
 Maybe ask a leader if you can add the ticket to the current sprint, and adjust it on the GUI
 
 ## Getting ready for PR review
-- in the github GUI, take off draft from PR
+- in the github GUI, take off draft from PR (at the bottom of the PR page)
 - send a link of the PR to the va-notify-engineers slack channel so they can review it! 
 - Move your issue from in Progress to Done.  
 
