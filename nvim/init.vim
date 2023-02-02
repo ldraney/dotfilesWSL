@@ -27,6 +27,9 @@ let g:netrw_keepdir= 0
 "set syn=sh
 
 call plug#begin()
+"format terraform file with a :TerraformFormat ex command
+Plug 'hashivim/vim-terraform'
+
 Plug 'github/copilot.vim'
 
 "bash script syntax highlighting
