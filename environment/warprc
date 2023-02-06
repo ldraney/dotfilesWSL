@@ -21,6 +21,7 @@ goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 lua:~/github/dotfilesWSL/nvim/lua
+notification-admin-infrastructure:~/oddball/vanotify-infra/cd/notification-admin-infrastructure
 notifications-api:~/oddball/notification-api
 nvim:~/.config/nvim
 oddball:~/oddball

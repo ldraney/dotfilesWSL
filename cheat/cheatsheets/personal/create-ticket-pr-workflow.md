@@ -1,7 +1,7 @@
+# Creating a Ticket or Start working on one
 
-** This needs to be turned into a python script so that an issue can be linked to an epic from the CLI
-
-## first copy the template
+## Create a ticket
+### first copy the template
 ```
 wd issue_templates
 cp [template] /tmp/[template]
@@ -9,7 +9,7 @@ vim /tmp/[template]
 #delete the first part of the ticket (e.g. assignee) as these are used in the command
 ```
 
-## create the issue (ticket)
+### create the issue (ticket)
 ```
 wd [related repo]
 gh issue create \
@@ -21,10 +21,19 @@ gh issue create \
 --label epic/bug/[none]
 ```
 
-## Create and Checkout new branch for your issue 
-** this won't work if the issue was not created in the repo you are editing.  
-** If they are different, run `git checkout -b [new-branch`
+## Starting work on a ticket
+### Create and Checkout new branch for your issue 
 ** If you already created a branch, skip this and go to the "Create a draft PR" section
+** this won't work if the issue was not created in the repo you are editing.  Please fix that first via Zenhub.
+```
+gh issue develop \
+--base master \
+--checkout \
+--issue-repo department-of-veterans-affairs/notification-api \
+--name [[issue_number]-some-detail-about-issue] \
+[ticket number]
+```
+e.g.
 ```
 gh issue develop \
 --base master \
@@ -32,15 +41,6 @@ gh issue develop \
 --issue-repo department-of-veterans-affairs/vanotify-infra \
 --name 662-understand-datadog \
 662
-```
-e.g.
-```
-gh issue develop \
---base master \
---checkout \
---issue-repo department-of-veterans-affairs/notification-api \
---name [[issue_number]-some-detail-about-issue] \
---issue [branch you just created] \
 ```
 and verify your branch is linked to the issue: 
 ```
@@ -52,16 +52,20 @@ gh issue develop --list 909
 ```
 you are now on the new branch.  
 
-
-## Create a draft PR
-copy the draft pr template and then edit it for the branch and issue
+### Create a draft PR
+1. cd to the templates (below I use wd rather than cd)
+2. copy the draft pr template
+3. edit it for the branch and issue
 ```
-wd pr-template
+wd pr-template   
+# cd $HOME/[oddball_repo_dir]\vanotify-team/Engineering/DevOps/templates
+
 cp pull-request-draft.md /tmp/pr-[branch-name].md 
 vim /tmp/pr-[branch-name].md
 ```
+You will use your file in the next section
 
-## Connect the branch to pr draft 
+### Connect the branch to pr draft 
 - apply as many labels as you want (see example) -- there are some labels that shouldn't be added
 - your branch will need to be at least one commit different from master for this to work
 - don't put the Notify label as it creates duplicates!  (That label should only be on the issue)
@@ -91,7 +95,7 @@ gh pr create \
 -t '#466 updating Terraform to latest version'
 ```
 
-## verify it worked
+### verify it worked
 verify pull requests is in this list:  
 ```
 gh pr list
@@ -100,19 +104,17 @@ view your ticket in the browser
 ```
 gh pr view -w [pr issue number]
 ```
-## add issue to epic
-Unfortunately, have to do this through the GUI: https://github.com/department-of-veterans-affairs/vanotify-infra/issues
-
-## Start Developing! 
-Maybe ask a leader if you can add the ticket to the current sprint, and adjust it on the GUI
+<!--## add issue to epic-->
+<!--Unfortunately, have to do this through the GUI: https://github.com/department-of-veterans-affairs/vanotify-infra/issues-->
+<!-- I don't think this is the appropriate place for this step -->
 
 ## Getting ready for PR review
 - in the github GUI, take off draft from PR (at the bottom of the PR page)
-- send a link of the PR to the va-notify-engineers slack channel so they can review it! 
-- Move your issue from in Progress to Done.  
+- send a link of the PR to the va-notify-engineers slack channel so they can review it!
 
 ## deleting your branch
 once you finish this whole flow with an approved PR (congratulations!), we no longer need your branch: 
+Sometimes the merge will delete your branch automatically, but if not:
 ```
 git checkout -D [branch]
 git push origin -d [branch]
