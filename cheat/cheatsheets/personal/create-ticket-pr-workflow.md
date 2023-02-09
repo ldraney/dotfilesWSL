@@ -4,8 +4,8 @@
 ### first copy the template
 ```
 wd issue_templates
-cp [template] /tmp/[template]
-vim /tmp/[template]
+cp [template] /tmp/[template].md
+vim /tmp/[template].md
 #delete the first part of the ticket (e.g. assignee) as these are used in the command
 ```
 
@@ -19,6 +19,15 @@ gh issue create \
 --label Notify \
 --label devops \
 --label epic/bug/[none]
+```
+```
+wd vanotify-infra
+gh issue create \
+-F /tmp/least-level-permissions-lambda \
+--title "Least IAM Permissions for Cloudformation" \
+--assignee ldraney \
+--label Notify \
+--label devops 
 ```
 
 ## Starting work on a ticket
