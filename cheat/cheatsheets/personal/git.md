@@ -19,3 +19,8 @@ git push -u origin [branchname]
 git branch --set-upstream-to=origin/[branchname] [branchname]
   e.g.
   git branch --set-upstream-to=origin/trigger-testing trigger-testing
+
+
+## restoring a file to the master version
+git restore --source=master [file you want to restore]
+git restore --source=master ./scripts/run_ci_migrations.sh
