@@ -33,8 +33,8 @@ Plug 'hashivim/vim-terraform'
 Plug 'github/copilot.vim'
 
 "bash script syntax highlighting
-Plug 'godlygeek/tabular'
-Plug 'arzg/vim-sh'
+"Plug 'godlygeek/tabular'
+"Plug 'arzg/vim-sh'
 
 "Terraform Syntax highlighting
 Plug 'hashivim/vim-terraform'
