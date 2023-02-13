@@ -1,12 +1,16 @@
-## skip ci/cd trigger
-git commit -m "[skip ci] whatever else you want to say"
 
+## rename a branch
+git branch -m [old-branch-name] [new-branch-name]
+git push origin [new-branch-name]
+**delete old branch**
 
 ## delete a branch
 
 git branch -d [branchname]
 git push origin --delete [branchname]
 
+## skip ci/cd trigger
+git commit -m "[skip ci] whatever else you want to say"
 
 ## make a new branch
 
