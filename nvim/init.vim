@@ -8,7 +8,7 @@ autocmd BufWinEnter * silent! loadview
 " current directory to match netrw browsing
 let g:netrw_keepdir= 0
 
-#give syntax highlighting to sh files with zsh syntax highlighting
+"give syntax highlighting to sh files with zsh syntax highlighting
 au BufRead,BufNewFile *.sh setfiletype zsh
 set syn=sh
 
