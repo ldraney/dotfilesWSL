@@ -2,29 +2,15 @@
 vnoremap <M-/> <Esc>/\%V
 "
 "Go to last position in file
-"check if ./vim/view directory exists for opening last location
-"https://vi.stackexchange.com/questions/20212/how-do-i-check-whether-a-given-directory-exists
-"if isdirectory("/home/ldraney/.vim/view")
-"autocmd BufWinLeave * silent! mkview
-"
 autocmd BufWinLeave * silent! mkview
 autocmd BufWinEnter * silent! loadview
-
-"if isdirectory("~/.local/share/nvim/view")
-    """""open at last location and scroll view
-    """""https://stackoverflow.com/questions/774560/in-vim-how-do-i-get-a-file-to-open-at-the-same-line-number-i-closed-it-at-last
-    "autocmd BufWinLeave * silent! mkview
-    "autocmd BufWinEnter * silent! loadview
-"else
-    "call mkdir(expand("~/.local/share/nvim/view"), "p")
-    """/home/ldraney/.local/share/nvim/view/
-"endif
 
 " current directory to match netrw browsing
 let g:netrw_keepdir= 0
 
-"au BufRead,BufNewFile *.sh setfiletype zsh
-"set syn=sh
+#give syntax highlighting to sh files with zsh syntax highlighting
+au BufRead,BufNewFile *.sh setfiletype zsh
+set syn=sh
 
 call plug#begin()
 "format terraform file with a :TerraformFormat ex command
