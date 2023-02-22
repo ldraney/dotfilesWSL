@@ -19,8 +19,10 @@ go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kid
 go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
+infra:~/oddball/vanotify-infra
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 lua:~/github/dotfilesWSL/nvim/lua
+noti:~/oddball/notification-api
 notification-admin-infrastructure:~/oddball/vanotify-infra/cd/notification-admin-infrastructure
 notifications-api:~/oddball/notification-api
 nvim:~/.config/nvim
