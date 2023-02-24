@@ -32,34 +32,14 @@ gh issue create \
 
 ## Starting work on a ticket
 ### Create and Checkout new branch for your issue 
-** If you already created a branch, skip this and go to the "Create a draft PR" section
-** this won't work if the issue was not created in the repo you are editing.  Please fix that first via Zenhub.
+** gh issue develop command is now deprecated
 ```
-gh issue develop \
---base master \
---checkout \
---issue-repo department-of-veterans-affairs/notification-api \
---name [[issue_number]-some-detail-about-issue] \
-[ticket number]
+git checkout -b [branchname]
+git push -u origin [branchname]
+git branch --set-upstream-to=origin/[branchname] [branchname]
+  e.g.
+  git branch --set-upstream-to=origin/trigger-testing trigger-testing
 ```
-e.g.
-```
-gh issue develop \
---base master \
---checkout \
---issue-repo department-of-veterans-affairs/vanotify-infra \
---name 662-understand-datadog \
-662
-```
-and verify your branch is linked to the issue: 
-```
-gh issue develop --list [issue-number]
-```
-e.g.
-```
-gh issue develop --list 909
-```
-you are now on the new branch.  
 
 ### Create a draft PR
 1. cd to the templates (below I use wd rather than cd)
@@ -73,6 +53,11 @@ cp pull-request-draft.md /tmp/pr-[branch-name].md
 vim /tmp/pr-[branch-name].md
 ```
 You will use your file in the next section
+
+Review https://github.com/department-of-veterans-affairs/vanotify-team/blob/master/Engineering/team_agreement.md#opening-and-reviewing-prs
+Relevant points:
+- include documentation if possible
+- paraphrase the original ticket, or quote it, but include the original context and accomplishment
 
 ### Connect the branch to pr draft 
 - apply as many labels as you want (see example) -- there are some labels that shouldn't be added
@@ -93,15 +78,15 @@ gh pr create \
 e.g
 ```
 gh pr create \
--R department-of-veterans-affairs/vanotify-infra \
+-R department-of-veterans-affairs/notification-api \
 -d \
 -B master \
--H 466-update-terraform \
--F /tmp/pull-request-draft.md \
+-H hotfix-twistlock-github-event \
+-F /tmp/pr-hotfix-twistlock-github-event.md \
 -a ldraney \
 -l devops \
 -l github_actions \
--t '#466 updating Terraform to latest version'
+-t 'hotfix for latest twistlock merge - syntax fix'
 ```
 
 ### verify it worked
