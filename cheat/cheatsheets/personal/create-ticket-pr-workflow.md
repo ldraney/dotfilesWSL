@@ -23,9 +23,8 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/least-level-permissions-lambda \
---title "Least IAM Permissions for Cloudformation" \
---assignee ldraney \
+-F /tmp/testing-endpoints.md \
+--title "Datadog - Set up Private Location and Dashboard" \
 --label Notify \
 --label devops 
 ```

@@ -1,3 +1,9 @@
+## merging to master
+git checkout master
+git pull origin master
+git checkout [branch]
+git merge master
+git push origin [branch]
 
 ## rename a branch
 git branch -m [old-branch-name] [new-branch-name]
