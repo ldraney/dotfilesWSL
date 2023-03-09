@@ -1,60 +1,40 @@
 # Start Working on a Ticket
-### quick notes:
-- I recommend having your repos in ~/oddball for the cd commands to work
-- this workflow is based on vanotify-team/Engineering/team_agreement.md, which may be updated before this file.  If you notice this, please message Lucas!
-- having the same labels for the issue and PR are highly recommended
-
-### For newcomers, onboarding, or quick reference: 
+### Create and Checkout new branch for your issue 
+** gh issue develop command is now deprecated
 ```
-mkdir ~/oddball
-cd ~/oddball
-git clone git@github.com:department-of-veterans-affairs/notification-api.git
-git clone git@github.com:department-of-veterans-affairs/vanotify-team.git
+git checkout -b [branchname]
+git push -u origin [branchname]
+git branch --set-upstream-to=origin/[branchname] [branchname]
+  e.g.
+  git branch --set-upstream-to=origin/trigger-testing trigger-testing
 ```
 
-## Find your ticket
+### Create a draft PR
+1. cd to the templates (below I use wd rather than cd)
+2. copy the draft pr template
+3. edit it for the branch and issue
 ```
-gh issue list
-gh issue edit --add-assignee [github username]
-```
+wd pr-template   
+# cd $HOME/[oddball_repo_dir]\vanotify-team/Engineering/DevOps/templates
 
-## Create a branch for your issue 
-create a branch for the issue
+cp pull-request-draft.md /tmp/pr-[branch-name].md 
+vim /tmp/pr-[branch-name].md
 ```
-git checkout -b [[issue_number]-some-detail-about-issue]
-git push -u origin [[issue_number]-some-detail-about-issue]
-```
-e.g. 
-```
-git checkout -b 947-set-output-deprecation
-git push -u origin 947-set-output-deprecation
-```
-you are now on the new branch.
+You will use your file in the next section
 
-## Check if a pr is open for the ticket
-```
-gh pr list
-```
-If it's not, create a pr with the following section
+Review https://github.com/department-of-veterans-affairs/vanotify-team/blob/master/Engineering/team_agreement.md#opening-and-reviewing-prs
+Relevant points:
+- include documentation if possible
+- paraphrase the original ticket, or quote it, but include the original context and accomplishment
 
-## Create a draft PR (if one doesn't exist)
-copy the draft pr template and then edit it for the branch and issue
+### Connect the branch to pr draft 
+- apply as many labels as you want (see example) -- there are some labels that shouldn't be added
+- your branch will need to be at least one commit different from master for this to work
+- don't put the Notify label as it creates duplicates!  (That label should only be on the issue)
 ```
-cd ~/oddball/vanotify-team
-cp Engineering/DevOps/templates/pull-request-draft.md \
-pull-request-draft-copy.md
-```
-edit the file how you want, (I like to edit with vim):
-```
-vim pull-request-draft-copy.md
-```
-## Connect the branch to pr draft 
-- make sure you are in the va-notify repo directory!
-- apply as many labels as you want (see example)
-```
-cd ~/github/notification-api
+cd ~/github/[repo you created ticket and branch]
 gh pr create \
--R department-of-veterans-affairs/notification-api
+-R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
 -H [development branch name] \
@@ -69,16 +49,15 @@ gh pr create \
 -R department-of-veterans-affairs/notification-api \
 -d \
 -B master \
--H 947-set-output-deprecation \
--F pull-request-draft-copy.md \
+-H hotfix-twistlock-github-event \
+-F /tmp/pr-hotfix-twistlock-github-event.md \
 -a ldraney \
--l Notify \
 -l devops \
 -l github_actions \
--t '#947 solved warning and deprecation'
+-t 'hotfix for latest twistlock merge - syntax fix'
 ```
 
-## verify it worked
+### verify it worked
 verify pull requests is in this list:  
 ```
 gh pr list
@@ -87,15 +66,18 @@ view your ticket in the browser
 ```
 gh pr view -w [pr issue number]
 ```
-Then, ask leader if you can add the ticket to the current sprint, and adjust it on the GUI
-
-## Start Developing! 
+<!--## add issue to epic-->
+<!--Unfortunately, have to do this through the GUI: https://github.com/department-of-veterans-affairs/vanotify-infra/issues-->
+<!-- I don't think this is the appropriate place for this step -->
 
 ## Getting ready for PR review
-in the github GUI, take off draft from PR and send a link of the PR to the va-notify-engineers slack channel!
+- in the github GUI, take off draft from PR (at the bottom of the PR page)
+- send a link of the PR to the va-notify-engineers slack channel so they can review it!
 
 ## deleting your branch
 once you finish this whole flow with an approved PR (congratulations!), we no longer need your branch: 
+Sometimes the merge will delete your branch automatically, but if not:
 ```
-git push origin -d [development branch name]
+git checkout -D [branch]
+git push origin -d [branch]
 ```

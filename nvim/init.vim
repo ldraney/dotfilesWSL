@@ -13,10 +13,22 @@ au BufRead,BufNewFile *.sh setfiletype zsh
 set syn=sh
 
 call plug#begin()
-"format terraform file with a :TerraformFormat ex command
-Plug 'hashivim/vim-terraform'
+
+"format json files
+Plug 'XadillaX/json-formatter.vim'
+"must also run:
+"npm install -g jjson
+"usage:
+":JSONFormatter"
 
 Plug 'github/copilot.vim'
+"must also run:
+":Copilot setup
+"# Go to my Microsoft Edge bookmark named "Copilot Login"
+":Copilot enable
+
+"format terraform file with a :TerraformFormat ex command
+Plug 'hashivim/vim-terraform'
 
 "bash script syntax highlighting
 "Plug 'godlygeek/tabular'

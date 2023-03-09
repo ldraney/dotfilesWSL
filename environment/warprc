@@ -22,6 +22,8 @@ gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 infra:~/oddball/vanotify-infra
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 lua:~/github/dotfilesWSL/nvim/lua
+noti-task-definitions:~/oddball/notification-api/cd/application-deployment
+noti-workflows:~/oddball/notification-api/.github/workflows
 noti:~/oddball/notification-api
 notification-admin-infrastructure:~/oddball/vanotify-infra/cd/notification-admin-infrastructure
 notifications-api:~/oddball/notification-api

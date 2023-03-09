@@ -1,5 +1,6 @@
-## Delete one image
+ls -al
 docker image rm notification_api
+ls
 
 
 ## Kill all containers

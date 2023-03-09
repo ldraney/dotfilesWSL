@@ -30,3 +30,6 @@ git branch --set-upstream-to=origin/[branchname] [branchname]
 ## restoring a file to the master version
 git restore --source=master [file you want to restore]
 git restore --source=master ./scripts/run_ci_migrations.sh
+or sometimes
+rm -rf [the file]
+git checkout origin/master -- [filename]
