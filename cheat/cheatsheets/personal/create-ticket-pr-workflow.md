@@ -24,8 +24,8 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/datadog-distinct-env-tracing-logging.md \
---title "Datadog - Profiler" \
+-F /tmp/datadog-connecting-tracing-logging.md \
+--title "Datadog - Connecting Tracing and Logging" \
 --assignee ldraney \
 --label Notify \
 --label devops \
@@ -33,4 +33,3 @@ gh issue create \
 ```
 
 - message Mel if I'm interested in moving a ticket to the current sprint
-

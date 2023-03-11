@@ -10,9 +10,6 @@ git branch --set-upstream-to=origin/[branchname] [branchname]
 ```
 
 ### Create a draft PR
-1. cd to the templates (below I use wd rather than cd)
-2. copy the draft pr template
-3. edit it for the branch and issue
 ```
 wd pr-template   
 # cd $HOME/[oddball_repo_dir]\vanotify-team/Engineering/DevOps/templates
@@ -22,6 +19,13 @@ vim /tmp/pr-[branch-name].md
 ```
 You will use your file in the next section
 
+#### Don't know what to put for the PR? run this command:
+```
+wd noti
+gh issue edit [ticket number]
+e.g.
+gh issue edit 1120
+```
 Review https://github.com/department-of-veterans-affairs/vanotify-team/blob/master/Engineering/team_agreement.md#opening-and-reviewing-prs
 Relevant points:
 - include documentation if possible
@@ -45,16 +49,18 @@ gh pr create \
 ```
 e.g
 ```
+wd noti # to see the branch name
 gh pr create \
 -R department-of-veterans-affairs/notification-api \
 -d \
 -B master \
--H hotfix-twistlock-github-event \
--F /tmp/pr-hotfix-twistlock-github-event.md \
+-H Datadog-Learning \
+-F /tmp/pr-Datadog-Learning.md \
 -a ldraney \
 -l devops \
+-t 'Datadog Learning'
+
 -l github_actions \
--t 'hotfix for latest twistlock merge - syntax fix'
 ```
 
 ### verify it worked

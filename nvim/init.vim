@@ -154,7 +154,7 @@ set conceallevel=0
 set autochdir
 set ignorecase
 set smartcase
-set tabstop=4 softtabstop=4 shiftwidth=4
+set tabstop=4 softtabstop=4 shiftwidth=2
 set mouse=a
 set indentexpr=''
 "set expandtab

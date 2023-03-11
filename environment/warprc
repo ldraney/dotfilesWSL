@@ -34,6 +34,7 @@ pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
 queries-teams-repo:~/oddball/vanotify-team/Engineering/DevOps/aws/log_metric_scripts
 queries:~/github/oddball_helps/scripts/aws/queries
 sensitive:~/github/sensitive
+team:~/oddball/vanotify-team
 terraform-aws-wordpress:~/github/terraform-aws-wordpress
 terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
 utility-infrastructure:~/oddball/vanotify-infra/cd/utility-infrastructure
