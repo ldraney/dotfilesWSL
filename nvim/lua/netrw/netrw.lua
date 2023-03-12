@@ -17,8 +17,10 @@ function ExitNetrw()
     nvim_command("qa!")
   end
 end
+-- need to remap this at some point
+--vim.cmd("nnoremap <silent> <C-q> :lua ExitNetrw()<CR>")
 
-vim.cmd("nnoremap <silent> <C-q> :lua ExitNetrw()<CR>")
+
 
 --exit neovim to the $NVIM_PWD
 --local nvim_set_option = vim.api.nvim_set_option
