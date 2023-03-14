@@ -9,7 +9,7 @@ git branch --set-upstream-to=origin/[branchname] [branchname]
   git branch --set-upstream-to=origin/trigger-testing trigger-testing
 ```
 
-### Create a draft PR
+### Edit a draft PR
 ```
 wd pr-template   
 # cd $HOME/[oddball_repo_dir]\vanotify-team/Engineering/DevOps/templates
@@ -30,8 +30,9 @@ Review https://github.com/department-of-veterans-affairs/vanotify-team/blob/mast
 Relevant points:
 - include documentation if possible
 - paraphrase the original ticket, or quote it, but include the original context and accomplishment
+- make sure original ticket number is in the name
 
-### Connect the branch to pr draft 
+### Create pr draft with branch connected 
 - apply as many labels as you want (see example) -- there are some labels that shouldn't be added
 - your branch will need to be at least one commit different from master for this to work
 - don't put the Notify label as it creates duplicates!  (That label should only be on the issue)
@@ -54,13 +55,13 @@ gh pr create \
 -R department-of-veterans-affairs/notification-api \
 -d \
 -B master \
--H Datadog-Learning \
--F /tmp/pr-Datadog-Learning.md \
+-H 1082-remove-user-flows-perf \
+-F /tmp/1082-remove-user-flows-perf.md \
 -a ldraney \
 -l devops \
--t 'Datadog Learning'
-
 -l github_actions \
+-t 'Remove User Flows for Perf Deploy'
+
 ```
 
 ### verify it worked
