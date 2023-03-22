@@ -50,16 +50,15 @@ e.g
 ```
 wd noti # to see the branch name
 gh pr create \
--R department-of-veterans-affairs/notification-api \
+-R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H 1082-remove-user-flows-perf \
--F /tmp/1082-remove-user-flows-perf.md \
+-H 877-qa-regression-ec2 \
+-F /tmp/877-qa-regression-ec2-pr.md \
 -a ldraney \
 -l devops \
 -l github_actions \
--t 'Remove User Flows for Perf Deploy'
-
+-t '877 QA Regression Suite EC2'
 ```
 
 ### verify it worked
