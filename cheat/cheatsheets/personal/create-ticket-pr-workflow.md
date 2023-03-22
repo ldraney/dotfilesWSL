@@ -24,8 +24,8 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/datadog-connecting-tracing-logging.md \
---title "Datadog - Connecting Tracing and Logging" \
+-F /tmp/datadog-learning-story.md \
+--title "Datadog Learning" \
 --assignee ldraney \
 --label Notify \
 --label devops \
