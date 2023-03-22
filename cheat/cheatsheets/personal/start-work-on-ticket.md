@@ -12,8 +12,6 @@ git branch --set-upstream-to=origin/[branchname] [branchname]
 ### Edit a draft PR
 ```
 wd pr-template   
-# cd $HOME/[oddball_repo_dir]\vanotify-team/Engineering/DevOps/templates
-
 cp pull-request-draft.md /tmp/pr-[branch-name].md 
 vim /tmp/pr-[branch-name].md
 ```
