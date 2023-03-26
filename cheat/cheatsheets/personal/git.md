@@ -1,9 +1,20 @@
-## merging to master
+## Merging conflict due to the very file you want to push!
+if the only conflict is the changes you made, simply
+```
+git pull
+git merge --no-ff
+git push
+```
+
+## merge branch with latest master
 git checkout master
 git pull origin master
 git checkout [branch]
 git merge master
 git push origin [branch]
+## comparing difference of my branch to master
+git diff master --name-only
+git diff master [filename]
 
 ## rename a branch
 git branch -m [old-branch-name] [new-branch-name]

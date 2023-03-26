@@ -24,8 +24,8 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/datadog-learning-story.md \
---title "Datadog Learning" \
+-F /tmp/QA-regression-ec2.md \
+--title "QA Regression EC2" \
 --assignee ldraney \
 --label Notify \
 --label devops \

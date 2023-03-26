@@ -10,6 +10,7 @@ bootstrap:~/oddball/vanotify-infra/cd/bootstrap
 cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
 completions:~/.oh-my-zsh/completions
 datadog:~/oddball/vanotify-infra/cd/utility-infrastructure
+deployment:~/oddball/vanotify-team/Process/Deployment
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
 dotfilesWSL:~/github/dotfilesWSL
@@ -19,6 +20,7 @@ go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kid
 go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
+infra-workflows:~/oddball/vanotify-infra/.github/workflows
 infra:~/oddball/vanotify-infra
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 lua:~/github/dotfilesWSL/nvim/lua
@@ -31,6 +33,7 @@ nvim:~/.config/nvim
 oddball:~/oddball
 oddball_helps:~/github/oddball_helps
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
+qa:~/oddball/notification-api-qa
 queries-teams-repo:~/oddball/vanotify-team/Engineering/DevOps/aws/log_metric_scripts
 queries:~/github/oddball_helps/scripts/aws/queries
 sensitive:~/github/sensitive
