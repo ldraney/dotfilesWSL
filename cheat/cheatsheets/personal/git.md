@@ -1,3 +1,9 @@
+## list all files in the current directory by last modification date
+```
+git ls-files | while read file; do echo "$(git log -1 --format="%ad" -- "$file") $file"; done | sort
+```
+
+
 ## Merging conflict due to the very file you want to push!
 if the only conflict is the changes you made, simply
 ```

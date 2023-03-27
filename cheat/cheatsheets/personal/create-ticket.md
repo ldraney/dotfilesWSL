@@ -29,7 +29,8 @@ gh issue create \
 --assignee ldraney \
 --label Notify \
 --label devops \
---label 'Review Needed'
+--label 'Review Needed' \
+#--label "epic/My Epic"
 ```
 
 - message Mel if I'm interested in moving a ticket to the current sprint
