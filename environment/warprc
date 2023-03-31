@@ -40,6 +40,7 @@ sensitive:~/github/sensitive
 team:~/oddball/vanotify-team
 terraform-aws-wordpress:~/github/terraform-aws-wordpress
 terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
+util:~/oddball/vanotify-infra/cd/utility-infrastructure
 utility-infrastructure:~/oddball/vanotify-infra/cd/utility-infrastructure
 va-qa:~/oddball/notification-api-qa
 vanotify-api:~/oddball/notification-api

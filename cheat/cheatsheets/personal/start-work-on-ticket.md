@@ -35,7 +35,7 @@ Relevant points:
 - your branch will need to be at least one commit different from master for this to work
 - don't put the Notify label as it creates duplicates!  (That label should only be on the issue)
 ```
-cd ~/github/[repo you created ticket and branch]
+wd [repo you created ticket and branch]
 gh pr create \
 -R department-of-veterans-affairs/vanotify-infra \
 -d \
@@ -53,14 +53,14 @@ gh pr create \
 -R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H 877-qa-regression-ec2 \
--F /tmp/877-qa-regression-ec2-pr.md \
+-H 531-qa-regression-ec2 \
+-F /tmp/pr-531-qa-regression-ec2.md \
 -a ldraney \
 -l devops \
--l github_actions \
--t '877 QA Regression Suite EC2'
+-t '#531 QA Regression EC2'
 ```
 
+-l github_actions \
 ### verify it worked
 verify pull requests is in this list:  
 ```
