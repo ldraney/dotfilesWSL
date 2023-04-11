@@ -1,3 +1,21 @@
+"function! TmuxSplitEvenHorizontal()
+  "let filepath = expand('%:p')
+  "if !empty(filepath)
+    "let tmux_command = "tmux split-window -h -c '#{pane_current_path}' 'nvim ".filepath."' && tmux select-layout even-horizontal"
+    "call system(tmux_command)
+  "endif
+"endfunction
+
+function! TmuxSplitEvenHorizontal()
+  let filepath = expand('%:p')
+  if !empty(filepath)
+    let tmux_command = "tmux split-window -h -c '".expand('%:p:h')."' && tmux send-keys -t '.tmux.active-pane' 'nvim ".shellescape(filepath)."' Enter && tmux select-layout even-horizontal"
+    call system(tmux_command)
+  endif
+endfunction
+
+nnoremap <leader>th :call TmuxSplitEvenHorizontal()<CR>
+
 "use alt-/ to search within a highlighted visual field
 vnoremap <M-/> <Esc>/\%V
 "

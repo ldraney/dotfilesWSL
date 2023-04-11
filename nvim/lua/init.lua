@@ -18,6 +18,45 @@ require("indent_blankline").setup {
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
+--local function tmux_split_even_horizontal()
+  --local filepath = vim.fn.expand('%:p')
+  --if filepath ~= '' then
+    --local tmux_command = "tmux split-window -h -c '" .. vim.fn.expand('%:p:h') .. "' && tmux send-keys -t '.tmux.active-pane' 'nvim " .. vim.fn.shellescape(filepath) .. "' Enter && tmux select-layout even-horizontal"
+    --vim.fn.system(tmux_command)
+  --end
+--end
+
+--vim.api.nvim_set_keymap('n', '<leader>th', ':lua tmux_split_even_horizontal()<CR>', { noremap = true, silent = true })
+
+
+--_G.tmux_split_even_horizontal = function()
+  --local filepath = vim.fn.expand('%:p')
+  --if filepath ~= '' then
+    --local tmux_command = "tmux split-window -h -c '" .. vim.fn.expand('%:p:h') .. "' && tmux send-keys -t '.tmux.active-pane' 'nvim " .. vim.fn.shellescape(filepath) .. "' Enter && tmux select-layout even-horizontal"
+    --vim.fn.system(tmux_command)
+  --end
+--end
+
+--_G.tmux_split_even_horizontal = function()
+  --local filepath = vim.fn.expand('%:p')
+  --if filepath ~= '' then
+	--local tmux_command = "tmux split-window -h 'nvim'"
+    --vim.fn.system(tmux_command)
+	----print("Pane ID: " .. tmux_pane_id)
+	--print("Filepath: " .. filepath)
+  --end
+--end
+
+_G.tmux_split_even_horizontal = function()
+  local filepath = vim.fn.expand('%:p')
+  if filepath ~= '' then
+    local tmux_command = "tmux split-window -h 'nvim -n " .. filepath .. "'; select-layout even-horizontal"
+    vim.fn.system(tmux_command)
+    print("Filepath: " .. filepath)
+  end
+end
+
+vim.api.nvim_set_keymap('n', '<leader>th', ':lua _G.tmux_split_even_horizontal()<CR>', { noremap = true, silent = true })
 
 
 

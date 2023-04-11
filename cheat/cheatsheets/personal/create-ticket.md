@@ -1,5 +1,3 @@
-# Creating a Ticket 
-
 ## Create a ticket
 ### first copy the template
 ```
@@ -24,13 +22,14 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/QA-regression-ec2.md \
---title "QA Regression EC2" \
---assignee ldraney \
+-F /tmp/prerelease-trigger.md \
+--title "Github Pre-Release Trigger failure" \
 --label Notify \
 --label devops \
---label 'Review Needed' \
+--label 'Review Needed' 
+
 #--label "epic/My Epic"
+--assignee ldraney \
 ```
 
 - message Mel if I'm interested in moving a ticket to the current sprint

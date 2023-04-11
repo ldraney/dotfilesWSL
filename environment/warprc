@@ -11,6 +11,7 @@ cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
 completions:~/.oh-my-zsh/completions
 datadog:~/oddball/vanotify-infra/cd/utility-infrastructure
 deployment:~/oddball/vanotify-team/Process/Deployment
+desktop:/mnt/c/Users/drane/Desktop
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
 dotfilesWSL:~/github/dotfilesWSL

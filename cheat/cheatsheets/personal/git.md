@@ -1,3 +1,6 @@
+## Check changes before I commit
+git diff HEAD
+
 ## "Please update your branches"
 1. wd to all my branches and make sure I don't need to push any changes
 2. Then:
