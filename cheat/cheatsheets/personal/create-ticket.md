@@ -22,14 +22,14 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/prerelease-trigger.md \
---title "Github Pre-Release Trigger failure" \
+-F /tmp/ecr-qa-regression.md \
+--title "Lambda for QA Regression Suite" \
 --label Notify \
 --label devops \
+--assignee ldraney \
 --label 'Review Needed' 
 
 #--label "epic/My Epic"
---assignee ldraney \
 ```
 
 - message Mel if I'm interested in moving a ticket to the current sprint

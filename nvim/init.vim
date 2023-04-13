@@ -45,15 +45,13 @@ Plug 'github/copilot.vim'
 "# Go to my Microsoft Edge bookmark named "Copilot Login"
 ":Copilot enable
 
-"format terraform file with a :TerraformFormat ex command
+"format terraform file with a :TerraformFmt ex command
+"Also include TerraformSyntax highlighting
 Plug 'hashivim/vim-terraform'
 
 "bash script syntax highlighting
 "Plug 'godlygeek/tabular'
 "Plug 'arzg/vim-sh'
-
-"Terraform Syntax highlighting
-Plug 'hashivim/vim-terraform'
 
 " Telescope stuff
 Plug 'nvim-lua/plenary.nvim'
@@ -61,12 +59,6 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 "Start using vim with googgle docs :)))
 "Plug 'aadv1k/gdoc.vim', {'do': './install.py'}
 
-"
-"Plug 'easymotion/vim-easymotion'
-"
-"Trying to get tmux and vim splits to split more evently 
-Plug 'christoomey/vim-tmux-navigator'
-"
 "LSP stuff
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'neovim/nvim-lspconfig'
@@ -143,6 +135,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
+
+" Enable automatic formatting of Terraform files on save
+let g:terraform_fmt_on_save = 1
 
 "system clipboard on wsl2
 if system('uname -r') =~ "microsoft"
