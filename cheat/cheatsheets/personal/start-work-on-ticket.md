@@ -2,7 +2,7 @@
 ### Create and Checkout new branch for your issue 
 ** gh issue develop command is now deprecated
 ```
-git checkout -b [branchname]
+git checkout -b [ticketNumber]-[ticketTitle]
 git push -u origin [branchname]
 git branch --set-upstream-to=origin/[branchname] [branchname]
   e.g.
@@ -17,18 +17,12 @@ vim /tmp/pr-[branch-name].md
 ```
 You will use your file in the next section
 
-#### Don't know what to put for the PR? run this command:
-```
-wd noti
-gh issue edit [ticket number]
-e.g.
-gh issue edit 1120
-```
-Review https://github.com/department-of-veterans-affairs/vanotify-team/blob/master/Engineering/team_agreement.md#opening-and-reviewing-prs
-Relevant points:
-- include documentation if possible
-- paraphrase the original ticket, or quote it, but include the original context and accomplishment
-- make sure original ticket number is in the name
+#### Don't know what to put for the PR? 
+- Review https://github.com/department-of-veterans-affairs/vanotify-team/blob/master/Engineering/team_agreement.md#opening-and-reviewing-prs
+  Relevant points:
+  * include documentation if possible
+  * paraphrase the original ticket, or quote it, but include the original context and accomplishment
+  * make sure original ticket number is in the name
 
 ### Create pr draft with branch connected 
 - apply as many labels as you want (see example) -- there are some labels that shouldn't be added
@@ -50,14 +44,14 @@ e.g
 ```
 wd noti # to see the branch name
 gh pr create \
--R department-of-veterans-affairs/vanotify-infra \
+-R department-of-veterans-affairs/notification-api-qa \
 -d \
 -B master \
--H 531-qa-regression-ec2 \
--F /tmp/pr-531-qa-regression-ec2.md \
+-H 55-qa-ecr-action \
+-F /tmp/pr-qa-ecr-action.md \
 -a ldraney \
 -l devops \
--t '#531 QA Regression EC2'
+-t '#55 QA ECR Action'
 ```
 
 -l github_actions \

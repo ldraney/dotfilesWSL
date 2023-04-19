@@ -34,6 +34,7 @@ nvim:~/.config/nvim
 oddball:~/oddball
 oddball_helps:~/github/oddball_helps
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
+qa-workflows:~/oddball/notification-api-qa/.github/workflows
 qa:~/oddball/notification-api-qa
 queries-teams-repo:~/oddball/vanotify-team/Engineering/DevOps/aws/log_metric_scripts
 queries:~/github/oddball_helps/scripts/aws/queries

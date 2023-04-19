@@ -134,7 +134,9 @@ edit() {
 	nvim < /tmp/$1.txt
 }
 check() {
-	xargs -o -n 1 nvim < /tmp/$1.txt
+	#xargs -o -n 1 nvim < /tmp/$1.txt
+	xargs -o -n 1 -I {} nvim "{}" < /tmp/$1.txt #needed so that filenames with special characters and spaces were read correctly
+	#while IFS= read -r line; do nvim -- "$line"; done < /tmp/$1.txt
 }
 
 #list only file names in current directory

@@ -22,8 +22,8 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/ecr-qa-regression.md \
---title "Lambda for QA Regression Suite" \
+-F /tmp/qa-ec2-simplified-env-file.md \
+--title "QA EC2 - ENV file" \
 --label Notify \
 --label devops \
 --assignee ldraney \
