@@ -8,6 +8,7 @@ aws-cli-script:~/github/oddball_helps/scripts/aws-cli-script
 aws-dd-forwarder-3.66.0:/mnt/c/Users/drane/Downloads/aws-dd-forwarder-3.66.0
 bootstrap:~/oddball/vanotify-infra/cd/bootstrap
 cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
+ci:~/oddball/notification-api/ci
 completions:~/.oh-my-zsh/completions
 datadog:~/oddball/vanotify-infra/cd/utility-infrastructure
 deployment:~/oddball/vanotify-team/Process/Deployment

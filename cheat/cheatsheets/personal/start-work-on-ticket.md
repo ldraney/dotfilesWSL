@@ -43,15 +43,19 @@ gh pr create \
 e.g
 ```
 wd noti # to see the branch name
+wd infra
 gh pr create \
--R department-of-veterans-affairs/notification-api-qa \
+-R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H 55-qa-ecr-action \
--F /tmp/pr-qa-ecr-action.md \
+-H 55-qa-ecr-action-repo \
+-F /tmp/pr-tt-ecr-infra.md \
 -a ldraney \
 -l devops \
--t '#55 QA ECR Action'
+-t '#55-qa-ecr-action-repo'
+
+
+-R department-of-veterans-affairs/notification-api \
 ```
 
 -l github_actions \

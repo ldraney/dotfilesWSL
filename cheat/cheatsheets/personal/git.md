@@ -15,7 +15,12 @@ git clone git@github.com:department-of-veterans-affairs/vanotify-infra.git
 git clone git@github.com:department-of-veterans-affairs/notification-api.git
 git clone git@github.com:department-of-veterans-affairs/notification-api-qa.git
 ```
-3. Then, whenever you open a new branch, get in a habit of merging branch with latest master
+or just
+```
+git checkout master
+git pull
+```
+5. Then, whenever you open a new branch, get in a habit of merging branch with latest master
 ## merge branch with latest master
 ```
 git checkout master
@@ -23,6 +28,10 @@ git pull origin master
 git checkout [branch]
 git merge master
 git push origin [branch]
+```
+6. If there's a merge conflict, and you want the master version:
+```
+git checkout --theirs [file path] [file path]
 ```
 ## comparing difference of my branch to master
 ```

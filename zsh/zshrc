@@ -77,6 +77,9 @@ bindkey -M vicmd 'y' vi-yank-xclip
 # wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
 source $ZSH/oh-my-zsh.sh
 
+# for npm, should have been installed with teh bootstrap.sh
+source ~/.nvm/nvm.sh
+
 #if tmux isn't running, run it:
 if tmux info &> /dev/null; then 
   #echo Tmux is running. Enjoy!
