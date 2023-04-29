@@ -1,4 +1,9 @@
 # Start Working on a Ticket
+
+### Is there QA on the ticket?
+- If there is, the moment i understand the ticket, ping QA
+- She wants a meeting, say "yo, let's chat for fifteen about my understaanding of the ticket"
+
 ### Create and Checkout new branch for your issue 
 ** gh issue develop command is now deprecated
 ```
@@ -45,17 +50,19 @@ e.g
 wd noti # to see the branch name
 wd infra
 gh pr create \
--R department-of-veterans-affairs/vanotify-infra \
+-R department-of-veterans-affairs/notification-api-qa \
 -d \
 -B master \
--H 55-qa-ecr-action-repo \
--F /tmp/pr-tt-ecr-infra.md \
+-H 62-Hotfix-ECR-Push \
+-F /tmp/pr-62-hotfix-ecr-push.md \
 -a ldraney \
 -l devops \
--t '#55-qa-ecr-action-repo'
+-t '#62 HOTFIX ECR Push Trigger'
 
 
 -R department-of-veterans-affairs/notification-api \
+-R department-of-veterans-affairs/notification-api-qa \
+-R department-of-veterans-affairs/vanotify-infra \
 ```
 
 -l github_actions \

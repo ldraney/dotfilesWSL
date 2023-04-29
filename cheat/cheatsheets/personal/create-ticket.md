@@ -22,8 +22,8 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/qa-ec2-simplified-env-file.md \
---title "QA EC2 - ENV file" \
+-F /tmp/hotfix-ECR.md \
+--title "HOTFIX - QA ECR Image Build on Push trigger" \
 --label Notify \
 --label devops \
 --assignee ldraney \
