@@ -34,6 +34,7 @@ notifications-api:~/oddball/notification-api
 nvim:~/.config/nvim
 oddball:~/oddball
 oddball_helps:~/github/oddball_helps
+personal:~/github
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
 qa-workflows:~/oddball/notification-api-qa/.github/workflows
 qa:~/oddball/notification-api-qa
