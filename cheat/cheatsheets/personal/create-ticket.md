@@ -22,14 +22,14 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/hotfix-ECR.md \
---title "HOTFIX - QA ECR Image Build on Push trigger" \
+-F /tmp/rds-enable-cloudwatch.md \
+--title "Enable Cloudwatch for RDS" \
 --label Notify \
 --label devops \
---assignee ldraney \
---label 'Review Needed' 
+--assignee ldraney 
 
 #--label "epic/My Epic"
+--label 'Review Needed' 
 ```
 
 - message Mel if I'm interested in moving a ticket to the current sprint

@@ -18,6 +18,27 @@ git bisect replay /tmp/bisect_log.txt
 git bisect view
 ```
 
+##  going back to a git commit while preserving history
+## This is useful to keep same branch with same draft PR
+```
+# Create a temporary branch at the working commit
+git checkout -b temp_branch 1c0043a5d67aad8244ead51d6c75c588f080098a
+
+# Switch back to your original branch
+git switch <your-branch-name>
+
+# Merge the temporary branch into your original branch using the `ours` strategy option
+git merge -s recursive -X ours temp_branch
+
+# Delete the temporary branch
+git branch -D temp_branch
+
+# Push the changes to the remote repository
+git push origin <your-branch-name>
+
+```
+
+
 ## elaborated process
 To walk through your git commit history and figure out your latest working commit, you can use the following commands:
 

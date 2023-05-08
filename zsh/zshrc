@@ -108,6 +108,11 @@ alias ter=terraform
 alias vim=nvim
 alias cheat='cheat -e'
 
+cdt (){
+  cd-gitroot
+  cd ../
+}
+
 findfile() {
 	find .  -name $1
 	find . -type f -name "*$1*"
@@ -245,4 +250,14 @@ function retry-profiler(){
   docker image rm notification_api
   docker-compose -f ci/docker-compose-local.yml build
   docker-compose -f ci/docker-compose-local.yml up
+}
+
+function new-branch-wd() {
+  branch_name=$1
+  branch_number=$(echo "$branch_name" | awk -F'-' '{print $1}')
+  wd_dir="noti-${branch_number}"
+  cd ~/oddball/notification-api/$branch_name
+  mkdir -p cd/application-deployment
+  wd add $wd_dir
+  wd $wd_dir
 }

@@ -5,13 +5,14 @@
 - She wants a meeting, say "yo, let's chat for fifteen about my understaanding of the ticket"
 
 ### Create and Checkout new branch for your issue 
-** gh issue develop command is now deprecated
 ```
-git checkout -b [ticketNumber]-[ticketTitle]
+git worktree add [ticketNumber]-[ticketTitle]
 git push -u origin [branchname]
-git branch --set-upstream-to=origin/[branchname] [branchname]
-  e.g.
-  git branch --set-upstream-to=origin/trigger-testing trigger-testing
+new-branch-wd [branchname]
+```
+make at least one change to the new local branch, then
+```
+git push --set-upstream origin 552-enable-cloudwatch-for-rds
 ```
 
 ### Edit a draft PR
@@ -46,19 +47,18 @@ gh pr create \
 -t '#[[ticketNumber] a short description]'
 ```
 e.g
+- note* you will have to make one file change, make sure not to make/delete a testfile, cause that will close the PR!
 ```
-wd noti # to see the branch name
-wd infra
+##  GO TO REPO, and then:
 gh pr create \
--R department-of-veterans-affairs/notification-api-qa \
+-R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H 62-Hotfix-ECR-Push \
--F /tmp/pr-62-hotfix-ecr-push.md \
+-H 552-enable-cloudwatch-for-rds \
+-F /tmp/pr-552-enable-cloudwatch-for-rds.md \
 -a ldraney \
 -l devops \
--t '#62 HOTFIX ECR Push Trigger'
-
+-t '#552 Enable Cloudwatch for RDS'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \

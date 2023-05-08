@@ -1,3 +1,19 @@
+## Merging conflict due to the very file you want to push!
+if the only conflict is the changes you made, simply
+```
+git pull
+git merge --no-ff
+git push
+```
+
+##  going back to a git commit while preserving history
+```
+git reset --soft 1c0043a5d67aad8244ead51d6c75c588f080098a
+git commit -m 'restored to commit _________'
+git push -f origin [branch name]
+```
+
+
 ## Check changes before I commit
 git diff HEAD
 
@@ -42,15 +58,6 @@ git diff master [filename]
 ## list all files in the current directory by last modification date
 ```
 git ls-files | while read file; do echo "$(git log -1 --format="%ad" -- "$file") $file"; done | sort
-```
-
-
-## Merging conflict due to the very file you want to push!
-if the only conflict is the changes you made, simply
-```
-git pull
-git merge --no-ff
-git push
 ```
 
 ## rename a branch
