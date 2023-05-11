@@ -7,15 +7,16 @@
 ### Create and Checkout new branch for your issue 
 ```
 git worktree add [ticketNumber]-[ticketTitle]
-git push -u origin [branchname]
-new-branch-wd [branchname]
-```
-make at least one change to the new local branch, then
-```
-git push --set-upstream origin 552-enable-cloudwatch-for-rds
+# git push -u origin [branchname]
+git push --set-upstream origin [branchname]
+wd-new-branch [branchname]
 ```
 
 ### Edit a draft PR
+
+** If its not a ticket and just a quick PR, then make a branch, make changes, the go to https://github.com/department-of-veterans-affairs/notification-api/branches
+
+make at least one change to the new local branch, then
 ```
 wd pr-template   
 cp pull-request-draft.md /tmp/pr-[branch-name].md 

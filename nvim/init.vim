@@ -105,7 +105,9 @@ Plug 'wellle/context.vim'
 "Plug 'junegunn/vim-easy-align'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'dkarter/bullets.vim'
+
+" Automatic numbering and bullet points for new lines
+"Plug 'dkarter/bullets.vim'
 
 " FUNCTIONALITIES
 Plug 'tpope/vim-repeat'

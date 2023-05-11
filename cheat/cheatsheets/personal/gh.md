@@ -1,3 +1,9 @@
+## If gh auth login won't work
+```
+unset GH_TOKEN
+gh auth login
+```
+
 ## running workflows
 ```
 gh workflow run utilities_workflow.yml \

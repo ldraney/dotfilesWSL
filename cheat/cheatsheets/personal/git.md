@@ -71,6 +71,13 @@ git checkout master
 git branch -d [branchname]
 git push origin --delete [branchname]
 
+OR
+
+git ls-remote --refs origin | grep [whatever]
+git push origin --delete [branch]
+git worktree remove devops-969-actions-env-debug
+git branch -D [branch]   # not always necessary for worktrees
+
 ## skip ci/cd trigger
 git commit -m "[skip ci] whatever else you want to say"
 

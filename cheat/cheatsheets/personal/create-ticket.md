@@ -22,14 +22,17 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/rds-enable-cloudwatch.md \
---title "Enable Cloudwatch for RDS" \
+-F /tmp/update-ec2-certs.md \
+--title "Update EC2 certs" \
 --label Notify \
 --label devops \
+--label 'Review Needed' 
+
+
+
 --assignee ldraney 
 
 #--label "epic/My Epic"
---label 'Review Needed' 
 ```
 
 - message Mel if I'm interested in moving a ticket to the current sprint
