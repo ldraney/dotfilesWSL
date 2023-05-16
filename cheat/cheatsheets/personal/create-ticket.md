@@ -22,15 +22,15 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/update-ec2-certs.md \
---title "Update EC2 certs" \
+-F /tmp/ec2-iam-docker.md \
+--title "EC2 IAM Docker Daemon" \
 --label Notify \
 --label devops \
+--assignee ldraney \
 --label 'Review Needed' 
 
 
 
---assignee ldraney 
 
 #--label "epic/My Epic"
 ```

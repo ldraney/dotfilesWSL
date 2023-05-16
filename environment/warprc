@@ -5,6 +5,8 @@
 538-qa-ec2:~/oddball/vanotify-infra/538-qa-ec2
 538-util:~/oddball/vanotify-infra/538-qa-ec2/cd/utility-infrastructure
 538:~/oddball/vanotify-infra/538-qa-ec2
+550-workflows:~/oddball/notification-api/550-twistcli-fix/.github/workflows
+550:~/oddball/notification-api/550-twistcli-fix
 67-run-qa-suite-action:~/oddball/notification-api/67-run-qa-suite-action
 Ai-Conversations:/mnt/c/Users/drane/OneDrive/Documents/AI-Conversations
 Documents:/mnt/c/Users/drane/OneDrive/Documents
@@ -71,6 +73,7 @@ team:~/oddball/vanotify-team
 terraform-aws-wordpress:~/github/terraform-aws-wordpress
 terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
 util-workflows:~/oddball/vanotify-infra/.github/workflows
+util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
 utility-infrastructure:~/oddball/vanotify-infra/cd/utility-infrastructure
 va-qa:~/oddball/notification-api-qa
 vanotify-api:~/oddball/notification-api

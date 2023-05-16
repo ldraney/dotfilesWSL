@@ -259,22 +259,26 @@ function git-worktree-add() {
   repo=$2
   git worktree add $branch_name
   git push --set-upstream origin $branch_name
-
   if [ "$repo" == "noti" ]; then
-    wd-new-branch-noti noti
+    wd-new-branch-noti $branch_name
   elif [ "$repo" == "infra" ]; then
-    wd-new-branch-infra infra
-  else
-    wd-new-branch $branch_name
+    wd-new-branch-infra $branch_name
   fi
 }
 
-#I haven't made changes to this yet, too lazy
-function wd-new-branch() {
+function wd-new-branch-noti() {
   branch_name=$1
   branch_number=$(echo "$branch_name" | awk -F'-' '{print $1}')
-  #wd_dir="noti-${branch_number}"
   cd ~/oddball/notification-api/$branch_name
+  mkdir -p cd/application-deployment
+  wd add --force $branch_number
+  wd $branch_number
+}
+
+function wd-new-branch-infra() {
+  branch_name=$1
+  branch_number=$(echo "$branch_name" | awk -F'-' '{print $1}')
+  cd /home/ldraney/oddball/vanotify-infra/$branch_name
   mkdir -p cd/application-deployment
   wd add --force $branch_number
   wd $branch_number
