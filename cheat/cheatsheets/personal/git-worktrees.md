@@ -17,6 +17,7 @@ new-branch-wd [branchname]
 # Start a worktree clone (bare repository with master)
 ```
 git clone --bare git@github.com:department-of-veterans-affairs/notification-api.git notification-api
+git clone --bare git@github.com:department-of-veterans-affairs/notification-api-qa.git notification-api-qa
 git clone --bare git@github.com:department-of-veterans-affairs/vanotify-infra.git vanotify-infra
 cd notification-api
 git worktree add master

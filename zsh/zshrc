@@ -259,9 +259,11 @@ function git-worktree-add() {
   repo=$2
   git worktree add $branch_name
   git push --set-upstream origin $branch_name
-  if [ "$repo" == "noti" ]; then
+  if [ "$repo" = "noti" ]; then
     wd-new-branch-noti $branch_name
-  elif [ "$repo" == "infra" ]; then
+  elif [ "$repo" = "qa" ]; then
+    wd-new-branch-qa $branch_name
+  elif [ "$repo" = "infra" ]; then
     wd-new-branch-infra $branch_name
   fi
 }
@@ -270,7 +272,14 @@ function wd-new-branch-noti() {
   branch_name=$1
   branch_number=$(echo "$branch_name" | awk -F'-' '{print $1}')
   cd ~/oddball/notification-api/$branch_name
-  mkdir -p cd/application-deployment
+  wd add --force $branch_number
+  wd $branch_number
+}
+
+function wd-new-branch-qa() {
+  branch_name=$1
+  branch_number=$(echo "$branch_name" | awk -F'-' '{print $1}')
+  cd ~/oddball/notification-api-qa/$branch_name
   wd add --force $branch_number
   wd $branch_number
 }
@@ -279,13 +288,8 @@ function wd-new-branch-infra() {
   branch_name=$1
   branch_number=$(echo "$branch_name" | awk -F'-' '{print $1}')
   cd /home/ldraney/oddball/vanotify-infra/$branch_name
-  mkdir -p cd/application-deployment
   wd add --force $branch_number
   wd $branch_number
-}
-
-function wd-noti() {
-
 }
 
 function git-delete-branch() {

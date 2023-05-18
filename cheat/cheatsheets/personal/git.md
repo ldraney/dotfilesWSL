@@ -1,3 +1,8 @@
+## Check latest SHA of my branch
+```
+git rev-parse HEAD
+```
+
 ## Merging conflict due to the very file you want to push!
 if the only conflict is the changes you made, simply
 ```

@@ -5,11 +5,10 @@
 - She wants a meeting, say "yo, let's chat for fifteen about my understaanding of the ticket"
 
 ### Create and Checkout new branch for your issue 
-```
 git worktree add [ticketNumber]-[ticketTitle]
-# git push -u origin [branchname]
-git push --set-upstream origin [branchname]
-wd-new-branch [branchname]
+e.g.
+```
+git-worktree-add 563-ec2-iam-docker infra
 ```
 
 ### Edit a draft PR
@@ -52,14 +51,14 @@ e.g
 ```
 ##  GO TO REPO, and then:
 gh pr create \
--R department-of-veterans-affairs/vanotify-infra \
+-R department-of-veterans-affairs/notification-api-qa \
 -d \
 -B master \
--H 552-enable-cloudwatch-for-rds \
--F /tmp/pr-552-enable-cloudwatch-for-rds.md \
+-H 73-bug-qa-container \
+-F /tmp/pr-73-bug-qa-container.md \
 -a ldraney \
 -l devops \
--t '#552 Enable Cloudwatch for RDS'
+-t '#73 Bug QA Container'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
