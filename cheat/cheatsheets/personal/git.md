@@ -1,3 +1,5 @@
+
+
 ## Check latest SHA of my branch
 ```
 git rev-parse HEAD
@@ -12,12 +14,18 @@ git push
 ```
 
 ##  going back to a git commit while preserving history
+(I'm not sure if this works, actually)
 ```
 git reset --soft 1c0043a5d67aad8244ead51d6c75c588f080098a
 git commit -m 'restored to commit _________'
 git push -f origin [branch name]
 ```
-
+## reset to a git commit, deleting history
+```
+git log  # to get the hash
+git reset --hard [hash]
+git push --force
+```
 
 ## Check changes before I commit
 git diff HEAD

@@ -10,6 +10,8 @@
 563-util:~/oddball/vanotify-infra/563-ec2-iam-docker/cd/utility-infrastructure
 563:~/oddball/vanotify-infra/563-ec2-iam-docker
 67-run-qa-suite-action:~/oddball/notification-api/67-run-qa-suite-action
+67-workflows:~/oddball/notification-api-qa/67-run-qa-action-2/.github/workflows
+67:~/oddball/notification-api-qa/67-run-qa-action-2
 73-workflows:~/oddball/notification-api-qa/73-bug-qa-container/.github/workflows
 73:~/oddball/notification-api-qa/73-bug-qa-container
 Ai-Conversations:/mnt/c/Users/drane/OneDrive/Documents/AI-Conversations
@@ -68,6 +70,7 @@ oddball:~/oddball
 oddball_helps:~/github/oddball_helps
 personal:~/github
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
+qa-master:~/oddball/notification-api-qa/master
 qa-workflows:~/oddball/notification-api-qa/.github/workflows
 qa:~/oddball/notification-api-qa
 queries-teams-repo:~/oddball/vanotify-team/Engineering/DevOps/aws/log_metric_scripts
