@@ -1,3 +1,7 @@
+## trying to get the agent installed on the ec2
+```
+aws ssm send-command --document-name "AWS-ConfigureAWSPackage" --document-version "1" --targets '[{"Key":"InstanceIds","Values":["<INSTANCE_ID>"]}]' --parameters '{"action":["Install"],"name":["AmazonCloudWatchAgent"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region <REGION>
+```
 
 ## testing a command on an ec2 instance
 1. run the command

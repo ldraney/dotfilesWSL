@@ -22,8 +22,8 @@ gh issue create \
 ```
 wd vanotify-infra
 gh issue create \
--F /tmp/ec2-iam-docker.md \
---title "EC2 IAM Docker Daemon" \
+-F /tmp/bug-qa-ec2.md \
+--title "Bug QA EC2" \
 --label Notify \
 --label devops \
 --assignee ldraney \

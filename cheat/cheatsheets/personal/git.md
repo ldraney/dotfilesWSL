@@ -1,5 +1,3 @@
-
-
 ## Check latest SHA of my branch
 ```
 git rev-parse HEAD

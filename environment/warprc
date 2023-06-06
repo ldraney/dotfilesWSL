@@ -9,6 +9,9 @@
 550:~/oddball/notification-api/550-twistcli-fix
 563-util:~/oddball/vanotify-infra/563-ec2-iam-docker/cd/utility-infrastructure
 563:~/oddball/vanotify-infra/563-ec2-iam-docker
+572-util:~/oddball/vanotify-infra/572-bug-qa-ec2/cd/utility-infrastructure
+572-workflows:~/oddball/vanotify-infra/572-bug-qa-ec2/.github/workflows
+572:~/oddball/vanotify-infra/572-bug-qa-ec2
 67-run-qa-suite-action:~/oddball/notification-api/67-run-qa-suite-action
 67-workflows:~/oddball/notification-api-qa/67-run-qa-action-2/.github/workflows
 67:~/oddball/notification-api-qa/67-run-qa-action-2
@@ -48,6 +51,7 @@ infra-master:~/oddball/vanotify-infra/master
 infra-workflows:~/oddball/vanotify-infra/.github/workflows
 infra:~/oddball/vanotify-infra
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
+keepalive:~/oddball/notification-api/keepalive-duration-70
 lua:~/github/dotfilesWSL/nvim/lua
 master:~/oddball/notification-api-qa/master
 noti-531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
