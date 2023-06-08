@@ -268,6 +268,14 @@ function git-worktree-add() {
   fi
 }
 
+function git-delete-worktree() {
+  branch_name=$1
+  git push origin --delete $branch_name
+  git worktree remove $branch_name
+  git branch -D $branch_name
+}
+
+# Secondary functions for git-worktree-add
 function wd-new-branch-noti() {
   branch_name=$1
   branch_number=$(echo "$branch_name" | awk -F'-' '{print $1}')
@@ -290,11 +298,4 @@ function wd-new-branch-infra() {
   cd /home/ldraney/oddball/vanotify-infra/$branch_name
   wd add --force $branch_number
   wd $branch_number
-}
-
-function git-delete-branch() {
-  branch_name=$1
-  git push origin --delete $branch_name
-  git worktree remove $branch_name
-  git branch -D $branch_name
 }

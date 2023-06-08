@@ -20,16 +20,19 @@ gh issue create \
 --label epic/bug/[none]
 ```
 ```
-wd vanotify-infra
+wd noti
 gh issue create \
--F /tmp/bug-qa-ec2.md \
---title "Bug QA EC2" \
+-F /tmp/terraform-utiltities-provider-upgrade.md \
+--title "Utilities Provider Upgrade" \
 --label Notify \
 --label devops \
---assignee ldraney \
 --label 'Review Needed' 
 
 
+--assignee ldraney \
+
+wd vanotify-infra
+wd noti
 
 
 #--label "epic/My Epic"

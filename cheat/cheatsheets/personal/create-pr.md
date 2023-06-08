@@ -43,11 +43,11 @@ gh pr create \
 -R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H 572-bug-qa-ec2 \
--F /tmp/pr-572-bug-qa-ec2.md \
+-H cherry-picks-ec2-revert \
+-F /tmp/pr-cherry-pick-ec2-revert.md \
 -a ldraney \
 -l devops \
--t '#572 Bug QA EC2'
+-t 'Cherry picks from revert PR #578'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
@@ -61,39 +61,4 @@ gh pr create \
 # Opening a PR
 ```
 cheat open-pr.md
-```
-
-
-
-
-
-
-
-
-
-## Additional Notes
-
-### verify it worked
-verify pull requests is in this list:  
-```
-gh pr list
-```
-view your ticket in the browser
-```
-gh pr view -w [pr issue number]
-```
-<!--## add issue to epic-->
-<!--Unfortunately, have to do this through the GUI: https://github.com/department-of-veterans-affairs/vanotify-infra/issues-->
-<!-- I don't think this is the appropriate place for this step -->
-
-## Getting ready for PR review
-- in the github GUI, take off draft from PR (at the bottom of the PR page)
-- send a link of the PR to the va-notify-engineers slack channel so they can review it!
-
-## deleting your branch
-once you finish this whole flow with an approved PR (congratulations!), we no longer need your branch: 
-Sometimes the merge will delete your branch automatically, but if not:
-```
-git checkout -D [branch]
-git push origin -d [branch]
 ```

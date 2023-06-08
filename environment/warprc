@@ -1,4 +1,5 @@
 1.6.2:~/oddball/notification-api
+1253:~/oddball/notification-api/1253-communication-item-crud
 531-qa-regression-ec2:~/oddball/vanotify-infra/531-qa-regression-ec2
 531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 538-app:~/oddball/vanotify-infra/538-qa-ec2/cd/application-infrastructure
@@ -12,11 +13,14 @@
 572-util:~/oddball/vanotify-infra/572-bug-qa-ec2/cd/utility-infrastructure
 572-workflows:~/oddball/vanotify-infra/572-bug-qa-ec2/.github/workflows
 572:~/oddball/vanotify-infra/572-bug-qa-ec2
+576-workflows:~/oddball/vanotify-infra/576-bug-aws-provider/.github/workflows
+576:~/oddball/vanotify-infra/576-bug-aws-provider
 67-run-qa-suite-action:~/oddball/notification-api/67-run-qa-suite-action
 67-workflows:~/oddball/notification-api-qa/67-run-qa-action-2/.github/workflows
 67:~/oddball/notification-api-qa/67-run-qa-action-2
 73-workflows:~/oddball/notification-api-qa/73-bug-qa-container/.github/workflows
 73:~/oddball/notification-api-qa/73-bug-qa-container
+ALB:~/oddball/vanotify-infra/ALB-idle-time-70
 Ai-Conversations:/mnt/c/Users/drane/OneDrive/Documents/AI-Conversations
 Documents:/mnt/c/Users/drane/OneDrive/Documents
 Downloads:/mnt/c/Users/drane/Downloads
@@ -27,8 +31,11 @@ aws-cli-script:~/github/oddball_helps/scripts/aws-cli-script
 aws-dd-forwarder-3.66.0:/mnt/c/Users/drane/Downloads/aws-dd-forwarder-3.66.0
 bootstrap:~/oddball/vanotify-infra/cd/bootstrap
 cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
+cherry-util:~/oddball/vanotify-infra/cherry-picks-ec2-revert/cd/utility-infrastructure
+cherry:~/oddball/vanotify-infra/cherry-picks-ec2-revert
 ci:~/oddball/notification-api/ci
 completions:~/.oh-my-zsh/completions
+datadog:~/oddball/notification-api/datadog-development-local-env
 dd-task-definitions:~/oddball/notification-api/dd-env-update-quickfix/cd/application-deployment
 dd:~/oddball/notification-api/dd-env-update-quickfix
 ddtrace:~/oddball/notification-api/ddtrace-error
@@ -37,8 +44,10 @@ desktop:/mnt/c/Users/drane/Desktop
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
 dotfilesWSL:~/github/dotfilesWSL
+ec2:~/oddball/notification-api-qa/ec2-documentation
 engineering:~/oddball/vanotify-team/Engineering
 githubPersonal:~/github
+glossary:~/oddball/vanotify-team/Support
 go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kids-token
 go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
@@ -53,6 +62,7 @@ infra:~/oddball/vanotify-infra
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 keepalive:~/oddball/notification-api/keepalive-duration-70
 lua:~/github/dotfilesWSL/nvim/lua
+master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
 master:~/oddball/notification-api-qa/master
 noti-531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 noti-538:~/oddball/vanotify-infra/538-qa-ec2
