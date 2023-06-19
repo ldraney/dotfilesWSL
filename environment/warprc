@@ -24,6 +24,8 @@ ALB:~/oddball/vanotify-infra/ALB-idle-time-70
 Ai-Conversations:/mnt/c/Users/drane/OneDrive/Documents/AI-Conversations
 Documents:/mnt/c/Users/drane/OneDrive/Documents
 Downloads:/mnt/c/Users/drane/Downloads
+HOTFIX-workflows:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger/.github/workflows
+HOTFIX:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 application-infrastructure:~/oddball/vanotify-infra/cd/application-infrastructure
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
@@ -84,6 +86,7 @@ oddball:~/oddball
 oddball_helps:~/github/oddball_helps
 personal:~/github
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
+qa-master-workflows:~/oddball/notification-api-qa/master/.github/workflows
 qa-master:~/oddball/notification-api-qa/master
 qa-workflows:~/oddball/notification-api-qa/.github/workflows
 qa:~/oddball/notification-api-qa
@@ -94,6 +97,7 @@ ssh:~/.ssh
 team:~/oddball/vanotify-team
 terraform-aws-wordpress:~/github/terraform-aws-wordpress
 terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
+trigger:~/oddball/notification-api-qa/trigger-test
 util-workflows:~/oddball/vanotify-infra/.github/workflows
 util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
 utility-infrastructure:~/oddball/vanotify-infra/cd/utility-infrastructure

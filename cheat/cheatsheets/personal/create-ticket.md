@@ -22,20 +22,19 @@ gh issue create \
 ```
 wd noti
 gh issue create \
--F /tmp/terraform-utiltities-provider-upgrade.md \
---title "Utilities Provider Upgrade" \
+-F /tmp/qa-run-suite-pre-release.md \
+--title "QA Suite - pre-release trigger" \
 --label Notify \
 --label devops \
 --label 'Review Needed' 
 
 
+--label QA
+--label 'VIP'   #add this if this is a HOTFIX or urgent ticket needed to be added to sprint
 --assignee ldraney \
 
-wd vanotify-infra
-wd noti
-
-
-#--label "epic/My Epic"
+To add a ticket to an epic, simply create it then add the appropriate epic label in the gui
+--label "epic/QA Regression Suite"
 ```
 
 - message Mel if I'm interested in moving a ticket to the current sprint
