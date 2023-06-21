@@ -40,14 +40,14 @@ e.g
 ```
 ##  GO TO REPO, and then:
 gh pr create \
--R department-of-veterans-affairs/vanotify-infra \
+-R department-of-veterans-affairs/notification-api \
 -d \
 -B master \
--H cherry-picks-ec2-revert \
--F /tmp/pr-cherry-pick-ec2-revert.md \
+-H 1214-github-pre-release-trigger-failure \
+-F /tmp/pr-1214.md \
 -a ldraney \
 -l devops \
--t 'Cherry picks from revert PR #578'
+-t '#1214 Fix Pre-release Trigger for GitHub Actions'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
