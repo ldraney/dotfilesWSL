@@ -26,9 +26,11 @@ jobs:
             if ('${{ github.event.release.prerelease }}' === true) {
               core.setOutput('environment', 'staging')
             }
+            if ('${{ github.event.action }}' === 'released') {
+              core.setOutput('environment', 'prod')
+            }
 
-  run-lambda-deploy:
-    needs: [setup-release]
-    run: |
-      echo " the environment is ${{ needs.setup-release.outputs.env }}"
+      - name: check environment
+        run: |
+          echo " the environment is ${{ needs.setup-release.outputs.env }}"
 
