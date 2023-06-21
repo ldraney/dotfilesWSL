@@ -8,7 +8,7 @@ jobs:
   init:
     runs-on: ubuntu-latest
     # This filters out pre-release releases
-    if: "!github.event.release.prerelease"
+    if: github.event.release.prerelease == true || github.event.action == 'released'
     # when a non draft PR is created TODO test actor on new repo!!!!
     steps:
       - name: Init
