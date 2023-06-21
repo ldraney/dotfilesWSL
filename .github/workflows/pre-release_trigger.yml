@@ -20,7 +20,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            if ('${{ github.event.release.prerelease }}' == true) {
+            if ('${{ github.event.release.prerelease }}' == 'true') {
               core.setOutput('environment', 'staging')
             }
             if ('${{ github.event.action }}' == 'released') {
