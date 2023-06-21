@@ -12,6 +12,6 @@ jobs:
   run-deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: Run migration task
+      - name: Run deployment
         run: |
           echo "${{ inputs.environment }}"
