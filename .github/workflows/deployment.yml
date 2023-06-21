@@ -1,0 +1,22 @@
+name: api deploy
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        default: "dev"
+        type: string
+      ref:
+        required: true
+        default: "master"
+        type: string
+
+jobs:
+  run-migrations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run migration task
+        run: |
+          echo "${{ inputs.environment }}
+

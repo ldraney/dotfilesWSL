@@ -30,7 +30,8 @@ jobs:
               core.setOutput('environment', 'prod')
             }
 
-      - name: check environment
-        run: |
-          echo " the environment is ${{ needs.setup-release.outputs.env }}"
-
+  run-deployment:
+    needs: [setup-release]
+    uses: ./.github/workflows/deployment.yml
+    with:
+      environment: "${{ needs.setup-release.outputs.env }}"
