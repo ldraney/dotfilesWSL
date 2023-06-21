@@ -5,19 +5,7 @@ on:
 
   # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  init:
-    runs-on: ubuntu-latest
-    # This filters out pre-release releases
-    if: github.event.release.prerelease == true || github.event.action == 'released'
-    # when a non draft PR is created TODO test actor on new repo!!!!
-    steps:
-      - name: Init
-        run: |
-          echo Deploy starting
-          echo ${{ github.actor }}
-
   setup-release:
-    needs: [init]
     runs-on: ubuntu-latest
     outputs:
       git-tag: ${{ steps.tag.outputs.version }}
