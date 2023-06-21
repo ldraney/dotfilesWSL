@@ -9,7 +9,7 @@ on:
         type: string
 
 jobs:
-  run-migrations:
+  run-deployment:
     runs-on: ubuntu-latest
     steps:
       - name: Run migration task
