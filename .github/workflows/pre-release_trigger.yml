@@ -29,6 +29,10 @@ jobs:
             if ('${{ github.event.action }}' === 'released') {
               core.setOutput('environment', 'prod')
             }
+            else {
+              console.log('Pre-release is false. Stopping workflow.')
+              process.exit(0)
+            }
 
   run-deployment:
     needs: [setup-release]
