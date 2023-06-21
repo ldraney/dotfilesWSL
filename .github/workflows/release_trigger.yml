@@ -22,6 +22,9 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            if ${{ github.event.release.isPrerelease }} {
+            if ${{ github.event.release.prerelease }} {
               core.setOutput('environment', 'staging')
+            }
+            if ('${{ github.event.action }}' === 'released') {
+              core.setOutput('environment', 'prod')
             }
