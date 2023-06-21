@@ -17,7 +17,7 @@ jobs:
           echo "github.event.release.prerelease: ${{ github.event.release.prerelease }}"
           echo "github.event.release.isPrerelease: ${{ github.event.release.isPrerelease }}"
           echo "github.event.action: ${{ github.event.action }}"
-          echo "github.payload: ${{ context.payload.release.prerelease }}"
+          echo "github.payload: ${{ github.event.release.release }}"
       - name: Setup Environment
         id: setup
         uses: actions/github-script@v6
