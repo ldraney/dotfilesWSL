@@ -25,6 +25,3 @@ jobs:
             if ${{ github.event.release.prerelease }} {
               core.setOutput('environment', 'staging')
             }
-            if ('${{ github.event.action }}' === 'released') {
-              core.setOutput('environment', 'prod')
-            }
