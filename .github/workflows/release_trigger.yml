@@ -14,9 +14,10 @@ jobs:
         run: |
           echo "Release tag: ${{ github.event.release.tag_name }}"
           echo "Release name: ${{ github.event.release.name }}"
-          echo "Is pre-release (boolean): ${{ github.event.release.prerelease }}"
-          echo "isPrerelease: ${{ github.event.release.isPrerelease }}"
-          echo "Is release (string): ${{ github.event.action }}"
+          echo "github.event.release.prerelease: ${{ github.event.release.prerelease }}"
+          echo "github.event.release.isPrerelease: ${{ github.event.release.isPrerelease }}"
+          echo "github.event.action: ${{ github.event.action }}"
+          echo "github.payload: ${{ context.payload }}"
       - name: Setup Environment
         id: setup
         uses: actions/github-script@v6
@@ -24,9 +25,7 @@ jobs:
           script: |
             if ('${{ github.event.release.prerelease }}' === true) {
               core.setOutput('environment', 'staging')
-              echo "Is pre-release (boolean): ${{ github.event.release.prerelease }}"
             }
             if ('${{ github.event.action }}' === 'released') {
               core.setOutput('environment', 'prod')
-              echo "Is release (boolean): ${{ github.event.release.latest }}"
             }
