@@ -1,7 +1,7 @@
 name: Release Trigger
 on:
   release:
-    types: [released]
+    types: [published]
 
 jobs:
   setup-release:
@@ -17,13 +17,12 @@ jobs:
           echo "github.event.release.prerelease: ${{ github.event.release.prerelease }}"
           echo "github.event.release.isPrerelease: ${{ github.event.release.isPrerelease }}"
           echo "github.event.action: ${{ github.event.action }}"
-          echo "github.event.release.release: ${{ github.event.release.release }}"
-          echo "github.event.release: ${{ github.event.release }}"
+          echo "github.payload: ${{ github.event.release.release }}"
       - name: Setup Environment
         id: setup
         uses: actions/github-script@v6
         with:
           script: |
-            if ('${{ github.event.action }}' === 'released') {
-              core.setOutput('environment', 'prod')
+            if ('${{ github.event.release.prerelease }}' === true) {
+              core.setOutput('environment', 'staging')
             }
