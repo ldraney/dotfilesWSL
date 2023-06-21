@@ -24,7 +24,9 @@ jobs:
           script: |
             if ('${{ github.event.release.prerelease }}' === true) {
               core.setOutput('environment', 'staging')
+              echo "Is pre-release (boolean): ${{ github.event.release.prerelease }}"
             }
             if ('${{ github.event.action }}' === 'released') {
               core.setOutput('environment', 'prod')
+              echo "Is release (boolean): ${{ github.event.release.latest }}"
             }
