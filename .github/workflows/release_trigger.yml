@@ -19,6 +19,7 @@ jobs:
           echo "github.event.action: ${{ github.event.action }}"
           echo "github.event.release.release: ${{ github.event.release.release }}"
           echo "github.event.release: ${{ github.event.release }}"
+
       - name: Setup Environment
         id: setup
         uses: actions/github-script@v6
@@ -27,3 +28,8 @@ jobs:
             if ('${{ github.event.action }}' === 'released') {
               core.setOutput('environment', 'prod')
             }
+
+  run-lambda-deploy:
+    needs: [setup-release]
+    run: |
+      echo " the environment is ${{ needs.setup-release.outputs.env }}"

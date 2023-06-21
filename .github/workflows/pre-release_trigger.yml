@@ -1,7 +1,7 @@
 name: Pre-release Trigger
 on:
   release:
-    types: [published]
+    types: [published, released]
 
 jobs:
   setup-release:
@@ -26,3 +26,9 @@ jobs:
             if ('${{ github.event.release.prerelease }}' === true) {
               core.setOutput('environment', 'staging')
             }
+
+  run-lambda-deploy:
+    needs: [setup-release]
+    run: |
+      echo " the environment is ${{ needs.setup-release.outputs.env }}"
+
