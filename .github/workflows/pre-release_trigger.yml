@@ -1,4 +1,4 @@
-name: Pre-release Trigger
+name: Release Trigger
 on:
   release:
     types: [published, released]
@@ -25,18 +25,14 @@ jobs:
     steps:
       - name: Check release
         run: |
-          echo "Release tag: ${{ github.event.release.tag_name }}"
-          echo "Release name: ${{ github.event.release.name }}"
           echo "github.event.release.prerelease: ${{ github.event.release.prerelease }}"
-          echo "github.event.release.isPrerelease: ${{ github.event.release.isPrerelease }}"
           echo "github.event.action: ${{ github.event.action }}"
-          echo "github.payload: ${{ github.event.release.release }}"
       - name: Setup Environment
         id: setup
         uses: actions/github-script@v6
         with:
           script: |
-            if ('${{ github.event.release.prerelease }}' === 'true') {
+            if ('${{ github.event.release.prerelease }}' === true) {
               core.setOutput('environment', 'staging')
             }
             if ('${{ github.event.action }}' === 'released') {
