@@ -7,10 +7,6 @@ on:
         required: true
         default: "dev"
         type: string
-      ref:
-        required: true
-        default: "master"
-        type: string
 
 jobs:
   run-migrations:
