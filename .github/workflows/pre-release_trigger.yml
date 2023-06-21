@@ -1,4 +1,4 @@
-name: Release Trigger
+name: Pre-release Trigger
 on:
   release:
     types: [published]
