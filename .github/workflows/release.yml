@@ -11,8 +11,6 @@ on:
 
 jobs:
   release-prod:
-    needs: [setup-release]
-    runs-on: ubuntu-latest
     uses: ./.github/workflows/deployment.yml
     with:
       environment: "${{ inputs.environment }}"
