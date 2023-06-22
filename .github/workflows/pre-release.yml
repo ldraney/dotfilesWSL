@@ -10,19 +10,16 @@ on:
         type: string
 
 jobs:
-  setup-environment:
-    runs-on: ubuntu-latest
-    outputs:
-      git-tag: ${{ steps.tag.outputs.version }}
-    steps:
-      - name: Init
-        run: |
-          echo Deploy starting
-          # this allows for blame
-          echo ${{ github.actor }}
   deploy-to-staging:
-    needs: [setup-environment]
-    uses: ./.github/workflows/deployment.yml
-    with:
-      environment: "${{ inputs.environment }}"
-      ref: "${{ inputs.git-tag }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.git-tag }}
+
+      - name: Call deployment workflow
+        uses: ./.github/workflows/deployment.yml
+        with:
+          environment: "${{ inputs.environment }}"
+          ref: "${{ inputs.git-tag }}"
