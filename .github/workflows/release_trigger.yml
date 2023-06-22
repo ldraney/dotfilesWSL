@@ -35,7 +35,7 @@ jobs:
     uses: ./.github/workflows/pre-release.yml
     with:
       environment: "staging"
-      ref: "${{ needs.setup-environment.outputs.git-tag }}"
+      git-tag: "${{ needs.setup-environment.outputs.git-tag }}"
 
   release:
     needs: [setup-environment]
@@ -43,4 +43,4 @@ jobs:
     uses: ./.github/workflows/release.yml
     with:
       environment: "prod"
-      ref: "${{ needs.setup-environment.outputs.git-tag }}"
+      git-tag: "${{ needs.setup-environment.outputs.git-tag }}"
