@@ -30,7 +30,7 @@ jobs:
           echo "is a regular release? (will say release if true)(github.event.action): ${{ github.event.action }}"
 
   pre-release:
-    needs: [setup-environment]
+    needs: [setup-release]
     if: github.event.release.prerelease == true
     uses: ./.github/workflows/pre-release.yml
     with:
@@ -38,7 +38,7 @@ jobs:
       git-tag: "${{ needs.setup-environment.outputs.git-tag }}"
 
   release:
-    needs: [setup-environment]
+    needs: [setup-release]
     if: github.event.action == 'released'
     uses: ./.github/workflows/release.yml
     with:
