@@ -40,7 +40,6 @@ jobs:
     if: github.event.release.prerelease == true
     steps:
       - name: Call pre-release workflow
-        uses: actions/checkout@v3
         uses: ./.github/workflows/pre-release.yml
         with:
           environment: "staging"
