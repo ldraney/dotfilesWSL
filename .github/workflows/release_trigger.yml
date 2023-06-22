@@ -26,18 +26,16 @@ jobs:
 
   pre-release:
     needs: [filter-release]
-    runs-on: ubuntu-latest
     if: github.event.release.prerelease == true
     steps:
       - name: Call pre-release workflow
-        uses: ./.github/workflows/pre-release.yml@master  # Use a specific branch
+        uses: ./.github/workflows/pre-release.yml  # Use a specific branch
         with:
           environment: "staging"
           ref: "${{ needs.setup-release.outputs.git-tag }}"
 
   release:
     needs: [filter-release]
-    runs-on: ubuntu-latest  # You need to specify where the job runs
     if: github.event.action == 'released'
     steps:
       - name: Call release workflow
