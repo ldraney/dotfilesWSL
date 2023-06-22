@@ -21,6 +21,7 @@ jobs:
   release-prod:
     needs: [setup-release]
     runs-on: ubuntu-latest
+    uses: actions/checkout@v3
     uses: ./.github/workflows/deployment.yml
     with:
       environment: "${{ inputs.environment }}"
