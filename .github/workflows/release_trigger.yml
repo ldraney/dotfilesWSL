@@ -4,7 +4,7 @@ on:
     types: [published]
 
 jobs:
-  setup-environment:
+  setup-release:
     runs-on: ubuntu-latest
     outputs:
       git-tag: ${{ steps.tag.outputs.version }}
@@ -35,12 +35,4 @@ jobs:
     uses: ./.github/workflows/pre-release.yml
     with:
       environment: "staging"
-      git-tag: "${{ needs.setup-environment.outputs.git-tag }}"
-
-  release:
-    needs: [setup-environment]
-    if: github.event.action == 'released'
-    uses: ./.github/workflows/release.yml
-    with:
-      environment: "prod"
       git-tag: "${{ needs.setup-environment.outputs.git-tag }}"

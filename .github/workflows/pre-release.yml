@@ -17,9 +17,15 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ inputs.git-tag }}
+  run-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run deployment
+        run: |
+          echo "hi mom"
 
-      - name: Call deployment workflow
-        uses: ./.github/workflows/deployment.yml
-        with:
-          environment: "${{ inputs.environment }}"
-          ref: "${{ inputs.git-tag }}"
+      #- name: Call deployment workflow
+        #uses: ./.github/workflows/deployment.yml
+        #with:
+          #environment: "${{ inputs.environment }}"
+          #ref: "${{ inputs.git-tag }}"
