@@ -38,20 +38,16 @@ jobs:
     needs: [setup-environment]
     runs-on: ubuntu-latest
     if: github.event.release.prerelease == true
-    steps:
-      - name: Call pre-release workflow
-        uses: ./.github/workflows/pre-release.yml
-        with:
-          environment: "staging"
-          ref: "${{ needs.setup-environment.outputs.git-tag }}"
+    uses: ./.github/workflows/pre-release.yml
+    with:
+      environment: "staging"
+      ref: "${{ needs.setup-environment.outputs.git-tag }}"
 
   release:
     needs: [setup-environment]
     runs-on: ubuntu-latest
     if: github.event.action == 'released'
-    steps:
-      - name: Call release workflow
-        uses: ./.github/workflows/release.yml
-        with:
-          environment: "prod"
-          ref: "${{ needs.setup-environment.outputs.git-tag }}"
+    uses: ./.github/workflows/release.yml
+    with:
+      environment: "prod"
+      ref: "${{ needs.setup-environment.outputs.git-tag }}"
