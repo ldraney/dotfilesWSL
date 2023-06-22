@@ -14,10 +14,6 @@ jobs:
           echo Deploy starting
           # this allows for blame
           echo ${{ github.actor }}
-      - name: Get the version
-        id: tag
-        run: |
-          echo "version=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
 
       - name: Check release and env values
         run: |
@@ -43,4 +39,4 @@ jobs:
     uses: ./.github/workflows/release.yml
     with:
       environment: "prod"
-      git-tag: "${{ needs.setup-environment.outputs.git-tag }}"
+      git-tag: "${{ steps.tag.outputs.version }}"
