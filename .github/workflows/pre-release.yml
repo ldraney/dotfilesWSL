@@ -21,7 +21,7 @@ jobs:
           # this allows for blame
           echo ${{ github.actor }}
   deploy-to-staging:
-    runs-on: ubuntu-latest
+    needs: [setup-environment]
     uses: ./.github/workflows/deployment.yml
     with:
       environment: "${{ inputs.environment }}"
