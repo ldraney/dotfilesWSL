@@ -12,6 +12,7 @@ on:
 jobs:
   deploy-to-staging:
     needs: [setup-release]
+    runs-on: ubuntu-latest
     uses: ./.github/workflows/deployment.yml
     with:
       environment: "${{ inputs.environment }}"

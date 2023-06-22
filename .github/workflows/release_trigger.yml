@@ -26,6 +26,7 @@ jobs:
 
   pre-release:
     needs: [filter-release]
+    runs-on: ubuntu-latest
     if: github.event.release.prerelease == true
     steps:
       - name: Call pre-release workflow
@@ -36,6 +37,7 @@ jobs:
 
   release:
     needs: [filter-release]
+    runs-on: ubuntu-latest
     if: github.event.action == 'released'
     steps:
       - name: Call release workflow
