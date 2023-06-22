@@ -18,5 +18,5 @@ jobs:
     steps:
       - name: Run deployment
         run: |
-          echo "${{ inputs.environment }}"
-          echo "${{ inputs.ref }}"
+          echo "environment is ${{ inputs.environment }}"
+          echo "tag is ${{ inputs.ref }}"

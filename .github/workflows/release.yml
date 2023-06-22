@@ -10,7 +10,7 @@ on:
         type: string
 
 jobs:
-  release-prod:
+  deploy-to-prod:
     uses: ./.github/workflows/deployment.yml
     with:
       environment: "${{ inputs.environment }}"
