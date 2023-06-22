@@ -13,17 +13,9 @@ jobs:
   deploy-to-staging:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ inputs.git-tag }}
-  run-deployment:
-    runs-on: ubuntu-latest
-    steps:
       - name: Run deployment
         run: |
           echo "hi mom"
-
       #- name: Call deployment workflow
         #uses: ./.github/workflows/deployment.yml
         #with:
