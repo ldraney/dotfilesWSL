@@ -6,13 +6,14 @@ on:
 jobs:
   setup-environment:
     runs-on: ubuntu-latest
+    outputs:
+      git-tag: ${{ steps.tag.outputs.version }}
     steps:
       - name: Init
         run: |
           echo Deploy starting
           # this allows for blame
           echo ${{ github.actor }}
-
       - name: Get the version
         id: tag
         run: |
