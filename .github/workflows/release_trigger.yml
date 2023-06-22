@@ -1,0 +1,46 @@
+name: Release and Pre-release Trigger
+on:
+  release:
+    types: [published]
+
+  init:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Init
+        run: |
+          echo Deploy starting
+          # this allows for blame
+          echo ${{ github.actor }}
+
+  filter-release:
+    needs: [init]
+    runs-on: ubuntu-latest
+    outputs:
+      git-tag: ${{ steps.tag.outputs.version }}
+      env: ${{ steps.setup.outputs.environment }}
+    steps:
+      - name: Check release
+        run: |
+          echo "github.event.release.prerelease: ${{ github.event.release.prerelease }}"
+          echo "github.event.action: ${{ github.event.action }}"
+
+  pre-release:
+    needs: [filter-release]
+    if: '${{ github.event.release.prerelease }}' == 'true'
+    uses: ./.github/workflows/pre-release.yml@master  # Use a specific branch
+    steps:
+      - name: Call pre-release workflow
+        with:
+          environment: "staging"
+          ref: "${{ needs.setup-release.outputs.git-tag }}"
+
+  release:
+    needs: [filter-release]
+    if: github.event.action == 'released'
+    runs-on: ubuntu-latest  # You need to specify where the job runs
+    uses: ./.github/workflows/release.yml@master  # Use a specific branch
+    steps:
+      - name: Call release workflow
+        with:
+          environment: "prod"
+          ref: "${{ needs.setup-release.outputs.git-tag }}"

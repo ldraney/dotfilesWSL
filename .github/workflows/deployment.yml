@@ -7,6 +7,10 @@ on:
         required: true
         default: "dev"
         type: string
+      ref:
+        required: true
+        default: "master"
+        type: string
 
 jobs:
   run-deployment:
@@ -15,3 +19,4 @@ jobs:
       - name: Run deployment
         run: |
           echo "${{ inputs.environment }}"
+          echo "${{ inputs.ref }}"

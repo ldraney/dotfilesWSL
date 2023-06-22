@@ -1,0 +1,18 @@
+name: Release to Prod
+on:
+  workflow_call:
+    inputs:
+      environment: 
+        required: true
+        type: string
+      git-tag:
+        required: true
+        type: string
+
+jobs:
+  release-prod:
+    needs: [setup-release]
+    uses: ./.github/workflows/deployment.yml
+    with:
+      environment: "${{ inputs.environment }}"
+      ref: "${{ inputs.git-tag }}"

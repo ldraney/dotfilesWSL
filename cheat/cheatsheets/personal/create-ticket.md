@@ -1,3 +1,10 @@
+
+
+IMPORTANT NOTE - CHECK templates in infra and noti and compare to teams repo before using this again, and adjust this cheat guide as necessary.  May need to add a wd command according to the repo I'm making a ticket for
+
+
+
+
 ## Create a ticket
 ### first copy the template
 ```
@@ -6,6 +13,8 @@ cp [template] /tmp/[template].md
 vim /tmp/[template].md
 #delete the first part of the ticket (e.g. assignee) as these are used in the command
 ```
+#### Important Reminders
+* if it has the qa label should ahv echat with qa at the top
 
 ### create the issue (ticket)
 ```
