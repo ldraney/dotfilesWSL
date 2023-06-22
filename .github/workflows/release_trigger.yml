@@ -39,4 +39,4 @@ jobs:
     uses: ./.github/workflows/release.yml
     with:
       environment: "prod"
-      git-tag: "${{ steps.tag.outputs.version }}"
+      git-tag: "${{ needs.setup-environment.outputs.git-tag }}"
