@@ -30,7 +30,7 @@ jobs:
     if: github.event.release.prerelease == true
     steps:
       - name: Call pre-release workflow
-        uses: ./.github/workflows/pre-release.yml  # Use a specific branch
+        uses: ./pre-release.yml  # Use a specific branch
         with:
           environment: "staging"
           ref: "${{ needs.setup-release.outputs.git-tag }}"
@@ -41,7 +41,7 @@ jobs:
     if: github.event.action == 'released'
     steps:
       - name: Call release workflow
-        uses: ./.github/workflows/release.yml@master  # Use a specific branch
+        uses: ./release.yml@master  # Use a specific branch
         with:
           environment: "prod"
           ref: "${{ needs.setup-release.outputs.git-tag }}"
