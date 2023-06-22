@@ -4,7 +4,7 @@ on:
     types: [published]
 
 jobs:
-  init:
+  setup-environment:
     runs-on: ubuntu-latest
     steps:
       - name: Init
@@ -13,8 +13,21 @@ jobs:
           # this allows for blame
           echo ${{ github.actor }}
 
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Check release and env values
+        run: |
+          echo "Release tag: ${{ github.event.release.tag_name }}"	          
+          echo "Release name: ${{ github.event.release.name }}"
+          echo "commit-hash: $(git rev-parse HEAD)"
+          echo "is a prerelease? (github.event.release.prerelease): ${{ github.event.release.prerelease }}"
+          echo "is a regular release? (will say release if true)(github.event.action): ${{ github.event.action }}"
+
   filter-release:
-    needs: [init]
+    needs: [setup-environment]
     runs-on: ubuntu-latest
     steps:
       - name: Check release
@@ -25,7 +38,7 @@ jobs:
           echo "::set-output name=env::environment"
 
   pre-release:
-    needs: [filter-release]
+    needs: [setup-environment]
     runs-on: ubuntu-latest
     if: github.event.release.prerelease == true
     steps:
@@ -41,7 +54,7 @@ jobs:
     if: github.event.action == 'released'
     steps:
       - name: Call release workflow
-        uses: ./release.yml@master  # Use a specific branch
+        uses: .github/workflows/release.yml@master  # Use a specific branch
         with:
           environment: "prod"
           ref: "${{ needs.setup-release.outputs.git-tag }}"
