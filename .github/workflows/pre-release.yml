@@ -16,8 +16,9 @@ jobs:
       - name: Hi mom
         run: |
           echo "hi mom"
-      - name: Call deployment workflow
-        uses: ./.github/workflows/deployment.yml
-        with:
-          environment: "${{ inputs.environment }}"
-          ref: "${{ inputs.git-tag }}"
+
+  deployment:
+    uses: ./.github/workflows/deployment.yml
+    with:
+      environment: "${{ inputs.environment }}"
+      ref: "${{ inputs.git-tag }}"
