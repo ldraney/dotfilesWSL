@@ -9,11 +9,6 @@ jobs:
     outputs:
       git-tag: ${{ steps.tag.outputs.version }}
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ needs.setup-environment.outputs.git-tag }}
-
       - name: Init
         run: |
           echo Deploy starting

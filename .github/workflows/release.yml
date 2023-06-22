@@ -10,14 +10,6 @@ on:
         type: string
 
 jobs:
-  setup-environment:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ inputs.ref }}
-
   release-prod:
     needs: [setup-release]
     runs-on: ubuntu-latest
