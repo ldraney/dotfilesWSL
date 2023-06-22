@@ -26,17 +26,6 @@ jobs:
           echo "is a prerelease? (github.event.release.prerelease): ${{ github.event.release.prerelease }}"
           echo "is a regular release? (will say release if true)(github.event.action): ${{ github.event.action }}"
 
-  filter-release:
-    needs: [setup-environment]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check release
-        run: |
-          echo "github.event.release.prerelease: ${{ github.event.release.prerelease }}"
-          echo "github.event.action: ${{ github.event.action }}"
-          echo "::set-output name=git-tag::version"
-          echo "::set-output name=env::environment"
-
   pre-release:
     needs: [setup-environment]
     runs-on: ubuntu-latest
@@ -49,7 +38,7 @@ jobs:
           ref: "${{ needs.setup-release.outputs.git-tag }}"
 
   release:
-    needs: [filter-release]
+    needs: [setup-environment]
     runs-on: ubuntu-latest
     if: github.event.action == 'released'
     steps:
