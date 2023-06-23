@@ -47,7 +47,7 @@ gh pr create \
 -F /tmp/pr-1214.md \
 -a ldraney \
 -l devops \
--t '#1214 Fix Pre-release Trigger for GitHub Actions'
+-t '#1214 Fix Pre-release Trigger for GitHub Actions final fix'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
