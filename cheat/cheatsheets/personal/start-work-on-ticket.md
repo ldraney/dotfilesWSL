@@ -14,3 +14,6 @@ e.g.
 ```
 git-worktree-add 563-ec2-iam-docker infra
 ```
+
+### create a draft PR so team can follow my ticket
+I have a reminder in my daily planner, but this is just important to remember

@@ -1,9 +1,4 @@
-
-
 IMPORTANT NOTE - CHECK templates in infra and noti and compare to teams repo before using this again, and adjust this cheat guide as necessary.  May need to add a wd command according to the repo I'm making a ticket for
-
-
-
 
 ## Create a ticket
 ### first copy the template
@@ -14,7 +9,8 @@ vim /tmp/[template].md
 #delete the first part of the ticket (e.g. assignee) as these are used in the command
 ```
 #### Important Reminders
-* if it has the qa label should ahv echat with qa at the top
+* if it has the qa label should have chat with qa at the top
+  - [ ] discuss with QA
 
 ### create the issue (ticket)
 ```
@@ -31,8 +27,8 @@ gh issue create \
 ```
 wd noti
 gh issue create \
--F /tmp/qa-run-suite-pre-release.md \
---title "QA Suite - pre-release trigger" \
+-F /tmp/statsd-spike-2.md \
+--title "Datadog StatsD - System Reliability Dashboard" \
 --label Notify \
 --label devops \
 --label 'Review Needed' 
