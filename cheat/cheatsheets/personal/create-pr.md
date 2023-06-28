@@ -1,14 +1,16 @@
 # Create a PR for your ticket/branch
-### Edit a draft PR
-- GUI option: ** If its not a ticket and just a quick PR, then make a branch, make changes, the go to https://github.com/department-of-veterans-affairs/notification-api/branches
-- if QA is on the ticket, Don't put `Fixes #` in the description.  
-- When I open a PR, the ticket should be moved to the DEV lane.
-- make at least one change to the new local branch, then
+###  copy PR template
+<!--- GUI option: ** If its not a ticket and just a quick PR, then make a branch, make changes, the go to https://github.com/department-of-veterans-affairs/notification-api/branches-->
 ```
 wd pr-template   
 cp pull-request-draft.md /tmp/pr-[branch-name].md 
 vim /tmp/pr-[branch-name].md
 ```
+### edit template
+- if QA is on the ticket, Don't put `Fixes #` in the description.  
+- When I open a PR, the ticket should be moved to the DEV lane.
+- make at least one change to the new local branch, then
+
 ### ChatGPT
 ask chatGPT to use this template as the basis for converting the zenhub ticket to a PR
 
@@ -40,14 +42,14 @@ e.g
 ```
 ##  GO TO REPO, and then:
 gh pr create \
--R department-of-veterans-affairs/notification-api \
+-R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H 1214-github-pre-release-trigger-failure \
--F /tmp/pr-1214.md \
+-H 97-trunc \
+-F /tmp/pr-97-infra.md \
 -a ldraney \
 -l devops \
--t '#1214 Fix Pre-release Trigger for GitHub Actions final fix'
+-t '#97 Infra for QA truncated output'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \

@@ -27,7 +27,10 @@
 73-workflows:~/oddball/notification-api-qa/73-bug-qa-container/.github/workflows
 73:~/oddball/notification-api-qa/73-bug-qa-container
 81:~/oddball/notification-api-qa/81-refactor-notifications
-97:~/oddball/notification-api-qa/97-trunc
+97-infra-util:~/oddball/vanotify-infra/97-trunc/cd/utility-infrastructure
+97-infra:~/oddball/vanotify-infra/97-trunc
+97-workflows:~/oddball/notification-api-qa/97-trunc/.github/workflows
+97:~/oddball/notification-api-qa/97-trunc-2
 ALB:~/oddball/vanotify-infra/ALB-idle-time-70
 Ai-Conversations:/mnt/c/Users/drane/OneDrive/Documents/AI-Conversations
 Documents:/mnt/c/Users/drane/OneDrive/Documents
