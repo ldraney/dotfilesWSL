@@ -4,6 +4,7 @@ on:
     types:
       - published
       - edited
+      - release
 
 jobs:
   setup-release:
