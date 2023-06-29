@@ -61,6 +61,7 @@ deployment:~/oddball/vanotify-team/Process/Deployment
 desktop:/mnt/c/Users/drane/Desktop
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
+dot-work:~/github/dotfilesWSL/.github/workflows
 dot-workflows:~/github/dotfilesWSL/.github/workflows
 dot:~/github/dotfilesWSL
 dotfilesWSL-workflows:~/github/dotfilesWSL/.github/workflows

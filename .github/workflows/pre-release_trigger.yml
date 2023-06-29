@@ -14,26 +14,16 @@ jobs:
           echo Deploy starting
           # this allows for blame
           echo ${{ github.actor }}
-
       - name: Check release and env values
         run: |
           echo "Release tag: ${{ github.event.release.tag_name }}"	          
           echo "Release name: ${{ github.event.release.name }}"
           echo "is a prerelease? (github.event.release.prerelease): ${{ github.event.release.prerelease }}"
-          echo "is published (staging) or a release (prod)?: ${{ github.event.action }}"
 
   pre-release:
     needs: [setup-release]
-    if: ${{ github.event.release.prerelease == true }}
-    uses: ./.github/workflows/pre-release.yml
+    uses: ./.github/workflows/release.yml
     with:
       environment: "staging"
       git-tag: "${{ github.event.release.tag_name }}"
-
-  release:
-    needs: [setup-release]
-    if: ${{ github.event.release.prerelease == false }}
-    uses: ./.github/workflows/release.yml
-    with:
-      environment: "prod"
-      git-tag: "${{ github.event.release.tag_name }}"
+    secrets: inherit

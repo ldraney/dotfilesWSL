@@ -1,3 +1,13 @@
+pick up ticket
+understand/research ticket (can include testing elsewhere)
+talk to QA - we get on the same page
+do whatever work you need to do
+if we didn't talk earlier, we absolutely need to talk before you open that PR, draft is fine
+Normally deploy branch to dev and test your branch, can't do that here > Dev Testing
+When satisfied that thing works on dev (can't do that here), open the PR > Dev Testing
+
+
+
 # Create a PR for your ticket/branch
 ###  copy PR template
 <!--- GUI option: ** If its not a ticket and just a quick PR, then make a branch, make changes, the go to https://github.com/department-of-veterans-affairs/notification-api/branches-->
@@ -9,7 +19,8 @@ vim /tmp/pr-[branch-name].md
 ### edit template
 - if QA is on the ticket, Don't put `Fixes #` in the description.  
 - When I open a PR, the ticket should be moved to the DEV lane.
-- make at least one change to the new local branch, then
+- make at least one change to the new local branch
+- note* you will have to make one file change, make sure not to make/delete a testfile, cause that will close the PR!
 
 ### ChatGPT
 ask chatGPT to use this template as the basis for converting the zenhub ticket to a PR
@@ -37,26 +48,25 @@ gh pr create \
 -l Notify \
 -t '#[[ticketNumber] a short description]'
 ```
-e.g
-- note* you will have to make one file change, make sure not to make/delete a testfile, cause that will close the PR!
+e.g.
 ```
 ##  GO TO REPO, and then:
 gh pr create \
--R department-of-veterans-affairs/vanotify-infra \
+-R department-of-veterans-affairs/notification-api \
 -d \
 -B master \
--H 97-trunc \
--F /tmp/pr-97-infra.md \
+-H 1348-release \
+-F /tmp/pr-1348.md \
 -a ldraney \
 -l devops \
--t '#97 Infra for QA truncated output'
+-l github_actions \
+-t '#1348 Release Trigger Action Bug fix'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
 -R department-of-veterans-affairs/vanotify-infra \
 ```
 
--l github_actions \
 
 
 
