@@ -17,13 +17,10 @@ jobs:
 
       - name: Check release and env values
         run: |
-          echo "The environment is ${{ steps.setup.outputs.environment }}"
-          echo "The tag is ${{ steps.tag.outputs.version }}"
           echo "Release tag: ${{ github.event.release.tag_name }}"	          
           echo "Release name: ${{ github.event.release.name }}"
-          echo "commit-hash: $(git rev-parse HEAD)"
           echo "is a prerelease? (github.event.release.prerelease): ${{ github.event.release.prerelease }}"
-          echo "is a regular release? (will say release if true)(github.event.action): ${{ github.event.action }}"
+          echo "is published (staging) or a release (prod)?: ${{ github.event.action }}"
 
   pre-release:
     needs: [setup-release]
