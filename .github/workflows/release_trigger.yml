@@ -1,7 +1,7 @@
 name: Release and Pre-release Trigger
 on:
   release:
-    types: [prereleased, released]
+    types: [prereleased, released, published]
 
 jobs:
   setup-release:
