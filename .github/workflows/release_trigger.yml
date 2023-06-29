@@ -1,7 +1,9 @@
 name: Release and Pre-release Trigger
 on:
   release:
-    types: [published, edited, release]
+    types:
+      - published
+      - edited
 
 jobs:
   setup-release:
