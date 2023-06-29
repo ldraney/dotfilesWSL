@@ -68,6 +68,7 @@ go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kid
 go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
+hotfix:~/oddball/notification-api/hotfix-trigger
 infra-538-util:~/oddball/vanotify-infra/538-qa-ec2/cd/utility-infrastructure
 infra-552:~/oddball/vanotify-infra/552-enable-cloudwatch-for-rds
 infra-master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
