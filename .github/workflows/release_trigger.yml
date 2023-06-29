@@ -5,6 +5,8 @@ on:
       - published
       - edited
       - release
+      - prereleased
+      - unpublished
 
 jobs:
   setup-release:
