@@ -1,14 +1,7 @@
 name: Release and Pre-release Trigger
 on:
   release:
-    types:
-      - published
-      - edited
-      - release
-      - prereleased
-      - unpublished
-      - created
-      - deleted
+    types: [prereleased, released]
 
 jobs:
   setup-release:
