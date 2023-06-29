@@ -7,6 +7,8 @@ on:
       - release
       - prereleased
       - unpublished
+      - created
+      - deleted
 
 jobs:
   setup-release:
