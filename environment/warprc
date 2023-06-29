@@ -59,6 +59,9 @@ deployment:~/oddball/vanotify-team/Process/Deployment
 desktop:/mnt/c/Users/drane/Desktop
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
+dot-workflows:~/github/dotfilesWSL/.github/workflows
+dot:~/github/dotfilesWSL
+dotfilesWSL-workflows:~/github/dotfilesWSL/.github/workflows
 dotfilesWSL:~/github/dotfilesWSL
 ec2:~/oddball/notification-api-qa/ec2-documentation
 engineering:~/oddball/vanotify-team/Engineering
