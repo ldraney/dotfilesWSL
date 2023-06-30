@@ -259,8 +259,43 @@ inoremap <Esc> <Esc><right>
 "netrw to automatically change working directory
 au FileType netrw nmap <buffer> <leader>% mt:!tmux split-window -h;tmux select-layout even-horizontal<CR>
 au FileType netrw nmap <buffer> <leader>z mt:!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
-nnoremap <leader>z :!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
+"open current NETRW directory in a new tab
+nnoremap <leader>z mt:!tmux split-window -h; tmux select-pane -L; tmux kill-pane; tmux select-layout even-horizontal<CR>
+"open current NETRW directory in a new tab
 nnoremap <leader>% mt:!tmux split-window -h;tmux select-layout even-horizontal<CR>
+
+"ends up going to the same directory but doesn't open a file
+"function! OpenInTmuxPane()
+    "" Get the full path of the current file
+    ""let l:filepath = netrw#LocalBrowseCheck("")
+	""echo l:filepath
+	"let l:filepath = expand('%:p')
+
+    "" Prepare the tmux command
+    "let l:tmux_command = "tmux split-window -h 'nvim " . l:filepath . "'"
+
+    "" Call the command
+    "call system(l:tmux_command)
+"endfunction
+
+function! OpenInTmuxPane()
+    " Get the current directory from the netrw buffer
+    let l:current_dir = b:netrw_curdir
+
+    " Get the name of the file under the cursor
+    let l:filename = expand('<cfile>')
+
+    " Combine the directory and filename to get the full path
+    let l:filepath = l:current_dir . '/' . l:filename
+
+    " Prepare the tmux command
+    let l:tmux_command = "tmux split-window -h 'nvim " . l:filepath . "'"
+
+    " Call the command
+    call system(l:tmux_command)
+endfunction
+
+nnoremap <leader>4 :call OpenInTmuxPane()<CR>
 
 "netrw copy a file
 au FileType netrw nmap <buffer> <leader>yp mt:!cp -r <C-R><C-F> ./<C-R><C-F>
