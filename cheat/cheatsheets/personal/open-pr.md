@@ -5,7 +5,7 @@ do whatever work you need to do
 if we didn't talk earlier, we absolutely need to talk before you open that PR, draft is fine
 Normally deploy branch to dev and test your branch, can't do that here > Dev Testing
 When satisfied that thing works on dev (can't do that here), open the PR > Dev Testing
-make sure 
+make sure my branch is updated
 
 
 # Opening a PR
