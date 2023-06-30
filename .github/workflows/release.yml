@@ -1,0 +1,17 @@
+name: Release
+on:
+  workflow_call:
+    inputs:
+      environment: 
+        required: true
+        type: string
+      git-tag:
+        required: true
+        type: string
+
+jobs:
+  deploy-to-prod:
+    uses: ./.github/workflows/deployment.yml
+    with:
+      environment: "${{ inputs.environment }}"
+      ref: "${{ inputs.git-tag }}"

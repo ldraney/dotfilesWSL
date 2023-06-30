@@ -72,6 +72,8 @@ git ls-files | while read file; do echo "$(git log -1 --format="%ad" -- "$file")
 ```
 
 ## rename a branch
+in my zshrc is git-rename-branch()
+
 git branch -m [old-branch-name] [new-branch-name]
 git push origin [new-branch-name]
 **delete old branch**

@@ -299,3 +299,23 @@ function wd-new-branch-infra() {
   wd add --force $branch_number
   wd $branch_number
 }
+
+function git-rename-branch() {
+  if [ $# -ne 2 ]; then
+    echo "Usage: git-rename-branch <old-branch-name> <new-branch-name>"
+    return 1
+  fi
+
+  local old_branch=$1
+  local new_branch=$2
+
+  # Rename the local branch
+  git branch -m "$old_branch" "$new_branch"
+
+  # Delete the old branch on remote
+  git push origin --delete "$old_branch"
+
+  # Push the new branch and reset the upstream branch
+  git push origin -u "$new_branch"
+}
+
