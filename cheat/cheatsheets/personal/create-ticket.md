@@ -4,13 +4,14 @@ IMPORTANT NOTE - CHECK templates in infra and noti and compare to teams repo bef
 ### first copy the template
 ```
 wd issue_templates
+git pull
 cp [template] /tmp/[template].md
 vim /tmp/[template].md
 #delete the first part of the ticket (e.g. assignee) as these are used in the command
 ```
 #### Important Reminders
 * if it has the qa label should have chat with qa at the top
-  - [ ] discuss with QA
+- [ ] Ticket is understood, and QA has been contacted
 
 ### create the issue (ticket)
 ```
@@ -26,15 +27,16 @@ gh issue create \
 ```
 ```
 wd noti
+wd qa
 gh issue create \
--F /tmp/statsd-spike-2.md \
---title "Datadog StatsD - System Reliability Dashboard" \
+-F /tmp/upgrade-provider-process.md \
+--title "SPIKE: Terraform Provider Upgrade Process" \
 --label Notify \
 --label devops \
 --label 'Review Needed' 
 
 
---label QA
+--label QA \
 --label 'VIP'   #add this if this is a HOTFIX or urgent ticket needed to be added to sprint
 --assignee ldraney \
 

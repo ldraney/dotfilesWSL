@@ -53,20 +53,20 @@ e.g.
 ```
 ##  GO TO REPO, and then:
 gh pr create \
--R department-of-veterans-affairs/notification-api \
+-R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H 1348-release \
--F /tmp/pr-1348.md \
+-H upgrade-fix \
+-F /tmp/pr-upgrade.md \
 -a ldraney \
 -l devops \
--l github_actions \
--t '#1348 Release Trigger Action Bug fix'
+-t 'Upgrade Fix'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
 -R department-of-veterans-affairs/vanotify-infra \
 ```
+-l github_actions \
 
 
 
