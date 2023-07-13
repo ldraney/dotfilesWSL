@@ -56,6 +56,8 @@ Plug 'hashivim/vim-terraform'
 " Telescope stuff
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'ThePrimeagen/harpoon'
 "Start using vim with googgle docs :)))
 "Plug 'aadv1k/gdoc.vim', {'do': './install.py'}
 
@@ -246,6 +248,15 @@ set termguicolors
 highlight Cursor guifg=blue guibg=blue
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
+
+" REMAPS
+nnoremap <leader>gf :Telescope git_files<cr>
+
+"Harpoon
+nnoremap <leader>pf :lua require("harpoon.mark").add_file()<cr>
+nnoremap <leader>pf :lua require("harpoon.ui").toggle_quick_menu()
+nnoremap <leader>pf :lua require("harpoon.ui").toggle_quick_menu()
+
 
 "set timeout timeoutlen=1000 ttimeoutlen=100
 "inoremap <C-c> <Esc>:w<CR>

@@ -56,11 +56,11 @@ gh pr create \
 -R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H upgrade-fix \
--F /tmp/pr-upgrade.md \
+-H 97trunc-infra \
+-F /tmp/pr-97-infra.md \
 -a ldraney \
 -l devops \
--t 'Upgrade Fix'
+-t '#97 infra permissions'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
