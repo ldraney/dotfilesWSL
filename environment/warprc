@@ -1,4 +1,5 @@
 1.6.2:~/oddball/notification-api
+108:~/oddball/notification-api-qa/108-notifications-abstraction
 1109-workflows:~/oddball/notification-api/1109-twistlock/.github/workflows
 1109:~/oddball/notification-api/1109-twistlock
 1214-workflows:~/oddball/notification-api/1214-github-pre-release-trigger-failure/.github/workflows
@@ -16,6 +17,9 @@
 538:~/oddball/vanotify-infra/538-qa-ec2
 550-workflows:~/oddball/notification-api/550-twistcli-fix/.github/workflows
 550:~/oddball/notification-api/550-twistcli-fix
+561-dev:~/oddball/notification-api/master/cd/application-deployment/dev
+561-workflows:~/oddball/notification-api/master/.github/workflows
+561:~/oddball/notification-api/561-profiler
 563-util:~/oddball/vanotify-infra/563-ec2-iam-docker/cd/utility-infrastructure
 563:~/oddball/vanotify-infra/563-ec2-iam-docker
 572-util:~/oddball/vanotify-infra/572-bug-qa-ec2/cd/utility-infrastructure
@@ -78,6 +82,8 @@ go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kid
 go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
+helps-master:~/github/oddball_helps/master
+helps:~/github/oddball_helps
 history-workflows:~/oddball/notification-api/history-fix/.github/workflows
 history:~/oddball/notification-api/history-fix
 hotfix:~/oddball/notification-api/hotfix-trigger
@@ -90,9 +96,10 @@ infra-workflows:~/oddball/vanotify-infra/.github/workflows
 infra:~/oddball/vanotify-infra
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 keepalive:~/oddball/notification-api/keepalive-duration-70
+ldraney:~/github/oddball_helps/ldraney-patch-2
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
-master:~/oddball/notification-api-qa/master
+master:~/oddball/vanotify-infra/master
 noti-531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 noti-538:~/oddball/vanotify-infra/538-qa-ec2
 noti-67:~/oddball/notification-api/67-run-qa-suite-action
@@ -125,6 +132,7 @@ ssh:~/.ssh
 team:~/oddball/vanotify-team
 terraform-aws-wordpress:~/github/terraform-aws-wordpress
 terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
+testy:~/github/oddball_helps/testy-test-3
 trigger:~/oddball/notification-api-qa/trigger-test
 upgrade-workflows:~/oddball/vanotify-infra/upgrade-fix/.github/workflows
 upgrade:~/oddball/vanotify-infra/upgrade-fix

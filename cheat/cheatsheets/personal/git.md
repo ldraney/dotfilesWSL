@@ -26,6 +26,9 @@ git reset --hard [hash]
 git push --force
 ```
 
+## Reset to HEAD
+git reset --hard HEAD
+
 ## Check changes before I commit
 git diff HEAD
 

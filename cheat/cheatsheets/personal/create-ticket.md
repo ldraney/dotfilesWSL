@@ -29,8 +29,8 @@ gh issue create \
 wd noti
 wd qa
 gh issue create \
--F /tmp/upgrade-provider-process.md \
---title "SPIKE: Terraform Provider Upgrade Process" \
+-F /tmp/build-error.md \
+--title "Dockerfile PyYaml and AttributeError" \
 --label Notify \
 --label devops \
 --label 'Review Needed' 

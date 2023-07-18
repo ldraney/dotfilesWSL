@@ -1,3 +1,7 @@
+Read this new agreement
+https://docs.google.com/document/d/1nwZIF_lydPWfvixxZlQLNt4nqy3Qp13pHQnMcYJjTqE/edit
+
+my summary below:
 pick up ticket
 understand/research ticket (can include testing elsewhere)
 talk to QA - we get on the same page
@@ -6,8 +10,6 @@ if we didn't talk earlier, we absolutely need to talk before you open that PR, d
 Normally deploy branch to dev and test your branch, can't do that here > Dev Testing
 When satisfied that thing works on dev (can't do that here), open the PR > Dev Testing
 make sure my branch is updated
-
-
 
 # Create a PR for your ticket/branch
 ###  copy PR template
@@ -53,14 +55,14 @@ e.g.
 ```
 ##  GO TO REPO, and then:
 gh pr create \
--R department-of-veterans-affairs/vanotify-infra \
+-R department-of-veterans-affairs/notification-api \
 -d \
 -B master \
--H 97trunc-infra \
--F /tmp/pr-97-infra.md \
+-H 561-profiler \
+-F /tmp/pr-561.md \
 -a ldraney \
 -l devops \
--t '#97 infra permissions'
+-t '#561 Profiler ddtrace errors'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
