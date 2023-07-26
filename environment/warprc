@@ -9,6 +9,8 @@
 1308:~/oddball/notification-api/1308-datadog-statsd
 1348-work:~/oddball/notification-api/1348-release/.github/workflows
 1348:~/oddball/notification-api/1348-release
+1362:~/oddball/vanotify-infra/1362-iam
+1378:~/oddball/vanotify-infra/1378-twistlock
 531-qa-regression-ec2:~/oddball/vanotify-infra/531-qa-regression-ec2
 531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 538-app:~/oddball/vanotify-infra/538-qa-ec2/cd/application-infrastructure
@@ -27,13 +29,15 @@
 572:~/oddball/vanotify-infra/572-bug-qa-ec2
 576-workflows:~/oddball/vanotify-infra/576-bug-aws-provider/.github/workflows
 576:~/oddball/vanotify-infra/576-bug-aws-provider
-593:~/oddball/vanotify-infra/593-upgrade-aws-terraform-provider
+593:~/oddball/vanotify-infra
 67-run-qa-suite-action:~/oddball/notification-api/67-run-qa-suite-action
 67-workflows:~/oddball/notification-api-qa/67-run-qa-action-2/.github/workflows
 67:~/oddball/notification-api-qa/67-run-qa-action-2
 73-workflows:~/oddball/notification-api-qa/73-bug-qa-container/.github/workflows
 73:~/oddball/notification-api-qa/73-bug-qa-container
 81:~/oddball/notification-api-qa/81-refactor-notifications
+96-workflows:~/oddball/notification-api-qa/96-setup/.github/workflows
+96:~/oddball/notification-api-qa/96-setup
 97-infra-util:~/oddball/vanotify-infra/97-trunc-4/cd/utility-infrastructure
 97-infra:~/oddball/vanotify-infra/97-trunc-4
 97-workflows:~/oddball/notification-api-qa/97-trunc-4/.github/workflows
@@ -45,6 +49,7 @@ Documents:/mnt/c/Users/drane/OneDrive/Documents
 Downloads:/mnt/c/Users/drane/Downloads
 HOTFIX-workflows:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger/.github/workflows
 HOTFIX:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger
+WSL:/mnt/c/Users/drane/OneDrive/Documents/WSL
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 application-infrastructure:~/oddball/vanotify-infra/cd/application-infrastructure
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
@@ -69,6 +74,8 @@ deployment:~/oddball/vanotify-team/Process/Deployment
 desktop:/mnt/c/Users/drane/Desktop
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
+dia-infra:~/github/DevOpsDialecticAI-infra
+dia:~/github/DevOpsDialecticAI
 dot-work:~/github/dotfilesWSL/.github/workflows
 dot-workflows:~/github/dotfilesWSL/.github/workflows
 dot:~/github/dotfilesWSL
@@ -132,8 +139,10 @@ ssh:~/.ssh
 team:~/oddball/vanotify-team
 terraform-aws-wordpress:~/github/terraform-aws-wordpress
 terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
+testbranch:~/github/DevOpsDialecticAI/master/testbranch-dia
 testy:~/github/oddball_helps/testy-test-3
 trigger:~/oddball/notification-api-qa/trigger-test
+twistlock:~/oddball/vanotify-infra/twistlock-ec2
 upgrade-workflows:~/oddball/vanotify-infra/upgrade-fix/.github/workflows
 upgrade:~/oddball/vanotify-infra/upgrade-fix
 util-workflows:~/oddball/vanotify-infra/.github/workflows

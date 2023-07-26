@@ -261,6 +261,7 @@ function git-worktree-add() {
   git worktree add $branch_name
   cd $branch_name
   git pull origin $branch_name
+  echo "ignore the above error if you are creating a new branch"
   git push --set-upstream origin $branch_name
   if [ "$repo" = "noti" ]; then
 	wd-new-branch $branch_name oddball/notification-api
@@ -270,6 +271,10 @@ function git-worktree-add() {
 	wd-new-branch $branch_name oddball/vanotify-infra
   elif [ "$repo" = "helps" ]; then
 	wd-new-branch $branch_name github/oddball_helps
+  elif [ "$repo" = "dia" ]; then
+	wd-new-branch $branch_name github/DevOpsDialecticAI
+  elif [ "$repo" = "dia-infra" ]; then
+	wd-new-branch $branch_name github/DevOpsDialecticAI-infra
   fi
 }
 
@@ -319,6 +324,7 @@ function git-rename-branch() {
 
   local old_branch=$1
   local new_branch=$2
+  local repo=$3
 
   # Rename the local branch
   git branch -m "$old_branch" "$new_branch"
@@ -328,5 +334,67 @@ function git-rename-branch() {
 
   # Push the new branch and reset the upstream branch
   git push origin -u "$new_branch"
+
+  git worktree remove "$old_branch"
+  git-worktree-add "$new_branch" $repo
 }
 
+function new-ticket() {
+    # Define the valid options
+    local options=("bug" "deployment" "spike" "story")
+
+    # Check if the input type is a valid option
+    if [[ " ${options[*]} " != *" $1 "* ]]; then
+        echo "Invalid type. Please choose from: ${options[*]}"
+        return
+    fi
+
+    # Navigate to the directory
+    wd issue_templates
+
+    # Update the repository
+    git pull
+
+    # Prepare the template name
+    local template_name="notify-$1-template.md"
+
+    # Prepare the destination file path
+    local destination="/tmp/$2.md"
+
+    # Check if the template file exists
+    if [[ -f "$template_name" ]]; then
+        # Copy the template to the temporary directory
+        cp "${template_name}" "${destination}"
+
+        # Edit the copied template
+        vim "${destination}"
+    else
+        echo "Template file ${template_name} does not exist."
+    fi
+}
+
+function create-pr() {
+
+    # Navigate to the desired directory
+    wd pr-template
+
+    # Update the repository
+    git pull
+
+    # Prepare the PR template name
+    local template_name="pull-request-draft.md"
+
+    # Prepare the destination file path
+    local destination="/tmp/pr-$1.md"
+
+    # Check if the PR template file exists
+    if [[ -f "$template_name" ]]; then
+        # Copy the PR template to the temporary directory
+        cp "${template_name}" "${destination}"
+
+        # Edit the copied PR template
+        vim "${destination}"
+    else
+        echo "PR template file ${template_name} does not exist."
+    fi
+}

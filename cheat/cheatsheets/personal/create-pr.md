@@ -1,24 +1,25 @@
 Read this new agreement
 https://docs.google.com/document/d/1nwZIF_lydPWfvixxZlQLNt4nqy3Qp13pHQnMcYJjTqE/edit
-
-my summary below:
-pick up ticket
-understand/research ticket (can include testing elsewhere)
-talk to QA - we get on the same page
-do whatever work you need to do
-if we didn't talk earlier, we absolutely need to talk before you open that PR, draft is fine
-Normally deploy branch to dev and test your branch, can't do that here > Dev Testing
-When satisfied that thing works on dev (can't do that here), open the PR > Dev Testing
-make sure my branch is updated
+- pick up ticket
+- understand/research ticket (can include testing elsewhere)
+- talk to QA - we get on the same page
+- do whatever work you need to do
+- if we didn't talk earlier, we absolutely need to talk before you open that PR, draft is fine
+- Normally deploy branch to dev and test your branch, can't do that here > Dev Testing
+- When satisfied that thing works on dev (can't do that here), open the PR > Dev Testing
+- make sure my branch is updated
 
 # Create a PR for your ticket/branch
-###  copy PR template
+
+create-pr [ticket-number]
+
 <!--- GUI option: ** If its not a ticket and just a quick PR, then make a branch, make changes, the go to https://github.com/department-of-veterans-affairs/notification-api/branches-->
-```
-wd pr-template   
-cp pull-request-draft.md /tmp/pr-[branch-name].md 
-vim /tmp/pr-[branch-name].md
-```
+<!--```-->
+<!--wd pr-template   -->
+<!--cp pull-request-draft.md /tmp/pr-[branch-name].md -->
+<!--vim /tmp/pr-[branch-name].md-->
+<!--```-->
+
 ### edit template
 - if QA is on the ticket, Don't put `Fixes #` in the description.  
 - When I open a PR, the ticket should be moved to the DEV lane.
@@ -55,20 +56,20 @@ e.g.
 ```
 ##  GO TO REPO, and then:
 gh pr create \
--R department-of-veterans-affairs/notification-api \
+-R department-of-veterans-affairs/notification-api-qa \
 -d \
 -B master \
--H 561-profiler \
--F /tmp/pr-561.md \
+-H 96-setup \
+-F /tmp/pr-96.md \
 -a ldraney \
 -l devops \
--t '#561 Profiler ddtrace errors'
+-l github_actions \
+-t '#96 Setup Env'
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
 -R department-of-veterans-affairs/vanotify-infra \
 ```
--l github_actions \
 
 
 

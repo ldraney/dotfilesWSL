@@ -1,42 +1,24 @@
-IMPORTANT NOTE - CHECK templates in infra and noti and compare to teams repo before using this again, and adjust this cheat guide as necessary.  May need to add a wd command according to the repo I'm making a ticket for
-
 ## Create a ticket
 ### first copy the template
-```
-wd issue_templates
-git pull
-cp [template] /tmp/[template].md
-vim /tmp/[template].md
-#delete the first part of the ticket (e.g. assignee) as these are used in the command
-```
-#### Important Reminders
-* if it has the qa label should have chat with qa at the top
-- [ ] Ticket is understood, and QA has been contacted
+new-ticket [bug, deployment, spike, story] [name]
+e.g.
+new-ticket bug test-ticket
 
 ### create the issue (ticket)
-```
-wd [related repo]
-gh issue create \
--F /tmp/template \
---title "Datadog Optimization for AWS Services" \
---assignee ldraney \
---label Notify \
---label devops \
---label 'Review Needed'
---label epic/bug/[none]
-```
 ```
 wd noti
 wd qa
 gh issue create \
--F /tmp/build-error.md \
---title "Dockerfile PyYaml and AttributeError" \
+-F /tmp/bug-test-ticket.md \
+--title "Hotfix - QA EC2 partition and deploy" \
 --label Notify \
 --label devops \
+--label QA 
+
 --label 'Review Needed' 
 
+--label epic/bug/[none]
 
---label QA \
 --label 'VIP'   #add this if this is a HOTFIX or urgent ticket needed to be added to sprint
 --assignee ldraney \
 
