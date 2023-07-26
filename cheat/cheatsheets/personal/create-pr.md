@@ -1,3 +1,39 @@
+Quick steps:
+- create pr in /tmp/pr-$1.md
+```
+create-pr [ticket-number]
+```
+- replace Fixes #__ with #[ticket-number](URL TO TICKET)
+- copy zenhub ticket content 
+- copy new template
+- ChatGPT4 - /ticket
+  - enter the appropriate values
+- create pr
+```
+wd [repo]
+gh pr create \
+-R department-of-veterans-affairs/vanotify-infra \
+-d \
+-B master \
+-H 1378-twistlock \
+-F /tmp/pr-1378.md \
+-a ldraney \
+-l devops \
+-t '#1378 Twistlock bug'
+
+-l github_actions \
+
+-R department-of-veterans-affairs/notification-api \
+-R department-of-veterans-affairs/notification-api-qa \
+-R department-of-veterans-affairs/vanotify-infra \
+```
+
+
+
+
+
+
+
 Read this new agreement
 https://docs.google.com/document/d/1nwZIF_lydPWfvixxZlQLNt4nqy3Qp13pHQnMcYJjTqE/edit
 - pick up ticket

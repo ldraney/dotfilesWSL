@@ -385,7 +385,7 @@ function create-pr() {
     local template_name="pull-request-draft.md"
 
     # Prepare the destination file path
-    local destination="/tmp/pr-$1.md"
+    local destination="/tmp/$1.md"
 
     # Check if the PR template file exists
     if [[ -f "$template_name" ]]; then
