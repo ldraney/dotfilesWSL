@@ -9,12 +9,11 @@ new-ticket bug test-ticket
 wd noti
 wd qa
 gh issue create \
--F /tmp/bug-test-ticket.md \
---title "Hotfix - QA EC2 partition and deploy" \
+-F /tmp/aws-inspector.md \
+--title "Twistlock to Amazon Inspector" \
 --label Notify \
 --label devops \
---label QA 
-
+--label QA \
 --label 'Review Needed' 
 
 --label epic/bug/[none]

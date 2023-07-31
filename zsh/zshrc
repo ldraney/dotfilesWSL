@@ -339,7 +339,7 @@ function git-rename-branch() {
   git-worktree-add "$new_branch" $repo
 }
 
-function new-ticket() {
+function create-ticket() {
     # Define the valid options
     local options=("bug" "deployment" "spike" "story")
 
@@ -397,4 +397,15 @@ function create-pr() {
     else
         echo "PR template file ${template_name} does not exist."
     fi
+}
+
+function qa-workflow-regression() {
+  local action_branch=$1
+  local branch_to_run=$2
+  local environment=$3
+  local file="regression.yml"
+
+  local cmd="gh workflow run -r $action_branch -F branch=$branch_to_run -F environment=$environment -F $field=$value $file"
+  echo "Running command: $cmd"
+  eval "$cmd"
 }

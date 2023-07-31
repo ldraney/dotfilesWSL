@@ -12,14 +12,15 @@ create-pr [ticket-number]
 ```
 wd [repo]
 gh pr create \
--R department-of-veterans-affairs/vanotify-infra \
+-R department-of-veterans-affairs/notification-api \
 -d \
 -B master \
--H 1378-twistlock \
--F /tmp/pr-1378.md \
+-H twistlock-remove \
+-F /tmp/twistlock.md \
 -a ldraney \
 -l devops \
--t '#1378 Twistlock bug'
+-l github_actions \
+-t 'Remove Twistlock'
 
 -l github_actions \
 

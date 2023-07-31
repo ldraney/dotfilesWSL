@@ -2,6 +2,7 @@
 108:~/oddball/notification-api-qa/108-notifications-abstraction
 1109-workflows:~/oddball/notification-api/1109-twistlock/.github/workflows
 1109:~/oddball/notification-api/1109-twistlock
+118:~/oddball/notification-api-qa/118-runner-bug
 1214-workflows:~/oddball/notification-api/1214-github-pre-release-trigger-failure/.github/workflows
 1214:~/oddball/notification-api/1214-github-pre-release-trigger-failure
 1253:~/oddball/notification-api/1253-communication-item-crud
@@ -134,6 +135,7 @@ qa-workflows:~/oddball/notification-api-qa/.github/workflows
 qa:~/oddball/notification-api-qa
 queries-teams-repo:~/oddball/vanotify-team/Engineering/DevOps/aws/log_metric_scripts
 queries:~/github/oddball_helps/scripts/aws/queries
+scripts:~/github/oddball_helps/master/scripts
 sensitive:~/github/sensitive
 ssh:~/.ssh
 team:~/oddball/vanotify-team
@@ -142,7 +144,7 @@ terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
 testbranch:~/github/DevOpsDialecticAI/master/testbranch-dia
 testy:~/github/oddball_helps/testy-test-3
 trigger:~/oddball/notification-api-qa/trigger-test
-twistlock:~/oddball/vanotify-infra/twistlock-ec2
+twistlock:~/oddball/notification-api/twistlock-remove
 upgrade-workflows:~/oddball/vanotify-infra/upgrade-fix/.github/workflows
 upgrade:~/oddball/vanotify-infra/upgrade-fix
 util-workflows:~/oddball/vanotify-infra/.github/workflows
