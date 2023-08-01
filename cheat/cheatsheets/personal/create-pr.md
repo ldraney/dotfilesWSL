@@ -6,21 +6,20 @@ create-pr [ticket-number]
 - replace Fixes #__ with #[ticket-number](URL TO TICKET)
 - copy zenhub ticket content 
 - copy new template
-- ChatGPT4 - /ticket
+- ChatGPT4 /create-pr
   - enter the appropriate values
-- create pr
 ```
 wd [repo]
 gh pr create \
--R department-of-veterans-affairs/notification-api \
+-R department-of-veterans-affairs/notification-api-qa \
 -d \
 -B master \
--H twistlock-remove \
--F /tmp/twistlock.md \
+-H 118-runner-bug \
+-F /tmp/118.md \
 -a ldraney \
 -l devops \
 -l github_actions \
--t 'Remove Twistlock'
+-t 'runner-debug'
 
 -l github_actions \
 

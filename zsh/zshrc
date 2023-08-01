@@ -96,7 +96,7 @@ fi
 export TERM=xterm-256color 
 
 #aliases
-alias gq='$HOME/.customCommands/gitScript.sh'
+#alias gq='$HOME/.customCommands/gitScript.sh'
 alias setLoginBackground='$HOME/.customCommands/setLoginBackground'
 alias gansPre='$HOME/.customCommands/gansPre.sh'
 alias gans='$HOME/.customCommands/gitAns.sh'
@@ -399,13 +399,11 @@ function create-pr() {
     fi
 }
 
-function qa-workflow-regression() {
-  local action_branch=$1
-  local branch_to_run=$2
-  local environment=$3
-  local file="regression.yml"
-
-  local cmd="gh workflow run -r $action_branch -F branch=$branch_to_run -F environment=$environment -F $field=$value $file"
-  echo "Running command: $cmd"
-  eval "$cmd"
+function gq() {
+    git fetch && 
+    git merge master &&
+    git pull && 
+    git add -A && 
+    git commit -m "$1" && 
+    git push
 }
