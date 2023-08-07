@@ -1,5 +1,5 @@
 ## update SAML Token
-1. `wd aws-cli-script`
+1. `wd aws-cli-setup`
 2. `vim samlrep.txt`
 3. `./get-token.py`
 4. ```

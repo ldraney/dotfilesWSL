@@ -1,5 +1,6 @@
 1.6.2:~/oddball/notification-api
 108:~/oddball/notification-api-qa/108-notifications-abstraction
+109:~/oddball/notification-api-qa/109-runner
 1109-workflows:~/oddball/notification-api/1109-twistlock/.github/workflows
 1109:~/oddball/notification-api/1109-twistlock
 118:~/oddball/notification-api-qa/118-runner-bug
@@ -56,6 +57,7 @@ application-infrastructure:~/oddball/vanotify-infra/cd/application-infrastructur
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
 aws-cli-commands:~/github/aws-cli-commands
 aws-cli-script:~/github/oddball_helps/scripts/aws-cli-script
+aws-cli-setup:~/github/oddball_helps/master/scripts/aws-cli-script
 aws-cli:~/github/aws-cli-commands
 aws-dd-forwarder-3.66.0:/mnt/c/Users/drane/Downloads/aws-dd-forwarder-3.66.0
 bootstrap:~/oddball/vanotify-infra/cd/bootstrap
@@ -135,6 +137,7 @@ qa-workflows:~/oddball/notification-api-qa/.github/workflows
 qa:~/oddball/notification-api-qa
 queries-teams-repo:~/oddball/vanotify-team/Engineering/DevOps/aws/log_metric_scripts
 queries:~/github/oddball_helps/scripts/aws/queries
+runner:~/oddball/notification-api-qa/109-runner/.github/actions/runner_automation
 scripts:~/github/oddball_helps/master/scripts
 sensitive:~/github/sensitive
 ssh:~/.ssh

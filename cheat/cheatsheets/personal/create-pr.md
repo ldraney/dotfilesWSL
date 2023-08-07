@@ -1,5 +1,4 @@
 Quick steps:
-- create pr in /tmp/pr-$1.md
 ```
 create-pr [ticket-number]
 ```
@@ -14,12 +13,12 @@ gh pr create \
 -R department-of-veterans-affairs/notification-api-qa \
 -d \
 -B master \
--H 118-runner-bug \
--F /tmp/118.md \
+-H 109-runner \
+-F /tmp/109.md \
 -a ldraney \
 -l devops \
 -l github_actions \
--t 'runner-debug'
+-t 'Runner Automation'
 
 -l github_actions \
 
@@ -33,6 +32,8 @@ gh pr create \
 
 
 
+
+LONG VERSION
 
 Read this new agreement
 https://docs.google.com/document/d/1nwZIF_lydPWfvixxZlQLNt4nqy3Qp13pHQnMcYJjTqE/edit

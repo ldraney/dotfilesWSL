@@ -31,6 +31,8 @@ au BufRead,BufNewFile *.sh setfiletype zsh
 set syn=sh
 
 call plug#begin()
+" relative and absolute line numbers
+Plug 'sitiom/nvim-numbertoggle'
 
 "format json files
 Plug 'XadillaX/json-formatter.vim'
@@ -188,7 +190,7 @@ set wrap breakindent
 set encoding=utf-8
 set textwidth=0
 set nohidden
-set number
+set relativenumber
 set title
 set undodir=~/.vim/undodir  "I need to set up this directory
 set undofile
@@ -198,7 +200,6 @@ set autoread
 set scrolloff=10
 set colorcolumn=80
 set clipboard=unnamed,unnamedplus
-set relativenumber
 """ Coloring
 set splitbelow
 set splitright
