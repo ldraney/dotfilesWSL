@@ -47,6 +47,7 @@
 97trunc:~/oddball/vanotify-infra/97trunc-infra
 ALB:~/oddball/vanotify-infra/ALB-idle-time-70
 Ai-Conversations:/mnt/c/Users/drane/OneDrive/Documents/AI-Conversations
+DAI:~/github/DevOpsDialecticAI
 Documents:/mnt/c/Users/drane/OneDrive/Documents
 Downloads:/mnt/c/Users/drane/Downloads
 HOTFIX-workflows:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger/.github/workflows
@@ -75,6 +76,8 @@ ddog:~/oddball/notification-api/ddog-local
 ddtrace:~/oddball/notification-api/ddtrace-error
 deployment:~/oddball/vanotify-team/Process/Deployment
 desktop:/mnt/c/Users/drane/Desktop
+devi-infra:~/github/DevOpsDialecticAI-infra
+devi:~/github/DevOpsDialecticAI
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
 dia-infra:~/github/DevOpsDialecticAI-infra
@@ -109,7 +112,7 @@ keepalive:~/oddball/notification-api/keepalive-duration-70
 ldraney:~/github/oddball_helps/ldraney-patch-2
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
-master:~/oddball/vanotify-infra/master
+master:~/oddball/notification-api-qa/master
 noti-531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 noti-538:~/oddball/vanotify-infra/538-qa-ec2
 noti-67:~/oddball/notification-api/67-run-qa-suite-action
@@ -131,6 +134,7 @@ oddball:~/oddball
 oddball_helps:~/github/oddball_helps
 personal:~/github
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
+privateGPT:~/github/privateGPT
 qa-master-workflows:~/oddball/notification-api-qa/master/.github/workflows
 qa-master:~/oddball/notification-api-qa/master
 qa-workflows:~/oddball/notification-api-qa/.github/workflows

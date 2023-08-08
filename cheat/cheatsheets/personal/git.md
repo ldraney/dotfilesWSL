@@ -1,3 +1,6 @@
+## Recent command fixed large file error
+git config pull.rebase true
+
 ## Check latest SHA of my branch
 ```
 git rev-parse HEAD
