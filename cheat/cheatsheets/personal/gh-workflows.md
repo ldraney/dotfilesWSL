@@ -3,7 +3,8 @@ gh workflow run -r [branch] -F [ref] dev_deploy.yml
 
 
 # INFRA
-gh workflow run -r [branch] F [ref] deployment.yml
+gh workflow run -r [branch] -F [ref] deployment.yaml
+gh workflow run -r 619-adv-scanning -F 619-adv-scanning deployment.yaml
 
 
 # QA

@@ -258,6 +258,10 @@ function git-worktree-add() {
   branch_name=$1
   repo=$2
   git fetch origin
+  cdt
+  cdt master
+  git pull origin master
+  cdt
   git worktree add $branch_name
   cd $branch_name
   git pull origin $branch_name
