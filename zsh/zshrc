@@ -257,11 +257,12 @@ function retry-profiler(){
 function git-worktree-add() {
   branch_name=$1
   repo=$2
+  wd $repo
   git fetch origin
-  cdt
-  cdt master
+  git worktree add master
+  cd master
   git pull origin master
-  cdt
+  wd $repo
   git worktree add $branch_name
   cd $branch_name
   git pull origin $branch_name
@@ -377,7 +378,7 @@ function create-ticket() {
     fi
 }
 
-function create-pr() {
+function start-pr() {
 
     # Navigate to the desired directory
     wd pr-template
@@ -403,11 +404,80 @@ function create-pr() {
     fi
 }
 
+#function create-pr() {
+
+#}
+
 function gq() {
-    git fetch && 
-    git merge master &&
-    git pull && 
-    git add -A && 
-    git commit -m "$1" && 
-    git push
+  echo "Fetching updates from the remote repository..." &&
+  git fetch &&
+
+  echo "Merging changes (if any) from the master branch into the current branch..." &&
+  git merge master &&
+
+  echo "Pushing master changes (if any) to the current remote branch..." &&
+  git push &&
+
+  echo "Pulling updates from the remote repository and merging them into the current branch..." &&
+  git pull &&
+
+  echo "Adding all changes to the staging area..." &&
+  git add -A &&
+
+  echo "Committing the changes with the provided message..." &&
+  git commit -m "$1" &&
+
+  echo "Pushing the committed changes to the remote repository..." &&
+  git push
+}
+
+function browser() {
+  /mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe "$1"
+}
+
+function open_zenhub_issue() {
+  local github_url="$1"
+  local repo="$2"
+  if [ "$repo" = "noti" ]; then
+	local repo="notification-api"
+  elif [ "$repo" = "qa" ]; then
+	local repo="notification-api-qa"
+  elif [ "$repo" = "infra" ]; then
+	local repo="vanotify-infra"
+  fi
+
+  local issue_number=$(echo "$github_url" | grep -oE '[0-9]+$')
+  local zenhub_url="https://app.zenhub.com/workspaces/va-notify-620d21369d810a00146ed9c8/issues/gh/department-of-veterans-affairs/$repo/$issue_number"
+  browser "$zenhub_url"
+}
+
+function pr_view() {
+  local repo=$1
+  local branch=$2
+  wd $repo $branch
+
+  if [ "$repo" = "noti" ]; then
+	local repo="notification-api"
+  elif [ "$repo" = "qa" ]; then
+	local repo="notification-api-qa"
+  elif [ "$repo" = "infra" ]; then
+	local repo="vanotify-infra"
+  fi
+
+  pr_number=$(gh pr view $branch | grep -m1 -oE 'https://github.com/[^ ]*' | grep -oE '[0-9]+$')
+
+  browser "https://github.com/department-of-veterans-affairs/$repo/pull/$pr_number"
+}
+
+function pr_merge() {
+  local repo=$1
+  local branch=$2
+  pr_number=$(gh pr view $branch | grep -m1 -oE 'https://github.com/[^ ]*' | grep -oE '[0-9]+$')
+  echo "merging PR: $pr_number"
+
+  wd $repo master
+  git pull
+  git fetch origin
+  gh pr merge 125 --squash
+  git push origin master
 }

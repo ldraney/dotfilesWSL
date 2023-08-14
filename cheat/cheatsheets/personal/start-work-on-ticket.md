@@ -1,3 +1,19 @@
+- assign yourself
+- add this sprint's label
+- Ping QA if label, and make sure I understand the ticket and am ready for a hangout
+```
+git-worktree-add 563-ec2-iam-docker infra
+```
+
+
+
+
+
+
+
+
+LONG VERSION
+
 # Start Working on a Ticket
 ## check this useful new dev agreement
 https://docs.google.com/document/d/1nwZIF_lydPWfvixxZlQLNt4nqy3Qp13pHQnMcYJjTqE/edit

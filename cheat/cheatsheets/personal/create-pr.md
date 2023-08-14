@@ -1,31 +1,41 @@
 Quick steps:
 ```
-create-pr [ticket-number]
+start-pr [ticket-number]
 ```
 - replace Fixes #__ with #[ticket-number](URL TO TICKET)
-- copy zenhub ticket content 
 - copy new template
+- copy zenhub ticket content 
 - ChatGPT4 /create-pr
   - enter the appropriate values
-```
 wd [repo]
+```
+url=$( \
 gh pr create \
 -R department-of-veterans-affairs/notification-api-qa \
 -d \
 -B master \
--H 109-runner \
--F /tmp/109.md \
+-H docker-password \
+-F /tmp/docker-password.md \
 -a ldraney \
 -l devops \
--l github_actions \
--t 'Runner Automation'
+-t 'Docker Password Mask in ECR Login action' \
+| grep -o 'https://github.com/[^ ]*')
+)
 
--l github_actions \
+browser "$url"
+```
+
+next step: 
+cheat open-pr.md
 
 -R department-of-veterans-affairs/notification-api \
 -R department-of-veterans-affairs/notification-api-qa \
 -R department-of-veterans-affairs/vanotify-infra \
 ```
+
+
+
+
 
 
 

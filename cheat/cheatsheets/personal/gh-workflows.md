@@ -1,5 +1,6 @@
 # NOTI
-gh workflow run -r [branch] -F [ref] dev_deploy.yml
+gh workflow run -r [branch] -F ref=[branch] dev_deploy.yml
+gh workflow run -r 619-adv-scanning twistlock.yml
 
 
 # INFRA

@@ -1,22 +1,66 @@
+
+create-ticket [bug, deployment, spike, story] [name]
+
+
+```
+output=$( \
+gh issue create \
+-F /tmp/docker-password.md \
+--title "Docker Password error" \
+--label Notify \
+--label devops \
+--label bug \
+--label 'VIP' \
+--label 'Review Needed'  \
+);
+issue_url=$(echo "$output" | grep -oE 'https://github.com/[^ ]+');
+open_zenhub_issue "$issue_url"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Create a ticket
 ### first copy the template
-new-ticket [bug, deployment, spike, story] [name]
+create-ticket [bug, deployment, spike, story] [name]
 e.g.
-new-ticket bug test-ticket
+create-ticket bug test-ticket
 
 ### create the issue (ticket)
 ```
 wd noti
 wd qa
+output=$( \
 gh issue create \
--F /tmp/aws-inspector.md \
---title "Twistlock to Amazon Inspector" \
+-F /tmp/docker-password.md \
+--title "Docker Password error" \
 --label Notify \
 --label devops \
---label QA \
---label 'Review Needed' 
+--label bug \
+--label 'VIP' \
+--label 'Review Needed'  \
+);
+
+issue_url=$(echo "$output" | grep -oE 'https://github.com/[^ ]+');
+
+open_zenhub_issue "$issue_url"
+```
+
 
 --label epic/bug/[none]
+--label QA \
 
 --label 'VIP'   #add this if this is a HOTFIX or urgent ticket needed to be added to sprint
 --assignee ldraney \
@@ -26,3 +70,5 @@ To add a ticket to an epic, simply create it then add the appropriate epic label
 ```
 
 - message Mel if I'm interested in moving a ticket to the current sprint
+
+<!--output=$(gh issue create -F /tmp/docker-password.md --title "Docker Password error" --label Notify --label devops --label bug --label 'VIP' --label 'Review Needed'); issue_url=$(echo "$output" | grep -oE 'https://github.com/[^ ]+'); open_zenhub_issue "$issue_url"-->

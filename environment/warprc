@@ -13,6 +13,8 @@
 1348:~/oddball/notification-api/1348-release
 1362:~/oddball/vanotify-infra/1362-iam
 1378:~/oddball/vanotify-infra/1378-twistlock
+1415-workflows:~/oddball/notification-api/master/1415-docker-password/.github/workflows
+1415:~/oddball/notification-api/master/1415-docker-password
 531-qa-regression-ec2:~/oddball/vanotify-infra/531-qa-regression-ec2
 531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 538-app:~/oddball/vanotify-infra/538-qa-ec2/cd/application-infrastructure
@@ -85,6 +87,7 @@ devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
 dia-infra:~/github/DevOpsDialecticAI-infra
 dia:~/github/DevOpsDialecticAI
+docker:~/oddball/notification-api-qa/docker-password
 dot-work:~/github/dotfilesWSL/.github/workflows
 dot-workflows:~/github/dotfilesWSL/.github/workflows
 dot:~/github/dotfilesWSL
@@ -115,7 +118,11 @@ keepalive:~/oddball/notification-api/keepalive-duration-70
 ldraney:~/github/oddball_helps/ldraney-patch-2
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
-master:~/oddball/notification-api-qa/master
+master:/home
+mig-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
+mig:~/oddball/notification-api/migrations-perf
+migrations-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
+migrations:~/oddball/notification-api/migrations-perf
 noti-531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 noti-538:~/oddball/vanotify-infra/538-qa-ec2
 noti-67:~/oddball/notification-api/67-run-qa-suite-action
