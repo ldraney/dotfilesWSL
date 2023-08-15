@@ -1,3 +1,9 @@
+" VIM RECORDING
+"q<letter> to start recording
+"q to stop recording
+"@<letter> to play back recording
+
+
 "function! TmuxSplitEvenHorizontal()
   "let filepath = expand('%:p')
   "if !empty(filepath)

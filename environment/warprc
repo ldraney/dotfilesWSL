@@ -34,10 +34,12 @@
 576-workflows:~/oddball/vanotify-infra/576-bug-aws-provider/.github/workflows
 576:~/oddball/vanotify-infra/576-bug-aws-provider
 593:~/oddball/vanotify-infra
+617:~/oddball/vanotify-infra/617-mpi-integration-lambda-support-for-dynamodb
 619-util:~/oddball/vanotify-infra/619-adv-scanning/cd/utility-infrastructure
 619-workflows:~/oddball/notification-api/619-adv-scanning/.github/workflows
 619:~/oddball/notification-api/619-adv-scanning
 626:~/oddball/vanotify-infra/626-twistlock
+626noti:~/oddball/notification-api/626noti-twistlock
 67-run-qa-suite-action:~/oddball/notification-api/67-run-qa-suite-action
 67-workflows:~/oddball/notification-api-qa/67-run-qa-action-2/.github/workflows
 67:~/oddball/notification-api-qa/67-run-qa-action-2
@@ -119,7 +121,7 @@ keepalive:~/oddball/notification-api/keepalive-duration-70
 ldraney:~/github/oddball_helps/ldraney-patch-2
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
-master:/home
+master:~/oddball/vanotify-infra/master
 mig-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 mig:~/oddball/notification-api/migrations-perf
 migrations-workflows:~/oddball/notification-api/migrations-perf/.github/workflows

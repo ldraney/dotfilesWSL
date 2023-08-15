@@ -267,7 +267,7 @@ function git-worktree-add() {
   cd $branch_name
   git pull origin $branch_name
   echo "ignore the above error if you are creating a new branch"
-  git push --set-upstream origin $branch_name
+  #git push --set-upstream origin $branch_name
   if [ "$repo" = "noti" ]; then
 	wd-new-branch $branch_name oddball/notification-api
   elif [ "$repo" = "qa" ]; then
@@ -490,7 +490,7 @@ function aws-saml() {
   vim ~/.zshenv
 }
 
-function check_workflow() {
+function workflow_check() {
   local repo=$1
   local workflow=$2
 
@@ -519,7 +519,7 @@ function check_workflow() {
   fi
 }
 
-function run_workflow() {
+function workflow_run() {
   local repo=$1
   local workflow=$2
 
@@ -533,5 +533,28 @@ function run_workflow() {
   # Call the check_workflow function to check the status of the run
   echo "Checking the status of the run..."
   check_workflow "$repo" "$workflow"
-  sleep 3
+  sleep 5
+}
+
+function branch() {
+  git rev-parse --abbrev-ref HEAD
+}
+
+function reset-repo() {
+  local repo=$1
+  wd $repo_short
+
+  if [ "$repo_short" = "noti" ]; then
+	local repo="notification-api"
+  elif [ "$repo_short" = "qa" ]; then
+	local repo="notification-api-qa"
+  elif [ "$repo_short" = "infra" ]; then
+	local repo="vanotify-infra"
+  fi
+
+  rm -rf $repo
+  git clone --bare git@github.com:department-of-veterans-affairs/$repo.git $repo
+  cd $repo
+
+  git-worktree-add master $repo_short
 }
