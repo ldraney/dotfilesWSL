@@ -1,7 +1,25 @@
+# literally type this command:
+aws-saml
+
+
+
+
+
+wd aws-cli-setup
+vim samlrep.txt
+python3 get-token.py
+vim aws-credentials.sh
+vim ~/.zshenv
+
+
+
+
+
+
 ## update SAML Token
 1. `wd aws-cli-setup`
 2. `vim samlrep.txt`
-3. `./get-token.py`
+3. `python3 ./get-token.py`
 4. ```
 vim aws-credentials.sh
 vim ~/.zshenv

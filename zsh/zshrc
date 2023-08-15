@@ -209,7 +209,7 @@ my_cheats()
 #complete -o nospace -C $(whereis terraform | cut -c 12-) terraform
 
 ##aws autocomplete
-#complete -C '/usr/local/bin/aws_completer' aws
+complete -C '/usr/local/bin/aws_completer' aws
 
 ## github cli autocomplete
 ## https://www.ajfriesen.com/github-cli-auto-completion-with-oh-my-zsh/
@@ -480,4 +480,58 @@ function pr_merge() {
   git fetch origin
   gh pr merge 125 --squash
   git push origin master
+}
+
+function aws-saml() {
+  wd aws-cli-setup
+  vim samlrep.txt
+  python3 get-token.py
+  vim aws-credentials.sh
+  vim ~/.zshenv
+}
+
+function check_workflow() {
+  local repo=$1
+  local workflow=$2
+
+  # Step 1: Get the current git branch
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  
+  # Step 2: Use gh command to get the latest run id for the current branch
+  # The grep command filters runs for the current branch,
+  # The awk command gets the run id (the last element in the line)
+  run_id=$(gh workflow view $workflow | grep "$current_branch" | head -n 1 | awk '{print $NF}')
+  
+  if [ -z "$run_id" ]; then
+	  echo "No runs found for the current branch: $current_branch"
+  else
+	if [ "$repo" = "noti" ]; then
+	  local repo="notification-api"
+	elif [ "$repo" = "qa" ]; then
+	  local repo="notification-api-qa"
+	elif [ "$repo" = "infra" ]; then
+	  local repo="vanotify-infra"
+	fi
+
+	url="https://github.com/department-of-veterans-affairs/$repo/actions/runs/$run_id"
+	echo "Opening $url"
+	browser "$url"
+  fi
+}
+
+function run_workflow() {
+  local repo=$1
+  local workflow=$2
+
+  # Get the current git branch
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  
+  # Run the GitHub Actions workflow for the current branch
+  echo "Running workflow $workflow on branch $current_branch..."
+  gh workflow run "$workflow" -r "$current_branch" -F ref="$current_branch"
+
+  # Call the check_workflow function to check the status of the run
+  echo "Checking the status of the run..."
+  check_workflow "$repo" "$workflow"
+  sleep 5
 }
