@@ -533,5 +533,5 @@ function run_workflow() {
   # Call the check_workflow function to check the status of the run
   echo "Checking the status of the run..."
   check_workflow "$repo" "$workflow"
-  sleep 5
+  sleep 3
 }
