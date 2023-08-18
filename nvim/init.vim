@@ -22,6 +22,19 @@ endfunction
 
 nnoremap <leader>th :call TmuxSplitEvenHorizontal()<CR>
 
+function! ToggleRelAbsNumbers()
+	set relativenumber
+        set number
+    else
+        set norelativenumber
+        set nonumber
+    endif
+endfunction
+
+nnoremap <leader>s :call ToggleRelAbsNumbers()<CR>
+
+
+
 "use alt-/ to search within a highlighted visual field
 vnoremap <M-/> <Esc>/\%V
 "
@@ -38,7 +51,7 @@ set syn=sh
 
 call plug#begin()
 " relative and absolute line numbers
-Plug 'sitiom/nvim-numbertoggle'
+"Plug 'sitiom/nvim-numbertoggle'
 
 "format json files
 Plug 'XadillaX/json-formatter.vim'
@@ -159,9 +172,13 @@ if system('uname -r') =~ "microsoft"
   augroup END
 endif
 
+"set relativenumber
+
 "  SETS
 "set startdir=$NVIM_PWD
 
+"set number
+"set relativenumber
 
 "set statusline=%!MyStatusLine()
 "function! MyStatusLine()
@@ -196,7 +213,6 @@ set wrap breakindent
 set encoding=utf-8
 set textwidth=0
 set nohidden
-set relativenumber
 set title
 set undodir=~/.vim/undodir  "I need to set up this directory
 set undofile
@@ -237,6 +253,19 @@ function! TransparentBackground()
 endfunction
 
 autocmd ColorScheme * call TransparentBackground() " uncomment if you are using a translucent terminal and you want nvim to use that
+
+set relativenumber
+
+function! ToggleLineNumbers()
+  if &relativenumber
+    set norelativenumber
+	set number
+  else
+    set relativenumber
+  endif
+endfunction
+
+nnoremap <leader><leader>n :call ToggleLineNumbers()<CR>
 
 " Main Coloring Configurations
 syntax on
@@ -606,10 +635,10 @@ nnoremap <Leader>m  :autocmd CursorHold * normal! m'<CR>
 ""easymotion mappings
 "let g:EasyMotion_do_mapping = 0 " Disable default mappings
 "nnoremap <Leader>f <Plug>(easymotion-prefix)f
-nnoremap <Leader>s <Plug>(easymotion-s2)
-nnoremap <Leader>f <Plug>(easymotion-prefix)s
+"nnoremap <Leader>s <Plug>(easymotion-s2)
+"nnoremap <Leader>f <Plug>(easymotion-prefix)s
 "nnoremap  <c-_> <Plug>(easymotion-sn)
-nnoremap  <Leader>/ <Plug>(easymotion-sn)
+"nnoremap  <Leader>/ <Plug>(easymotion-sn)
 "nnoremap <Leader>F <Plug>(easymotion-prefix)F
 "nnoremap <Leader>s <Plug>(easymotion-prefix)s
 

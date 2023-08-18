@@ -532,8 +532,8 @@ function workflow_run() {
 
   # Call the check_workflow function to check the status of the run
   echo "Checking the status of the run..."
-  check_workflow "$repo" "$workflow"
   sleep 5
+  workflow_check "$repo" "$workflow"
 }
 
 function branch() {
@@ -541,8 +541,8 @@ function branch() {
 }
 
 function reset-repo() {
-  local repo=$1
-  wd $repo_short
+  local repo_short=$1
+  wd oddball
 
   if [ "$repo_short" = "noti" ]; then
 	local repo="notification-api"
@@ -557,4 +557,14 @@ function reset-repo() {
   cd $repo
 
   git-worktree-add master $repo_short
+}
+
+
+function update-master() {
+  repo=$1
+  wd $repo
+  git fetch origin
+  git worktree add master
+  cd master
+  git pull origin master
 }
