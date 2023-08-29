@@ -1,13 +1,16 @@
 
 1. merge pr with CLI (add to that script to make sure my branch is up to date with master)
-pr_merge [repo] [branch]
-pr_merge qa docker-password
+  pr_merge [repo] [branch]
+  pr_merge qa docker-password
 
 
-2. Automate slack message to indicate its done
+2. Send a slack message
+    Automate slack message to indicate its done
+    Message just needs to be a comment on my original PR slack message that its been merged, please update your branches!
+    
 3. Open ticket in browser to either close it or move to QA lane
-(something similar to open_zenhub_issue(), except get the url based on teh ticket number or something.  likely a wd to the repo -  porbalby by getting ranch name and opening correlated branch
-open_zenhub_issue qa 
+    (something similar to open_zenhub_issue(), except get the url based on teh ticket number or something.  likely a wd to the repo -  porbalby by getting ranch name and opening correlated branch
+    open_zenhub_issue qa 
 
 
 

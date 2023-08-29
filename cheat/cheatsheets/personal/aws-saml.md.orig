@@ -5,15 +5,6 @@ aws-saml
 
 
 
-
-
-
-
-
-
-
-
-
 wd aws-cli-setup
 vim samlrep.txt
 python3 get-token.py

@@ -1,5 +1,22 @@
+start-ticket [bug, deployment, spike, story] [name]
+- edit template as needed
+create-ticket [ticket name] [wd branch] [ticket title]
+  *THIS ISNT QUITE WORKING YET, it overwrite the tmp file with the tempalte!*
+  e.g. 
+  create-ticket ec2-vaec noti "QA EC2 VA_SLICE"
 
-create-ticket [bug, deployment, spike, story] [name]
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ```

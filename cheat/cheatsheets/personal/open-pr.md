@@ -1,20 +1,25 @@
 fast:
 - Make sure branch is updated with latest master (just a gq 'latest' should work)
-wd branch
-gq 'latest'
+    wd [branch]
+    gq 'latest'
 
+- Open PR 
+    with cli (for future automation)
+    pr_view qa docker-password
+- Move ticket to dev testing lane
+    via CLI (future automation)
+    ```
+    ZH_TOKEN=
+    PIPELINE_ID=
+    TICKET_NUMBER=
 
-- Open PR with cli (for future automation)
-pr_view qa docker-password
+    curl -X POST -H "Content-Type: application/json" -H "X-Authentication-Token: $ZH_TOKEN" -d '{"pipeline_id": "$PIPELINE_ID", "position": "top"}' "https://api.zenhub.com/p1/repositories/REPOSITORY_ID/issues/$TICKET_NUMBER/moves"
+    ```
+- Ping va-notify-engineer Slack with a message:
+:PR: Can I please get a review for #[PR TITLE](PR LINK)?  It is related to [ticket-number](ticket)
 
-- Move ticket to dev testing lane via CLI (future automation)
-```
-ZH_TOKEN=
-PIPELINE_ID=
-TICKET_NUMBER=
-
-curl -X POST -H "Content-Type: application/json" -H "X-Authentication-Token: $ZH_TOKEN" -d '{"pipeline_id": "$PIPELINE_ID", "position": "top"}' "https://api.zenhub.com/p1/repositories/REPOSITORY_ID/issues/$TICKET_NUMBER/moves"
-```
+e.g.
+:PR: Can I please get a review for [#626 Twistlock](https://github.com/department-of-veterans-affairs/vanotify-infra/pull/629)?  It is related to [#626 Revive Twistlock](https://app.zenhub.com/workspaces/va-notify-620d21369d810a00146ed9c8/issues/gh/department-of-veterans-affairs/vanotify-infra/626)
 
 
 

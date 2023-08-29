@@ -10,6 +10,7 @@ set -o autopushd
 #fi
 
 ZSH_THEME="cloud"
+#ZSH_THEME="mytheme"
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
@@ -259,7 +260,8 @@ function git-worktree-add() {
   repo=$2
   wd $repo
   git fetch origin
-  git worktree add master
+  rm -rf master 
+  git worktree add master -f
   cd master
   git pull origin master
   wd $repo
@@ -273,6 +275,10 @@ function git-worktree-add() {
   elif [ "$repo" = "qa" ]; then
 	wd-new-branch $branch_name oddball/notification-api-qa
   elif [ "$repo" = "infra" ]; then
+	wd-new-branch $branch_name oddball/vanotify-infra
+  elif [ "$repo" = "kafka" ]; then
+	wd-new-branch $branch_name oddball/vanotify-infra
+  elif [ "$repo" = "utils" ]; then
 	wd-new-branch $branch_name oddball/vanotify-infra
   elif [ "$repo" = "helps" ]; then
 	wd-new-branch $branch_name github/oddball_helps
@@ -344,7 +350,7 @@ function git-rename-branch() {
   git-worktree-add "$new_branch" $repo
 }
 
-function create-ticket() {
+function start-ticket() {
     # Define the valid options
     local options=("bug" "deployment" "spike" "story")
 
@@ -378,6 +384,29 @@ function create-ticket() {
     fi
 }
 
+function create-ticket() {
+  local ticket_name=$1
+  local wd_repo=$2
+  local title="$3"
+
+  wd $wd_repo
+
+  output=$( \
+  gh issue create \
+  -F /tmp/$ticket_name.md \
+  --title $title \
+  --label Notify \
+  --label devops \
+  --label 'Review Needed'  \
+  );
+  issue_url=$(echo "$output" | grep -oE 'https://github.com/[^ ]+');
+
+  echo 'consider adding VIP, bug, or QA labels'
+
+  browser "$issue_url"
+  #open_zenhub_issue "$issue_url"
+}
+
 function start-pr() {
 
     # Navigate to the desired directory
@@ -404,9 +433,35 @@ function start-pr() {
     fi
 }
 
-#function create-pr() {
+function create-pr() {
+  local branch=$1
+  local wd_repo=$2
+  local title="$3"
 
-#}
+  if [ "$wd_repo" = "noti" ]; then
+	local repo="notification-api"
+  elif [ "$wd_repo" = "qa" ]; then
+	local repo="notification-api-qa"
+  elif [ "$wd_repo" = "infra" ]; then
+	local repo="vanotify-infra"
+  fi
+
+  wd $wd_repo
+
+  url=$( \
+  gh pr create \
+  -R department-of-veterans-affairs/$repo \
+  -d \
+  -B master \
+  -H $branch \
+  -F /tmp/$branch.md \
+  -a ldraney \
+  -l devops \
+  -t $title \
+  | grep -o 'https://github.com/[^ ]*')
+
+  browser "$url"
+}
 
 function gq() {
   echo "Fetching updates from the remote repository..." &&
@@ -520,8 +575,7 @@ function workflow_check() {
 }
 
 function workflow_run() {
-  local repo=$1
-  local workflow=$2
+  local workflow=$1
 
   # Get the current git branch
   current_branch=$(git rev-parse --abbrev-ref HEAD)
@@ -529,9 +583,11 @@ function workflow_run() {
   # Run the GitHub Actions workflow for the current branch
   echo "Running workflow $workflow on branch $current_branch..."
   gh workflow run "$workflow" -r "$current_branch" -F ref="$current_branch"
+  echo 'the following command was run:'
+  echo "gh workflow run \"$workflow\" -r \"$current_branch\" -F ref=\"$current_branch\""
 
   # Call the check_workflow function to check the status of the run
-  echo "Checking the status of the run..."
+  echo "Opening the workflow in the browser..."
   sleep 5
   workflow_check "$repo" "$workflow"
 }

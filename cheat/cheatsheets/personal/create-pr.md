@@ -1,26 +1,46 @@
 Quick steps:
 ```
-start-pr [ticket-number]
+start-pr [branch-name]
 ```
 - replace Fixes #__ with #[ticket-number](URL TO TICKET)
-- copy new template
+- copy file
 - copy zenhub ticket content 
-- ChatGPT4 /create-pr
+- ChatGPT4 /pr
   - enter the appropriate values
+```
+create-pr [branch] [repo] [title]
+```
+cheat open-pr.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 wd [repo]
 ```
 url=$( \
 gh pr create \
--R department-of-veterans-affairs/notification-api-qa \
+-R department-of-veterans-affairs/vanotify-infra \
 -d \
 -B master \
--H docker-password \
--F /tmp/docker-password.md \
+-H 626-twistlock \
+-F /tmp/626-twistlock.md \
 -a ldraney \
 -l devops \
--t 'Docker Password Mask in ECR Login action' \
+-t '626 Twistlock' \
 | grep -o 'https://github.com/[^ ]*')
-)
 
 browser "$url"
 ```
