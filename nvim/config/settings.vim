@@ -45,7 +45,6 @@ set splitright
 
 set formatoptions-=cro
 set nopaste
-"set splitright
 "set tabline
 set conceallevel=0
 set autochdir
@@ -77,9 +76,6 @@ set autoread
 set scrolloff=10
 set colorcolumn=80
 set clipboard=unnamed,unnamedplus
-""" Coloring
-set splitbelow
-set splitright
 
 set nocindent
 set showbreak=>>

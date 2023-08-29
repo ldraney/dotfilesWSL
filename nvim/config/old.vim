@@ -178,7 +178,7 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 "nnoremap <C-e> :Ex
 
 "splits
-nnoremap <leader><C-v> :vsplit<CR>
+nnoremap <leader><v> :vsplit<CR>
 "nnoremap <leader><C-h> <C-w><s>
 
 "Navigate split buffers
