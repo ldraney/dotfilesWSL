@@ -255,40 +255,6 @@ function retry-profiler(){
   docker-compose -f ci/docker-compose-local.yml up
 }
 
-function git-worktree-add() {
-  branch_name=$1
-  repo=$2
-  wd $repo
-  git fetch origin
-  rm -rf master 
-  git worktree add master -f
-  cd master
-  git pull origin master
-  wd $repo
-  git worktree add $branch_name
-  cd $branch_name
-  git pull origin $branch_name
-  echo "ignore the above error if you are creating a new branch"
-  #git push --set-upstream origin $branch_name
-  if [ "$repo" = "noti" ]; then
-	wd-new-branch $branch_name oddball/notification-api
-  elif [ "$repo" = "qa" ]; then
-	wd-new-branch $branch_name oddball/notification-api-qa
-  elif [ "$repo" = "infra" ]; then
-	wd-new-branch $branch_name oddball/vanotify-infra
-  elif [ "$repo" = "kafka" ]; then
-	wd-new-branch $branch_name oddball/vanotify-infra
-  elif [ "$repo" = "utils" ]; then
-	wd-new-branch $branch_name oddball/vanotify-infra
-  elif [ "$repo" = "helps" ]; then
-	wd-new-branch $branch_name github/oddball_helps
-  elif [ "$repo" = "dia" ]; then
-	wd-new-branch $branch_name github/DevOpsDialecticAI
-  elif [ "$repo" = "dia-infra" ]; then
-	wd-new-branch $branch_name github/DevOpsDialecticAI-infra
-  fi
-}
-
 function wd-new-branch() {
   branch_name=$1
   branch_number=$(echo "$branch_name" | awk -F'-' '{print $1}')
@@ -433,36 +399,6 @@ function start-pr() {
     fi
 }
 
-function create-pr() {
-  local branch=$1
-  local wd_repo=$2
-  local title="$3"
-
-  if [ "$wd_repo" = "noti" ]; then
-	local repo="notification-api"
-  elif [ "$wd_repo" = "qa" ]; then
-	local repo="notification-api-qa"
-  elif [ "$wd_repo" = "infra" ]; then
-	local repo="vanotify-infra"
-  fi
-
-  wd $wd_repo
-
-  url=$( \
-  gh pr create \
-  -R department-of-veterans-affairs/$repo \
-  -d \
-  -B master \
-  -H $branch \
-  -F /tmp/$branch.md \
-  -a ldraney \
-  -l devops \
-  -t $title \
-  | grep -o 'https://github.com/[^ ]*')
-
-  browser "$url"
-}
-
 function gq() {
   echo "Fetching updates from the remote repository..." &&
   git fetch &&
@@ -486,43 +422,121 @@ function gq() {
   git push
 }
 
-function browser() {
-  /mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe "$1"
+
+#REFACTOR
+
+# Declare an associative array to map the repo key to the repo value
+declare -A repo_map=(
+    ["noti"]="oddball/notification-api"
+    ["qa"]="oddball/notification-api-qa"
+    ["team"]="oddball/vanotify-team"
+    ["infra"]="oddball/vanotify-infra"
+    ["kafka"]="oddball/notification-kafka"
+    ["utils"]="oddball/notification-utils"
+    ["helps"]="github/oddball_helps"
+    ["dia"]="github/DevOpsDialecticAI"
+    ["dia-infra"]="github/DevOpsDialecticAI-infra"
+)
+
+function git-worktree-add() {
+    branch_name=$1
+    repo_key=$2
+    repo=${repo_map[$repo_key]}
+
+    wd $repo_key
+    git fetch origin
+    rm -rf master 
+    git worktree add master -f
+    cd master
+    git pull origin master
+    wd $repo_key
+    git worktree add $branch_name
+    cd $branch_name
+    git pull origin $branch_name
+    echo "ignore the above error if you are creating a new branch"
+    #git push --set-upstream origin $branch_name
+
+    wd-new-branch $branch_name $repo
+}
+
+function create-pr() {
+    branch=$1
+    repo_key=$2
+    repo=${repo_map[$repo_key]}
+    title="$3"
+
+    wd $repo_key
+
+    url=$( \
+    gh pr create \
+    -R department-of-veterans-affairs/$repo \
+    -d \
+    -B master \
+    -H $branch \
+    -F /tmp/$branch.md \
+    -a ldraney \
+    -l devops \
+    -t $title \
+    | grep -o 'https://github.com/[^ ]*')
+
+    browser "$url"
 }
 
 function open_zenhub_issue() {
-  local github_url="$1"
-  local repo="$2"
-  if [ "$repo" = "noti" ]; then
-	local repo="notification-api"
-  elif [ "$repo" = "qa" ]; then
-	local repo="notification-api-qa"
-  elif [ "$repo" = "infra" ]; then
-	local repo="vanotify-infra"
-  fi
+    github_url="$1"
+    repo_key="$2"
+    repo=${repo_map[$repo_key]}
 
-  local issue_number=$(echo "$github_url" | grep -oE '[0-9]+$')
-  local zenhub_url="https://app.zenhub.com/workspaces/va-notify-620d21369d810a00146ed9c8/issues/gh/department-of-veterans-affairs/$repo/$issue_number"
-  browser "$zenhub_url"
+    issue_number=$(echo "$github_url" | grep -oE '[0-9]+$')
+    zenhub_url="https://app.zenhub.com/workspaces/va-notify-620d21369d810a00146ed9c8/issues/gh/department-of-veterans-affairs/$repo/$issue_number"
+    browser "$zenhub_url"
 }
 
 function pr_view() {
-  local repo=$1
-  local branch=$2
-  wd $repo $branch
+    repo_key=$1
+    repo=${repo_map[$repo_key]}
+    branch=$2
 
-  if [ "$repo" = "noti" ]; then
-	local repo="notification-api"
-  elif [ "$repo" = "qa" ]; then
-	local repo="notification-api-qa"
-  elif [ "$repo" = "infra" ]; then
-	local repo="vanotify-infra"
-  fi
+    wd $repo_key $branch
 
-  pr_number=$(gh pr view $branch | grep -m1 -oE 'https://github.com/[^ ]*' | grep -oE '[0-9]+$')
-
-  browser "https://github.com/department-of-veterans-affairs/$repo/pull/$pr_number"
+    pr_number=$(gh pr view $branch | grep -m1 -oE 'https://github.com/[^ ]*' | grep -oE '[0-9]+$')
+    browser "https://github.com/department-of-veterans-affairs/$repo/pull/$pr_number"
 }
+
+function workflow_check() {
+    repo_key=$1
+    repo=${repo_map[$repo_key]}
+    workflow=$2
+
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    run_id=$(gh workflow view $workflow | grep "$current_branch" | head -n 1 | awk '{print $NF}')
+    
+    if [ -z "$run_id" ]; then
+	    echo "No runs found for the current branch: $current_branch"
+    else
+	    url="https://github.com/department-of-veterans-affairs/$repo/actions/runs/$run_id"
+	    echo "Opening $url"
+	    browser "$url"
+    fi
+}
+
+function reset-repo() {
+    repo_short=$1
+    repo=${repo_map[$repo_short]}
+    
+    wd oddball
+    rm -rf $repo
+    git clone --bare git@github.com:department-of-veterans-affairs/$repo.git $repo
+    cd $repo
+
+    git-worktree-add master $repo_short
+}
+
+function browser() {
+    /mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe "$1"
+}
+
+#END OF REFACTOR
 
 function pr_merge() {
   local repo=$1
@@ -543,35 +557,6 @@ function aws-saml() {
   python3 get-token.py
   vim aws-credentials.sh
   vim ~/.zshenv
-}
-
-function workflow_check() {
-  local repo=$1
-  local workflow=$2
-
-  # Step 1: Get the current git branch
-  current_branch=$(git rev-parse --abbrev-ref HEAD)
-  
-  # Step 2: Use gh command to get the latest run id for the current branch
-  # The grep command filters runs for the current branch,
-  # The awk command gets the run id (the last element in the line)
-  run_id=$(gh workflow view $workflow | grep "$current_branch" | head -n 1 | awk '{print $NF}')
-  
-  if [ -z "$run_id" ]; then
-	  echo "No runs found for the current branch: $current_branch"
-  else
-	if [ "$repo" = "noti" ]; then
-	  local repo="notification-api"
-	elif [ "$repo" = "qa" ]; then
-	  local repo="notification-api-qa"
-	elif [ "$repo" = "infra" ]; then
-	  local repo="vanotify-infra"
-	fi
-
-	url="https://github.com/department-of-veterans-affairs/$repo/actions/runs/$run_id"
-	echo "Opening $url"
-	browser "$url"
-  fi
 }
 
 function workflow_run() {
@@ -596,26 +581,6 @@ function branch() {
   git rev-parse --abbrev-ref HEAD
 }
 
-function reset-repo() {
-  local repo_short=$1
-  wd oddball
-
-  if [ "$repo_short" = "noti" ]; then
-	local repo="notification-api"
-  elif [ "$repo_short" = "qa" ]; then
-	local repo="notification-api-qa"
-  elif [ "$repo_short" = "infra" ]; then
-	local repo="vanotify-infra"
-  fi
-
-  rm -rf $repo
-  git clone --bare git@github.com:department-of-veterans-affairs/$repo.git $repo
-  cd $repo
-
-  git-worktree-add master $repo_short
-}
-
-
 function update-master() {
   repo=$1
   wd $repo
@@ -623,4 +588,10 @@ function update-master() {
   git worktree add master
   cd master
   git pull origin master
+}
+
+function conflict-1() {
+  cdt ../
+  git clone --bare git@github.com:department-of-veterans-affairs/[repo].git [repo]
+
 }

@@ -121,6 +121,7 @@ infra-master:~/oddball/vanotify-infra/master
 infra-workflows:~/oddball/vanotify-infra/.github/workflows
 infra:~/oddball/vanotify-infra
 issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
+kafka:~/oddball/notification-kafka
 keepalive:~/oddball/notification-api/keepalive-duration-70
 ldraney:~/github/oddball_helps/ldraney-patch-2
 lua:~/github/dotfilesWSL/nvim/lua
@@ -169,12 +170,13 @@ testbranch:~/github/DevOpsDialecticAI/master/testbranch-dia
 testy:~/github/oddball_helps/testy-test-3
 trigger:~/oddball/notification-api-qa/trigger-test
 twistlock:~/oddball/notification-api/twistlock-daily-check
-update:~/oddball/vanotify-infra/update-pr-template
+update:~/oddball/notification-api/update-pr-template
 upgrade-workflows:~/oddball/vanotify-infra/upgrade-fix/.github/workflows
 upgrade:~/oddball/vanotify-infra/upgrade-fix
 util-workflows:~/oddball/vanotify-infra/.github/workflows
 util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
 utility-infrastructure:~/oddball/vanotify-infra/cd/utility-infrastructure
+utils:~/oddball/notification-utils
 va-qa:~/oddball/notification-api-qa
 vanotify-api:~/oddball/notification-api
 vanotify-infra:~/oddball/vanotify-infra
