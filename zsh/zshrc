@@ -438,6 +438,15 @@ declare -A repo_map=(
     ["dia-infra"]="github/DevOpsDialecticAI-infra"
 )
 
+function conflict-1() {
+  cdt ../
+  git clone --bare git@github.com:department-of-veterans-affairs/[repo].git [repo]
+
+    branch_name=$1
+    repo_key=$2
+    repo=${repo_map[$repo_key]}
+}
+
 function git-worktree-add() {
     branch_name=$1
     repo_key=$2
@@ -588,10 +597,4 @@ function update-master() {
   git worktree add master
   cd master
   git pull origin master
-}
-
-function conflict-1() {
-  cdt ../
-  git clone --bare git@github.com:department-of-veterans-affairs/[repo].git [repo]
-
 }

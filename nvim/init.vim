@@ -172,6 +172,12 @@ if system('uname -r') =~ "microsoft"
   augroup END
 endif
 
+" EasyClip settings
+nmap M <Plug>MoveMotionEndOfLinePlug
+nnoremap gm m
+
+
+
 "set relativenumber
 
 "  SETS
@@ -187,6 +193,42 @@ let g:netrw_keepdir= 0
 
 " this should open help in a vertical split
 set splitright
+
+"FOLDING
+set viminfo+=n~/.vim/viminfo
+set foldenable
+set foldmethod=manual
+
+function! ToggleAllFolds()
+    " Check if there are any closed folds
+    if foldclosed('.') != -1
+        " If there are, open all folds
+        normal zR
+    else
+        " Otherwise, close all folds
+        normal zM
+    endif
+endfunction
+
+nnoremap ZA :call ToggleAllFolds()<CR>
+
+" Fold remaps
+"nnoremap ZA zR
+nnoremap zD zE
+nnoremap zd VGo:fold<CR>
+nnoremap zu Vgg:fold<CR>
+"set foldmarker=BEGIN_FOLD,END_FOLD
+" Managing Manual Folds:
+"za: Toggle fold under the cursor.
+"zR: Open all folds.
+"zM: Close all folds.
+"zo: Open fold under the cursor.
+"zc: Close fold under the cursor.
+"zd: Delete the fold at the cursor.
+"zE: Erase all folds in the file.
+"zj: Move to the start of the next fold.
+"zk: Move to the end of the previous fold.
+
 
 set formatoptions-=cro
 set nopaste
@@ -242,8 +284,6 @@ let g:coq_settings = { 'auto_start': v:true }
 """ Main Configurations
 "filetype plugin indent on
 
-"nmap M <Plug>MoveMotionEndOfLinePlug
-
 " Functions and autocmds to run whenever changing colorschemes
 function! TransparentBackground()
     highlight Normal guibg=NONE ctermbg=NONE
@@ -298,9 +338,12 @@ nnoremap <leader>pf :lua require("harpoon.ui").toggle_quick_menu()
 "inoremap <C-c> <Esc>:w<CR>
 "
 "save with ctrl s
-nnoremap <C-s> <C-c>:w<CR>
+nnoremap <C-s> <C-c>:mkview<CR><C-c>:w<CR>
 inoremap <C-c> <Esc><right>
 inoremap <Esc> <Esc><right>
+
+"folding load on opening file
+autocmd BufWinEnter * silent loadview
 
 
 "netrw to automatically change working directory
