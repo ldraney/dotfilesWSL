@@ -610,27 +610,66 @@ function update-master() {
   git pull origin master
 }
 
-devi-build() {
+function devi-build() {
 	curdir=$(pwd)
 	wd devi master
 	docker build -t devi .
 	cd $curdir
 }
 
-devi() {
+function devi() {
 
-  path_or_string="$1"
   curdir=$(pwd)
 
-  #wd devi master
   wd devi master
 
-  poetry install > /dev/null 2>&1
-  # run the command and get the output
-  poetry run python main.py "$path_or_string" 2> /dev/null > >(tee /tmp/devi-output.txt)
+  poetry install 
+  poetry run python main.py "$1"
 
-  cd $curdir
+  ##vim $path_or_string
+
+  #cd $curdir
 }
+
+#devi-path() {
+  ## devi-patch [path-to-file] [branch]
+  #path="$1"
+  #branch=$2
+  #curdir=$(pwd)
+
+  ##wd devi master
+  #wd devi $branch
+
+  #poetry install > /dev/null 2>&1
+  ## run the command and get the output
+  ##poetry run python main.py "$path_or_string" "$branch" 2> /dev/null > >(tee /tmp/$path_or_string)
+    ## run the command and get the output
+  #poetry run python main.py "$path" "$branch" 2> /dev/null > >(tee /tmp/$path)
+
+  #vim /tmp/$path
+
+  #cd $curdir
+#}
+
+#devi-string() {
+  #string="$1"
+  #branch=$2
+  #curdir=$(pwd)
+
+  ##vim /tmp/$path_or_string
+
+  ##wd devi master
+  #wd devi $branch
+
+  #poetry install > /dev/null 2>&1
+  ## run the command and get the output
+  #poetry run python main.py "$string" "$branch" 2> /dev/null > >(tee /tmp/$string)
+
+  #vim /tmp/$string
+
+  #cd $curdir
+#}
+
 
 vector-docs() {
   #path_or_string="$1"
@@ -648,6 +687,24 @@ vector-docs() {
 
   cd $curdir
 }
+
+single-url() {
+  #path_or_string="$1"
+  curdir=$(pwd)
+
+  #wd devi master
+  wd devi vector
+
+  poetry install > /dev/null 2>&1
+  # run the command and get the output
+  #poetry run python vector.py "$path_or_string" 2> /dev/null > >(tee /tmp/devi-output.txt)
+  #poetry run python vector.py 2> /dev/null > >(tee /tmp/devi-output.txt)
+  #poetry run python vector.py
+  poetry run python single-url.py
+
+  cd $curdir
+}
+
 
 dotAll-pre() {
   curdir=$(pwd)
