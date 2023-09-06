@@ -637,19 +637,23 @@ da (){
 }
 
 dotAll-pre() {
+  curdir=$(pwd)
   wd dot
   git status
   wd ansible_desktop_setup_WSL
   git status
   wd sensitive
   git status
+  cd $curdir
 }
 
 dotAll() {
+  curdir=$(pwd)
   wd dot
   gq "$1"
   wd ansible_desktop_setup_WSL
   gq "$1"
   wd sensitive
   gq "$1"
+  cd $curdir
 }
