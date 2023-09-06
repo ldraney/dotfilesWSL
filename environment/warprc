@@ -76,6 +76,7 @@ bootstrap:~/oddball/vanotify-infra/cd/bootstrap
 cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
 cherry-util:~/oddball/vanotify-infra/cherry-picks-ec2-revert/cd/utility-infrastructure
 cherry:~/oddball/vanotify-infra/cherry-picks-ec2-revert
+chroma:~/github/DevOpsDialecticAI/chroma
 ci:~/oddball/notification-api/ci
 completions:~/.oh-my-zsh/completions
 da:~/github/DevOpsDialecticAI
