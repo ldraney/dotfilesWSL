@@ -638,10 +638,16 @@ da (){
 
 dotAll-pre() {
   curdir=$(pwd)
+
+  echo -e "\e[1m\e[35mThe Dotfiles Directory\e[0m"
   wd dot
   git status
+
+  echo -e "\e[1m\e[35mThe Ansible Desktop Setup Directory\e[0m"
   wd ansible_desktop_setup_WSL
   git status
+
+  echo -e "\e[1m\e[35mThe Sensitive Directory\e[0m"  
   wd sensitive
   git status
   cd $curdir
@@ -649,11 +655,18 @@ dotAll-pre() {
 
 dotAll() {
   curdir=$(pwd)
+
+  echo -e "\e[1m\e[35mThe Dotfiles Directory\e[0m"
   wd dot
   gq "$1"
+
+  echo -e "\e[1m\e[35mThe Ansible Desktop Setup Directory\e[0m"
   wd ansible_desktop_setup_WSL
   gq "$1"
+
+  echo -e "\e[1m\e[35mThe Sensitive Directory\e[0m"
   wd sensitive
   gq "$1"
   cd $curdir
 }
+
