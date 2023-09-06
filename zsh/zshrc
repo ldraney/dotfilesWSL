@@ -610,43 +610,36 @@ function update-master() {
   git pull origin master
 }
 
-da-build() {
+devi-build() {
 	curdir=$(pwd)
 	wd devi master
 	docker build -t devi .
 	cd $curdir
 }
 
-da() {
-    if [[ -z "$1" ]]; then
-        echo "Please provide a file path or a direct string."
-        return 1
-    fi
+devi() {
 
-    # Check if the Docker image exists
-	if ! docker image inspect devi > /dev/null 2>&1; then
-		echo "Image not found locally. building..."
-		da-build
-	fi
+  path_or_string="$1"
+  curdir=$(pwd)
 
-    # If the input is a file path
-    if [[ -f "$1" ]]; then
-        # Extract directory from the provided file path
-        dir_path=$(dirname "$1")
-        file_name=$(basename "$1")
+  #wd devi master
+  wd devi master
 
-        # Run the Docker container with the appropriate volume mount
-        docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY \
-		  -v $HOME:/data \
-		  -v "$dir_path":/container_volume \
-		  devi /container_volume/"$file_name"
-    else
-        # If the input is a direct string
-		string=$1
-		docker run -i -e OPENAI_API_KEY=$OPENAI_API_KEY \
-		  -v $PWD:/data \
-		  devi $string
-    fi
+  poetry install > /dev/null 2>&1
+  #poetry run python main.py "$path_or_string" > /dev/null 2>&1
+  #poetry run python main.py "$path_or_string" > /dev/null 2>&1 tee /tmp/devi-output.txt
+  poetry run python main.py "$path_or_string" 2> /dev/null > >(tee /tmp/devi-output.txt)
+
+  cd $curdir
+}
+
+devi-data() {
+	curdir=$(pwd)
+	path=$1
+	wd devi vector
+	poetry install
+	poetry run python vector.py $path
+	cd $curdir
 }
 
 dotAll-pre() {
@@ -683,3 +676,18 @@ dotAll() {
   cd $curdir
 }
 
+merge-to-master() {
+  wd_repo=$1 
+  branch=$2
+
+  wd $wd_repo master
+  git merge $branch
+
+  # Resolve any merge conflicts if necessary
+
+  # Commit the merge changes
+  git commit -m "Merge $branch into master"
+
+  git push
+
+}

@@ -97,6 +97,7 @@ dia-infra:~/github/DevOpsDialecticAI-infra
 dia:~/github/DevOpsDialecticAI
 docker-workflows:~/oddball/notification-api-qa/docker-help/.github/workflows
 docker:~/oddball/notification-api-qa/docker-help
+dockerless:~/github/DevOpsDialecticAI/dockerless
 dot-work:~/github/dotfilesWSL/.github/workflows
 dot-workflows:~/github/dotfilesWSL/.github/workflows
 dot:~/github/dotfilesWSL
@@ -183,6 +184,8 @@ va-qa:~/oddball/notification-api-qa
 vanotify-api:~/oddball/notification-api
 vanotify-infra:~/oddball/vanotify-infra
 vanotify-team:~/oddball/vanotify-team
+vector:~/github/DevOpsDialecticAI/vector
+vectorize:~/github/DevOpsDialecticAI/vectorize
 vmshare-tmp:/mnt/c/Users/drane/OneDrive/Desktop/VMShare/tmp
 vmshare:/mnt/c/Users/drane/OneDrive/Desktop/VMShare
 windows.settings.json.windows.terminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
