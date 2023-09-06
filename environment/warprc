@@ -156,6 +156,7 @@ oddball_helps:~/github/oddball_helps
 personal:~/github
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
 privateGPT:~/github/privateGPT
+privategpt:~/github/DevOpsDialecticAI/privategpt
 qa-master-workflows:~/oddball/notification-api-qa/master/.github/workflows
 qa-master:~/oddball/notification-api-qa/master
 qa-workflows:~/oddball/notification-api-qa/.github/workflows
