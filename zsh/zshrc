@@ -610,9 +610,9 @@ function update-master() {
   git pull origin master
 }
 
-da () {
+da (){
     if [[ -z "$1" ]]; then
-        echo "Please provide a file path."
+        echo "Please provide a file path or a direct string."
         return 1
     fi
 
@@ -622,10 +622,34 @@ da () {
         docker pull my_python_app
     fi
 
-    # Extract directory from the provided file path
-    dir_path=$(dirname "$1")
-    file_name=$(basename "$1")
+    # If the input is a file path
+    if [[ -f "$1" ]]; then
+        # Extract directory from the provided file path
+        dir_path=$(dirname "$1")
+        file_name=$(basename "$1")
 
-    # Run the Docker container with the appropriate volume mount
-    docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY -v "$dir_path":/container_volume my_python_app /container_volume/"$file_name"
+        # Run the Docker container with the appropriate volume mount
+        docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY -v "$dir_path":/container_volume my_python_app /container_volume/"$file_name"
+    else
+        # If the input is a direct string
+        echo "$1" | docker run -i -e OPENAI_API_KEY=$OPENAI_API_KEY my_python_app
+    fi
+}
+
+dotAll-pre() {
+  wd dot
+  git status
+  wd ansible_desktop_setup_WSL
+  git status
+  wd sensitive
+  git status
+}
+
+dotAll() {
+  wd dot
+  gq "$1"
+  wd ansible_desktop_setup_WSL
+  gq "$1"
+  wd sensitive
+  gq "$1"
 }
