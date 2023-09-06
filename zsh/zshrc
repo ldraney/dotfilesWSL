@@ -636,10 +636,11 @@ da() {
         file_name=$(basename "$1")
 
         # Run the Docker container with the appropriate volume mount
-        docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY -v "$dir_path":/container_volume my_python_app /container_volume/"$file_name"
+        docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY -v $HOME:/data -v "$dir_path":/container_volume devi /container_volume/"$file_name"
     else
         # If the input is a direct string
-        echo "$1" | docker run -i -e OPENAI_API_KEY=$OPENAI_API_KEY my_python_app
+		string=$1
+		docker run -i -e OPENAI_API_KEY=$OPENAI_API_KEY devi $string
     fi
 }
 
