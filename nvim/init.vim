@@ -38,7 +38,7 @@ nnoremap <leader>s :call ToggleRelAbsNumbers()<CR>
 "use alt-/ to search within a highlighted visual field
 vnoremap <M-/> <Esc>/\%V
 "
-"Go to last position in file
+"Go to last position in file (also loads folding)
 autocmd BufWinLeave * silent! mkview
 autocmd BufWinEnter * silent! loadview
 
@@ -159,6 +159,8 @@ Plug 'tpope/vim-fugitive'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'kshenoy/vim-signature'
+
 call plug#end()
 
 " Enable automatic formatting of Terraform files on save
@@ -214,9 +216,9 @@ nnoremap ZA :call ToggleAllFolds()<CR>
 
 " Fold remaps
 "nnoremap ZA zR
-nnoremap zD zE
-nnoremap zd VGo:fold<CR>
-nnoremap zu Vgg:fold<CR>
+nnoremap ZD zE
+nnoremap zG VGo:fold<CR>
+nnoremap zgg Vgg:fold<CR>
 "set foldmarker=BEGIN_FOLD,END_FOLD
 " Managing Manual Folds:
 "za: Toggle fold under the cursor.
@@ -228,7 +230,6 @@ nnoremap zu Vgg:fold<CR>
 "zE: Erase all folds in the file.
 "zj: Move to the start of the next fold.
 "zk: Move to the end of the previous fold.
-
 
 set formatoptions-=cro
 set nopaste
@@ -341,9 +342,6 @@ nnoremap <leader>pf :lua require("harpoon.ui").toggle_quick_menu()
 nnoremap <C-s> <C-c>:mkview<CR><C-c>:w<CR>
 inoremap <C-c> <Esc><right>
 inoremap <Esc> <Esc><right>
-
-"folding load on opening file
-autocmd BufWinEnter * silent loadview
 
 
 "netrw to automatically change working directory

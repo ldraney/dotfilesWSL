@@ -126,7 +126,7 @@ keepalive:~/oddball/notification-api/keepalive-duration-70
 ldraney:~/github/oddball_helps/ldraney-patch-2
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
-master:~/oddball/vanotify-infra/master
+master:~/github/DevOpsDialecticAI/master
 mig-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 mig:~/oddball/notification-api/migrations-perf
 migrations-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
