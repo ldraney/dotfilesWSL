@@ -626,20 +626,27 @@ devi() {
   wd devi master
 
   poetry install > /dev/null 2>&1
-  #poetry run python main.py "$path_or_string" > /dev/null 2>&1
-  #poetry run python main.py "$path_or_string" > /dev/null 2>&1 tee /tmp/devi-output.txt
+  # run the command and get the output
   poetry run python main.py "$path_or_string" 2> /dev/null > >(tee /tmp/devi-output.txt)
 
   cd $curdir
 }
 
-devi-data() {
-	curdir=$(pwd)
-	path=$1
-	wd devi vector
-	poetry install
-	poetry run python vector.py $path
-	cd $curdir
+vector-docs() {
+  #path_or_string="$1"
+  curdir=$(pwd)
+
+  #wd devi master
+  wd devi master
+
+  poetry install > /dev/null 2>&1
+  # run the command and get the output
+  #poetry run python vector.py "$path_or_string" 2> /dev/null > >(tee /tmp/devi-output.txt)
+  #poetry run python vector.py 2> /dev/null > >(tee /tmp/devi-output.txt)
+  #poetry run python vector.py
+  poetry run python vector-docs.py
+
+  cd $curdir
 }
 
 dotAll-pre() {
