@@ -637,7 +637,7 @@ vector-docs() {
   curdir=$(pwd)
 
   #wd devi master
-  wd devi master
+  wd devi vector
 
   poetry install > /dev/null 2>&1
   # run the command and get the output
