@@ -610,6 +610,13 @@ function update-master() {
   git pull origin master
 }
 
+da-build () {
+	curdir=$(pwd)
+	wd devi master
+	docker build -t devi .
+	cd $curdir
+}
+
 da (){
     if [[ -z "$1" ]]; then
         echo "Please provide a file path or a direct string."
@@ -617,10 +624,10 @@ da (){
     fi
 
     # Check if the Docker image exists
-    if ! docker image inspect my_python_app > /dev/null 2>&1; then
-        echo "Image not found locally. Pulling..."
-        docker pull my_python_app
-    fi
+	if ! docker image inspect devi > /dev/null 2>&1; then
+		echo "Image not found locally. building..."
+		da-build
+	fi
 
     # If the input is a file path
     if [[ -f "$1" ]]; then

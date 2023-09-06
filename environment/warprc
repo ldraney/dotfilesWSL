@@ -78,6 +78,7 @@ cherry-util:~/oddball/vanotify-infra/cherry-picks-ec2-revert/cd/utility-infrastr
 cherry:~/oddball/vanotify-infra/cherry-picks-ec2-revert
 ci:~/oddball/notification-api/ci
 completions:~/.oh-my-zsh/completions
+da:~/github/DevOpsDialecticAI
 datadog:~/oddball/notification-api/datadog-development-local-env
 dd-task-definitions:~/oddball/notification-api/dd-env-update-quickfix/cd/application-deployment
 dd:~/oddball/notification-api/dd-env-update-quickfix
