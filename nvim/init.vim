@@ -33,6 +33,8 @@ endfunction
 
 nnoremap <leader>s :call ToggleRelAbsNumbers()<CR>
 
+" quickly clear a file
+
 
 
 "use alt-/ to search within a highlighted visual field
@@ -705,3 +707,5 @@ set wildignore+=*/.vim/*
 
 
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
+nnoremap <leader><leader>c GVggc

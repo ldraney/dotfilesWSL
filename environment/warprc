@@ -9,6 +9,7 @@
 1253:~/oddball/notification-api/1253-communication-item-crud
 1308-task-definitions:~/oddball/notification-api/1308-datadog-statsd/cd/application-deployment
 1308:~/oddball/notification-api/1308-datadog-statsd
+1326:~/oddball/notification-api/1326-qa-suite
 1348-work:~/oddball/notification-api/1348-release/.github/workflows
 1348:~/oddball/notification-api/1348-release
 1362:~/oddball/vanotify-infra/1362-iam
@@ -130,6 +131,7 @@ ldraney:~/github/oddball_helps/ldraney-patch-2
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
 master:~/github/DevOpsDialecticAI/master
+memory:~/github/DevOpsDialecticAI/memory-chain
 mig-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 mig:~/oddball/notification-api/migrations-perf
 migrations-workflows:~/oddball/notification-api/migrations-perf/.github/workflows

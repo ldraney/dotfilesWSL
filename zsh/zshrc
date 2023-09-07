@@ -623,12 +623,14 @@ function devi() {
 
   wd devi master
 
-  poetry install 
-  poetry run python main.py "$1"
+  poetry install -q > /dev/null 2>&1
+  #poetry run python main.py "$1"
+  vim /tmp/gpt.txt
+  poetry -q run python main.py /tmp/gpt.txt
 
   ##vim $path_or_string
 
-  #cd $curdir
+  cd $curdir
 }
 
 #devi-path() {

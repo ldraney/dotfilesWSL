@@ -1,7 +1,7 @@
 - assign yourself
 - add this sprint's label
 - Ping QA if label, and make sure I understand the ticket and am ready for a hangout
-- update master to latest
+- update master to latest (next command does this)
 ```
 git-worktree-add 563-ec2-iam-docker infra
 ```
