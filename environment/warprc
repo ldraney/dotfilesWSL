@@ -10,6 +10,7 @@
 1308-task-definitions:~/oddball/notification-api/1308-datadog-statsd/cd/application-deployment
 1308:~/oddball/notification-api/1308-datadog-statsd
 1326:~/oddball/notification-api/1326-qa-suite
+1326qa:~/oddball/notification-api-qa/1326qa
 1348-work:~/oddball/notification-api/1348-release/.github/workflows
 1348:~/oddball/notification-api/1348-release
 1362:~/oddball/vanotify-infra/1362-iam
