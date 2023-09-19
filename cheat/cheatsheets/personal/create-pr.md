@@ -16,6 +16,15 @@ cheat open-pr.md
 
 
 
+gh pr create \
+-R department-of-veterans-affairs/vanotify-infra \
+-d \
+-B master \
+-H deploy-to-dev-namechange \
+-F /tmp/deploy.md \
+-a ldraney \
+-l devops \
+-t 'Dev Infra Deployment - name change' 
 
 
 

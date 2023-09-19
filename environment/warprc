@@ -89,6 +89,7 @@ ddog-task-definitions:~/oddball/notification-api/ddog-local/cd/application-deplo
 ddog-workflows:~/oddball/notification-api/ddog-local/.github/workflows
 ddog:~/oddball/notification-api/ddog-local
 ddtrace:~/oddball/notification-api/ddtrace-error
+depl:~/oddball/vanotify-infra/deploy-to-dev-namechange
 deployment:~/oddball/vanotify-team/Process/Deployment
 desktop:/mnt/c/Users/drane/Desktop
 devi-infra:~/github/DevOpsDialecticAI-infra
