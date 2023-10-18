@@ -1,5 +1,16 @@
-# literally type this command:
-aws-saml
+wd aws-cli-setup
+vim samlrep.txt
+python3 get-token.py
+vim aws-credentials.sh
+vim ~/.zshenv
+
+
+
+
+
+not working
+<!--# literally type this command:-->
+<!--aws-saml-->
 
 
 

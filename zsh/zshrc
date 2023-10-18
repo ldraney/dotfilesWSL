@@ -411,6 +411,7 @@ function gq() {
 
   echo "Merging changes (if any) from the master branch into the current branch..." &&
   git merge master &&
+  #git merge main &&
 
   echo "Pushing master changes (if any) to the current remote branch..." &&
   git push &&
@@ -463,10 +464,14 @@ function git-worktree-add() {
 
     wd $repo_key
     git fetch origin
-    rm -rf master 
-    git worktree add master -f
-    cd master
-    git pull origin master
+	#rm -rf main
+	#git worktree add main -f
+	#cd main
+	#git pull origin main
+	rm -rf master 
+	git worktree add master -f
+	cd master
+	git pull origin master
     wd $repo_key
     git worktree add $branch_name
     cd $branch_name
@@ -627,6 +632,7 @@ function devi() {
 
   curdir=$(pwd)
 
+  # cd to the devi repo (privategpt with my dataset)
   wd devi master
 
   poetry install -q > /dev/null 2>&1
@@ -762,4 +768,8 @@ merge-to-master() {
 
   git push
 
+}
+
+exp() {
+  explorer.exe .
 }

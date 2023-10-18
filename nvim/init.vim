@@ -167,6 +167,8 @@ call plug#end()
 
 " Enable automatic formatting of Terraform files on save
 let g:terraform_fmt_on_save = 1
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 
 "system clipboard on wsl2
 if system('uname -r') =~ "microsoft"

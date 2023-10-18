@@ -7,6 +7,10 @@
 	;name = lucas
 [safe]
 	directory = /mnt/hgfs/VMShare/AutomateWindows
+	directory = /mnt/c/Users/drane/github/autohotkey
+	directory = /home/ldraney/oddball/vanotify-infra/master
+	directory = /home/ldraney/oddball/vanotify-infra
+	directory = /home/ldraney/oddball/vanotify-infra/subnet-increase-hotfix
 	;directory = /mnt/hgfs/VMShare/Recon/tv/dev-setup
 [credential]
 	helper = cache --timeout=600

@@ -7,6 +7,7 @@
 1214-workflows:~/oddball/notification-api/1214-github-pre-release-trigger-failure/.github/workflows
 1214:~/oddball/notification-api/1214-github-pre-release-trigger-failure
 1253:~/oddball/notification-api/1253-communication-item-crud
+13-l:~/oddball/notification-kafka/13-lambda-deploy-actions
 1308-task-definitions:~/oddball/notification-api/1308-datadog-statsd/cd/application-deployment
 1308:~/oddball/notification-api/1308-datadog-statsd
 1326:~/oddball/notification-api/1326-qa-suite
@@ -14,7 +15,9 @@
 1348-work:~/oddball/notification-api/1348-release/.github/workflows
 1348:~/oddball/notification-api/1348-release
 1362:~/oddball/vanotify-infra/1362-iam
+1369:~/oddball/vanotify-infra/1369-kafka-trigger-for-lambda-poc
 1378:~/oddball/vanotify-infra/1378-twistlock
+13:~/oddball/notification-kafka/13-lambda-deploy-actions
 1415-workflows:~/oddball/notification-api/master/1415-docker-password/.github/workflows
 1415:~/oddball/notification-api/master/1415-docker-password
 531-qa-regression-ec2:~/oddball/vanotify-infra/531-qa-regression-ec2
@@ -68,7 +71,9 @@ HOTFIX:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger
 WSL:/mnt/c/Users/drane/OneDrive/Documents/WSL
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 application-infrastructure:~/oddball/vanotify-infra/cd/application-infrastructure
+autohotkey:~/github/autohotkey
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
+autoscaling:~/github/oddball_helps/autoscaling
 aws-cli-commands:~/github/aws-cli-commands
 aws-cli-script:~/github/oddball_helps/scripts/aws-cli-script
 aws-cli-setup:~/github/oddball_helps/scripts/aws-cli-script
@@ -114,6 +119,7 @@ go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kid
 go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
+hammer:~/github/oddball_helps/hammer-script
 helps-master:~/github/oddball_helps/master
 helps:~/github/oddball_helps
 history-workflows:~/oddball/notification-api/history-fix/.github/workflows
@@ -138,6 +144,7 @@ mig-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 mig:~/oddball/notification-api/migrations-perf
 migrations-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 migrations:~/oddball/notification-api/migrations-perf
+netw:~/oddball/vanotify-team/network-topology
 noti-531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 noti-538:~/oddball/vanotify-infra/538-qa-ec2
 noti-67:~/oddball/notification-api/67-run-qa-suite-action
@@ -167,10 +174,13 @@ qa-workflows:~/oddball/notification-api-qa/.github/workflows
 qa:~/oddball/notification-api-qa
 queries-teams-repo:~/oddball/vanotify-team/Engineering/DevOps/aws/log_metric_scripts
 queries:~/github/oddball_helps/scripts/aws/queries
+repo:~/oddball/notification-api-qa/repo-on-ec2
 runner:~/oddball/notification-api-qa/109-runner/.github/actions/runner_automation
 scripts:~/github/oddball_helps/master/scripts
+sdk:~/github/oddball_helps/aws_python_SDK
 sensitive:~/github/sensitive
 ssh:~/.ssh
+subn:~/oddball/vanotify-infra/subnet-increase-hotfix
 team:~/oddball/vanotify-team
 terraform-aws-wordpress:~/github/terraform-aws-wordpress
 terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
