@@ -1,0 +1,23 @@
+name: Neovim Lua Tests
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-lua-tests:
+    runs-on: ubuntu-latest
+    name: Run Lua Tests in Neovim Environment
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Lua Tests
+        uses: ./ # Uses the action in this repository
+        with:
+          directory: 'lua/tests'
+      - name: Generate Report Summary
+        run: |
+          echo "### Test Results :rocket:" >> $GITHUB_STEP_SUMMARY
+          # Add additional summary details here
+
+      - name: Run Lua tests
+        run: busted -p test_ lua/tests/ >> $GITHUB_STEP_SUMMARY

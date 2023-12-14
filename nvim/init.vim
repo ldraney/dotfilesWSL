@@ -1,41 +1,3 @@
-" VIM RECORDING
-"q<letter> to start recording
-"q to stop recording
-"@<letter> to play back recording
-
-
-"function! TmuxSplitEvenHorizontal()
-  "let filepath = expand('%:p')
-  "if !empty(filepath)
-    "let tmux_command = "tmux split-window -h -c '#{pane_current_path}' 'nvim ".filepath."' && tmux select-layout even-horizontal"
-    "call system(tmux_command)
-  "endif
-"endfunction
-
-function! TmuxSplitEvenHorizontal()
-  let filepath = expand('%:p')
-  if !empty(filepath)
-    let tmux_command = "tmux split-window -h -c '".expand('%:p:h')."' && tmux send-keys -t '.tmux.active-pane' 'nvim ".shellescape(filepath)."' Enter && tmux select-layout even-horizontal"
-    call system(tmux_command)
-  endif
-endfunction
-
-nnoremap <leader>th :call TmuxSplitEvenHorizontal()<CR>
-
-function! ToggleRelAbsNumbers()
-	set relativenumber
-        set number
-    else
-        set norelativenumber
-        set nonumber
-    endif
-endfunction
-
-nnoremap <leader>s :call ToggleRelAbsNumbers()<CR>
-
-" quickly clear a file
-
-
 
 "use alt-/ to search within a highlighted visual field
 vnoremap <M-/> <Esc>/\%V
@@ -129,7 +91,8 @@ Plug 'wellle/context.vim'
 "useful for aligning dictionaries or other declarations
 "Plug 'junegunn/vim-easy-align'
 
-Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim', { 'tag': 'v3.3.10' }
 
 " Automatic numbering and bullet points for new lines
 "Plug 'dkarter/bullets.vim'
@@ -167,8 +130,6 @@ call plug#end()
 
 " Enable automatic formatting of Terraform files on save
 let g:terraform_fmt_on_save = 1
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
 
 "system clipboard on wsl2
 if system('uname -r') =~ "microsoft"
@@ -301,16 +262,19 @@ autocmd ColorScheme * call TransparentBackground() " uncomment if you are using 
 
 set relativenumber
 
-function! ToggleLineNumbers()
-  if &relativenumber
-    set norelativenumber
-	set number
-  else
-    set relativenumber
-  endif
-endfunction
+"nnoremap <leader>th :lua requre('tmux_split_even_horizontal').tmux_split_even_horizontal()<CR>
+"nnoremap <leader>s :lua require('toggle_rel_abs_numbers').toggle_rel_abs_numbers()<CR>
 
-nnoremap <leader><leader>n :call ToggleLineNumbers()<CR>
+"function! ToggleLineNumbers()
+  "if &relativenumber
+    "set norelativenumber
+	"set number
+  "else
+    "set relativenumber
+  "endif
+"endfunction
+
+nnoremap <leader><leader>n :lua require('toggle_rel_abs_numbers').toggle_line_numbers()<CR>
 
 " Main Coloring Configurations
 syntax on
