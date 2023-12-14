@@ -1,3 +1,17 @@
+-- Mock setup
+_G.vim = {
+    wo = {},  -- Window-scoped options
+    bo = {},  -- Buffer-scoped options
+    -- Add more fields as needed
+}
+
+-- Example usage in a test case
+describe("My Neovim Function", function()
+    it("does something", function()
+        -- Test code that uses the mock `vim` object
+    end)
+end)
+
 describe("toggle_line_numbers", function()
     local toggle_line_numbers
 

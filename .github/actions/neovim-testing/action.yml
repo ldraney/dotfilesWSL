@@ -1,0 +1,12 @@
+name: 'Neovim Lua Tests'
+description: 'Run Lua tests in a Neovim environment'
+inputs:
+  directory:
+    description: 'Directory containing Lua tests'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.directory }}
+

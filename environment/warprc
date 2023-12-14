@@ -97,6 +97,7 @@ ddtrace:~/oddball/notification-api/ddtrace-error
 depl:~/oddball/vanotify-infra/deploy-to-dev-namechange
 deployment:~/oddball/vanotify-team/Process/Deployment
 desktop:/mnt/c/Users/drane/Desktop
+devi-infra-2:~/github/devi-infra-2
 devi-infra:~/github/DevOpsDialecticAI-infra
 devi:~/github/DevOpsDialecticAI
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
@@ -144,6 +145,7 @@ mig-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 mig:~/oddball/notification-api/migrations-perf
 migrations-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 migrations:~/oddball/notification-api/migrations-perf
+neovim-testing-action:~/github/dotfilesWSL/.github/actions/neovim-testing
 netw:~/oddball/vanotify-team/network-topology
 noti-531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 noti-538:~/oddball/vanotify-infra/538-qa-ec2
