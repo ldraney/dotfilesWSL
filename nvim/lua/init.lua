@@ -8,10 +8,10 @@ vim.opt.list = true
 --vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:↴")
 
-require("indent_blankline").setup {
-    show_end_of_line = true,
-    space_char_blankline = " ",
-}
+--require("indent_blankline").setup {
+    --show_end_of_line = true,
+    --space_char_blankline = " ",
+--}
 
 --turn off automatic comments for newlines with o
 --https://www.reddit.com/r/neovim/comments/sqld76/stop_automatic_newline_continuation_of_comments/
