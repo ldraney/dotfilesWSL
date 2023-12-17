@@ -87,6 +87,7 @@ chroma:~/github/DevOpsDialecticAI/chroma
 ci:~/oddball/notification-api/ci
 completions:~/.oh-my-zsh/completions
 da:~/github/DevOpsDialecticAI
+dad:~/github/dad-project
 datadog:~/oddball/notification-api/datadog-development-local-env
 dd-task-definitions:~/oddball/notification-api/dd-env-update-quickfix/cd/application-deployment
 dd:~/oddball/notification-api/dd-env-update-quickfix
@@ -140,6 +141,7 @@ ldraney:~/github/oddball_helps/ldraney-patch-2
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
 master:~/github/DevOpsDialecticAI/master
+memgpt:~/github/MemGPT
 memory:~/github/DevOpsDialecticAI/memory-chain
 mig-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 mig:~/oddball/notification-api/migrations-perf
