@@ -773,3 +773,8 @@ merge-to-master() {
 exp() {
   explorer.exe .
 }
+
+memgpt() {
+  poetry run -C $HOME/github/MemGPT memgpt "$@"
+}
+
