@@ -121,6 +121,7 @@ glossary:~/oddball/vanotify-team/Support
 go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kids-token
 go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
+gpt:~/github/personal-gpt
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 hammer:~/github/oddball_helps/hammer-script
 hello-universe:~/oddball/hello-universe
@@ -130,6 +131,7 @@ history-workflows:~/oddball/notification-api/history-fix/.github/workflows
 history:~/oddball/notification-api/history-fix
 hotfix:~/oddball/notification-api/hotfix-trigger
 humans:~/.memgpt/humans
+idp:~/github/idp-templates
 infra-538-util:~/oddball/vanotify-infra/538-qa-ec2/cd/utility-infrastructure
 infra-552:~/oddball/vanotify-infra/552-enable-cloudwatch-for-rds
 infra-master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
@@ -141,6 +143,7 @@ issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 kafka:~/oddball/notification-kafka
 keepalive:~/oddball/notification-api/keepalive-duration-70
 ldraney:~/github/oddball_helps/ldraney-patch-2
+linear:~/github/linear-graph-project
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
 master:~/oddball/vanotify-infra/master
@@ -172,6 +175,7 @@ npm:~/oddball/notification-api/ddog-npm
 nvim:~/.config/nvim
 oddball:~/oddball
 oddball_helps:~/github/oddball_helps
+personal-gpt:~/github/personal-gpt
 personal:~/github
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
 privateGPT:~/github/privateGPT
