@@ -134,6 +134,7 @@ humans:~/.memgpt/humans
 idp:~/github/idp-templates
 infra-538-util:~/oddball/vanotify-infra/538-qa-ec2/cd/utility-infrastructure
 infra-552:~/oddball/vanotify-infra/552-enable-cloudwatch-for-rds
+infra-linear:~/github/linear-infra
 infra-master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
 infra-master-workflows:~/oddball/vanotify-infra/master/.github/workflows
 infra-master:~/oddball/vanotify-infra/master
@@ -143,10 +144,11 @@ issue_templates:~/oddball/vanotify-team/.github/ISSUE_TEMPLATE
 kafka:~/oddball/notification-kafka
 keepalive:~/oddball/notification-api/keepalive-duration-70
 ldraney:~/github/oddball_helps/ldraney-patch-2
+linear-infra:~/github/linear-infra
 linear:~/github/linear-graph-project
 lua:~/github/dotfilesWSL/nvim/lua
 master-util:~/oddball/vanotify-infra/master/cd/utility-infrastructure
-master:~/oddball/vanotify-infra/master
+master:~/oddball/notification-api-qa/master
 memgpt-configure:~/github/sensitive/memgpt
 memgpt:~/github/MemGPT
 memory:~/github/DevOpsDialecticAI/memory-chain
@@ -175,6 +177,7 @@ npm:~/oddball/notification-api/ddog-npm
 nvim:~/.config/nvim
 oddball:~/oddball
 oddball_helps:~/github/oddball_helps
+orchestration-linear:~/github/infra-orchestration
 personal-gpt:~/github/personal-gpt
 personal:~/github
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
