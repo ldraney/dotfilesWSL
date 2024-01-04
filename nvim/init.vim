@@ -128,6 +128,8 @@ Plug 'kshenoy/vim-signature'
 
 call plug#end()
 
+let g:NERDSpaceDelims = 1
+
 " Enable automatic formatting of Terraform files on save
 let g:terraform_fmt_on_save = 1
 
