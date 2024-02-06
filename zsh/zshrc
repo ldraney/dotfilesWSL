@@ -700,3 +700,19 @@ memgpt() {
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 
+
+# adding VScode to PATH
+export PATH="$PATH:/mnt/c/Users/drane/AppData/Local/Programs/Microsoft VS Code"
+export PATH="$PATH:/mnt/c/Program Files/Typora"
+
+
+# Add this function to your .bashrc
+terraform_resources() {
+    if [ -z "$1" ]; then
+        echo "Usage: terraform_resources <directory>"
+        return 1
+    fi
+
+    grep -hoR 'resource "[^"]*"' "$1" | sed 's/resource "//g' | sed 's/"$//g' | sort | uniq
+}
+

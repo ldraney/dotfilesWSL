@@ -14,6 +14,10 @@ au BufRead,BufNewFile *.sh setfiletype zsh
 set syn=sh
 
 call plug#begin()
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+
 " relative and absolute line numbers
 "Plug 'sitiom/nvim-numbertoggle'
 
@@ -147,6 +151,18 @@ nnoremap gm m
 
 
 
+" treesitter syntax highlighting
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true, -- Enable Tree-sitter based highlighting
+  },
+  ensure_installed = {"yaml"}, -- Ensure YAML syntax is supported for GitHub Actions
+}
+EOF
+
+
+
 "set relativenumber
 
 "  SETS
@@ -230,7 +246,7 @@ set incsearch
 set backspace
 set autoread
 set scrolloff=10
-set colorcolumn=80
+set colorcolumn=120
 set clipboard=unnamed,unnamedplus
 """ Coloring
 set splitbelow
