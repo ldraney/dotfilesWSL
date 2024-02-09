@@ -53,6 +53,7 @@
 67-run-qa-suite-action:~/oddball/notification-api/67-run-qa-suite-action
 67-workflows:~/oddball/notification-api-qa/67-run-qa-action-2/.github/workflows
 67:~/oddball/notification-api-qa/67-run-qa-action-2
+718:~/oddball/vanotify-infra/718-kafka-producer-ec2
 73-workflows:~/oddball/notification-api-qa/73-bug-qa-container/.github/workflows
 73:~/oddball/notification-api-qa/73-bug-qa-container
 81:~/oddball/notification-api-qa/81-refactor-notifications
@@ -173,6 +174,7 @@ noti-538:~/oddball/vanotify-infra/538-qa-ec2
 noti-67:~/oddball/notification-api/67-run-qa-suite-action
 noti-:~/oddball/notification-api
 noti-fork:~/github/noti-fork
+noti-infra-fork:~/github/noti-infra-fork
 noti-infra:~/oddball/vanotify-infra
 noti-master-task-definitions:~/oddball/notification-api/master/cd/application-deployment
 noti-master-workflows:~/oddball/notification-api/master/.github/workflows
@@ -181,6 +183,7 @@ noti-task-definitions:~/oddball/notification-api/cd/application-deployment
 noti-util-531:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 noti-util-538:~/oddball/vanotify-infra/538-qa-ec2/cd/utility-infrastructure
 noti-workflows:~/oddball/notification-api/master/.github/workflows
+noti-workspaces:~/oddball/vanotify-infra/terraform-workspaces
 noti:~/oddball/notification-api
 notification-admin-infrastructure:~/oddball/vanotify-infra/cd/notification-admin-infrastructure
 notification-api:~/oddball/notification-api
