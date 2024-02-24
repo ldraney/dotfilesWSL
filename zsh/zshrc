@@ -716,3 +716,17 @@ terraform_resources() {
     grep -hoR 'resource "[^"]*"' "$1" | sed 's/resource "//g' | sed 's/"$//g' | sort | uniq
 }
 
+mklink() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage: mklink [target_directory] [link_directory]"
+    return 1
+  fi
+
+  # Convert Unix paths to Windows paths and replace forward slashes with backslashes
+  local target_directory=$(wslpath -w "$1" | sed 's/\//\\/g')
+  local link_directory=$(wslpath -w "$2" | sed 's/\//\\/g')
+
+  # Use cmd.exe to run mklink in Windows
+  /mnt/c/Windows/System32/cmd.exe /c mklink /D "$link_directory" "$target_directory"
+}
+

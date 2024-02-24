@@ -53,6 +53,7 @@
 67-run-qa-suite-action:~/oddball/notification-api/67-run-qa-suite-action
 67-workflows:~/oddball/notification-api-qa/67-run-qa-action-2/.github/workflows
 67:~/oddball/notification-api-qa/67-run-qa-action-2
+713:~/oddball/vanotify-infra/713-http-redirect
 718:~/oddball/vanotify-infra/718-kafka-producer-ec2
 73-workflows:~/oddball/notification-api-qa/73-bug-qa-container/.github/workflows
 73:~/oddball/notification-api-qa/73-bug-qa-container
@@ -75,9 +76,10 @@ HOTFIX-workflows:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger/.github/w
 HOTFIX:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger
 Typora:/mnt/c/Program Files/Typora
 WSL:/mnt/c/Users/drane/OneDrive/Documents/WSL
+air:~/github/AirSalesmanDemo
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 application-infrastructure:~/oddball/vanotify-infra/cd/application-infrastructure
-autohotkey:~/github/autohotkey
+autohotkey:/mnt/c/Users/drane/OneDrive/Documents/AutoHotkey
 automateWindows:/mnt/c/Users/drane/Desktop/VMShare/AutomateWindows
 autoscaling:~/github/oddball_helps/autoscaling
 aws-cli-commands:~/github/aws-cli-commands
@@ -149,6 +151,8 @@ infra-master-workflows:~/oddball/vanotify-infra/master/.github/workflows
 infra-master:~/oddball/vanotify-infra/master
 infra-workflows:~/oddball/vanotify-infra/.github/workflows
 infra:~/oddball/vanotify-infra
+iss-setter:~/iss/iss-setter
+iss:~/iss
 issue_templates:~/oddball/notification-api/master/.github/ISSUE_TEMPLATE
 kafka:~/oddball/notification-kafka
 keepalive:~/oddball/notification-api/keepalive-duration-70
@@ -175,6 +179,7 @@ noti-67:~/oddball/notification-api/67-run-qa-suite-action
 noti-:~/oddball/notification-api
 noti-fork:~/github/noti-fork
 noti-infra-fork:~/github/noti-infra-fork
+noti-infra-issue-templates:~/oddball/vanotify-infra/master/.github/ISSUE_TEMPLATE
 noti-infra:~/oddball/vanotify-infra
 noti-master-task-definitions:~/oddball/notification-api/master/cd/application-deployment
 noti-master-workflows:~/oddball/notification-api/master/.github/workflows
@@ -212,7 +217,11 @@ runner:~/oddball/notification-api-qa/109-runner/.github/actions/runner_automatio
 scripts:~/github/oddball_helps/master/scripts
 sdk:~/github/oddball_helps/aws_python_SDK
 sensitive:~/github/sensitive
+setter-2:~/iss/ISS-setter-2
+setter-infra:~/iss/iss-setter-infra
+setter:~/iss/ISS-setter
 ssh:~/.ssh
+startup:/mnt/c/Users/drane/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup
 subn:~/oddball/vanotify-infra/subnet-increase-hotfix
 team:~/oddball/vanotify-team
 templates:~/oddball/notification-api/master/.github/ISSUE_TEMPLATE
