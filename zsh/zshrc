@@ -716,6 +716,8 @@ terraform_resources() {
     grep -hoR 'resource "[^"]*"' "$1" | sed 's/resource "//g' | sed 's/"$//g' | sort | uniq
 }
 
+
+#  WINDOWS COMMANDS
 mklink() {
   if [ "$#" -ne 2 ]; then
     echo "Usage: mklink [target_directory] [link_directory]"
@@ -728,5 +730,27 @@ mklink() {
 
   # Use cmd.exe to run mklink in Windows
   /mnt/c/Windows/System32/cmd.exe /c mklink /D "$link_directory" "$target_directory"
+}
+
+# yo
+pic() {
+  /mnt/c/Windows/System32/cmd.exe /c start $1
+}
+
+# Tree commands
+t1() {
+  tree -L 1 --filesfirst
+}
+
+t2() {
+  tree -L 2 --filesfirst
+}
+
+t3() {
+  tree -L 3 --filesfirst
+}
+
+t() {
+  tree --filesfirst
 }
 

@@ -114,6 +114,7 @@ devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
 dia-infra:~/github/DevOpsDialecticAI-infra
 dia:~/github/DevOpsDialecticAI
+diagrams:~/github/diagrams
 docker-workflows:~/oddball/notification-api-qa/docker-help/.github/workflows
 docker:~/oddball/notification-api-qa/docker-help
 dockerless:~/github/DevOpsDialecticAI/dockerless
@@ -151,6 +152,9 @@ infra-master-workflows:~/oddball/vanotify-infra/master/.github/workflows
 infra-master:~/oddball/vanotify-infra/master
 infra-workflows:~/oddball/vanotify-infra/.github/workflows
 infra:~/oddball/vanotify-infra
+iss-api:~/iss/iss-setter-api
+iss-app:~/iss/iss-setter-app
+iss-infra:~/iss/iss-setter-infra
 iss-setter:~/iss/iss-setter
 iss:~/iss
 issue_templates:~/oddball/notification-api/master/.github/ISSUE_TEMPLATE
