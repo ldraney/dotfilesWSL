@@ -19,3 +19,10 @@
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[branch]
+	sort = -committerdate
+[maintenance]
+	repo = /home/ldraney/iss/iss-setter-infra
+	repo = /home/ldraney/oddball/notification-api/master
+	repo = /home/ldraney/oddball/notification-api/1374-deployment-tracking
+	repo = /home/ldraney/oddball/notification-api/update-datadog-image

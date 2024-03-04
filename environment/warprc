@@ -17,6 +17,7 @@
 1348:~/oddball/notification-api/1348-release
 1362:~/oddball/vanotify-infra/1362-iam
 1369:~/oddball/vanotify-infra/1369-kafka-trigger-for-lambda-poc
+1374:~/oddball/notification-api/1374-deployment-tracking
 1378:~/oddball/vanotify-infra/1378-twistlock
 13:~/oddball/notification-kafka/13-lambda-deploy-actions
 1415-workflows:~/oddball/notification-api/master/1415-docker-password/.github/workflows
@@ -118,6 +119,7 @@ diagrams:~/github/diagrams
 docker-workflows:~/oddball/notification-api-qa/docker-help/.github/workflows
 docker:~/oddball/notification-api-qa/docker-help
 dockerless:~/github/DevOpsDialecticAI/dockerless
+dora:~/oddball/vanotify-team/Engineering/DevOps/DORA
 dot-work:~/github/dotfilesWSL/.github/workflows
 dot-workflows:~/github/dotfilesWSL/.github/workflows
 dot:~/github/dotfilesWSL
@@ -236,6 +238,7 @@ testy:~/github/oddball_helps/testy-test-3
 total:~/oddball/vanotify-infra/total-terraform-upgrade
 trigger:~/oddball/notification-api-qa/trigger-test
 twistlock:~/oddball/notification-api/twistlock-daily-check
+update-datadog-image:~/oddball/notification-api/update-datadog-image
 update:~/oddball/notification-api/update-pr-template
 upgrade-workflows:~/oddball/vanotify-infra/upgrade-fix/.github/workflows
 upgrade:~/oddball/vanotify-infra/upgrade-fix

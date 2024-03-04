@@ -754,3 +754,7 @@ t() {
   tree --filesfirst
 }
 
+
+# Git settings
+git config --global branch.sort -committerdate
+git maintenance start
