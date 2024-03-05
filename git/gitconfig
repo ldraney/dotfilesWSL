@@ -26,3 +26,4 @@
 	repo = /home/ldraney/oddball/notification-api/master
 	repo = /home/ldraney/oddball/notification-api/1374-deployment-tracking
 	repo = /home/ldraney/oddball/notification-api/update-datadog-image
+	repo = /home/ldraney/github/ansible_desktop_setup_WSL

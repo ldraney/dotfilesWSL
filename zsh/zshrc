@@ -757,4 +757,4 @@ t() {
 
 # Git settings
 git config --global branch.sort -committerdate
-git maintenance start
+# git maintenance start
