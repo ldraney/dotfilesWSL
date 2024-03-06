@@ -125,6 +125,7 @@ dot-workflows:~/github/dotfilesWSL/.github/workflows
 dot:~/github/dotfilesWSL
 dotfilesWSL-workflows:~/github/dotfilesWSL/.github/workflows
 dotfilesWSL:~/github/dotfilesWSL
+drane:/mnt/c/Users/drane
 ec2:~/oddball/notification-api-qa/ec2-documentation
 engineering:~/oddball/vanotify-team/Engineering
 github-script:~/github/github-script
@@ -254,6 +255,7 @@ vanotify-infra:~/oddball/vanotify-infra
 vanotify-team:~/oddball/vanotify-team
 vector:~/github/DevOpsDialecticAI/vector
 vectorize:~/github/DevOpsDialecticAI/vectorize
+vivaldi:/mnt/c/Users/drane/AppData/Local/Vivaldi
 vmshare-tmp:/mnt/c/Users/drane/OneDrive/Desktop/VMShare/tmp
 vmshare:/mnt/c/Users/drane/OneDrive/Desktop/VMShare
 windows.settings.json.windows.terminal:/mnt/c/Users/drane/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
