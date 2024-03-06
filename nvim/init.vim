@@ -14,6 +14,10 @@ au BufRead,BufNewFile *.sh setfiletype zsh
 set syn=sh
 
 call plug#begin()
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+
 " relative and absolute line numbers
 "Plug 'sitiom/nvim-numbertoggle'
 
@@ -128,6 +132,8 @@ Plug 'kshenoy/vim-signature'
 
 call plug#end()
 
+let g:NERDSpaceDelims = 1
+
 " Enable automatic formatting of Terraform files on save
 let g:terraform_fmt_on_save = 1
 
@@ -142,6 +148,18 @@ endif
 " EasyClip settings
 nmap M <Plug>MoveMotionEndOfLinePlug
 nnoremap gm m
+
+
+
+" treesitter syntax highlighting
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true, -- Enable Tree-sitter based highlighting
+  },
+  ensure_installed = {"yaml"}, -- Ensure YAML syntax is supported for GitHub Actions
+}
+EOF
 
 
 
@@ -228,7 +246,7 @@ set incsearch
 set backspace
 set autoread
 set scrolloff=10
-set colorcolumn=80
+set colorcolumn=120
 set clipboard=unnamed,unnamedplus
 """ Coloring
 set splitbelow

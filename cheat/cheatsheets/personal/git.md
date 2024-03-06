@@ -15,6 +15,11 @@ git push
 ```
 if there is a file you have to resolve, after fixing it, then
 
+Sometimes you just need to run:
+```
+git pull --no-rebase
+```
+
 ##  going back to a git commit while preserving history
 (I'm not sure if this works, actually)
 ```
