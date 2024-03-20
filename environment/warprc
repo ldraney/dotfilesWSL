@@ -23,6 +23,9 @@
 1415-workflows:~/oddball/notification-api/master/1415-docker-password/.github/workflows
 1415:~/oddball/notification-api/master/1415-docker-password
 1526:~/oddball/notification-api/1526-regression-deploy
+1668-demo:~/oddball/demo-api
+1668-poc:~/oddball/demo-api
+1668-release:~/oddball/notification-api/1668-pipeline-approval-release
 1668:~/oddball/notification-api/1668-pipeline-approval
 531-qa-regression-ec2:~/oddball/vanotify-infra/531-qa-regression-ec2
 531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
@@ -90,6 +93,7 @@ aws-cli-setup:~/github/oddball_helps/scripts/aws-cli-script
 aws-cli:~/github/aws-cli-commands
 aws-dd-forwarder-3.66.0:/mnt/c/Users/drane/Downloads/aws-dd-forwarder-3.66.0
 bootstrap:~/oddball/vanotify-infra/cd/bootstrap
+bug-docker-cache-action:~/oddball/notification-api/bug-docker-cache-action
 celery:~/oddball/vanotify-infra/celery-tasks-hotfix
 cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
 cherry-util:~/oddball/vanotify-infra/cherry-picks-ec2-revert/cd/utility-infrastructure
@@ -105,7 +109,9 @@ dd:~/oddball/notification-api/dd-env-update-quickfix
 ddog-task-definitions:~/oddball/notification-api/ddog-local/cd/application-deployment
 ddog-workflows:~/oddball/notification-api/ddog-local/.github/workflows
 ddog:~/oddball/notification-api/ddog-local
+ddtrace-update:~/oddball/notification-api/ddtrace-update
 ddtrace:~/oddball/notification-api/ddtrace-error
+demo-api:~/oddball/demo-api
 depl:~/oddball/vanotify-infra/deploy-to-dev-namechange
 deployment:~/oddball/vanotify-team/Process/Deployment
 desktop:/mnt/c/Users/drane/Desktop
