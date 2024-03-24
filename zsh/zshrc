@@ -1,8 +1,7 @@
 # notification-api app development
  export WORKON_HOME=$HOME/.virtualenvs
  export PROJECT_HOME=$HOME/Devel
- source  ~/.pyenv/versions/3.10.13/bin/virtualenvwrapper.sh
-
+ source  ~/.pyenv/versions/3.12.1/bin/virtualenvwrapper.sh
 
 
 export PATH="$HOME/.local/bin:$PATH"
