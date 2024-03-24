@@ -82,6 +82,8 @@ HOTFIX:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger
 Typora:/mnt/c/Program Files/Typora
 WSL:/mnt/c/Users/drane/OneDrive/Documents/WSL
 air:~/github/AirSalesmanDemo
+ansible-kickstart:~/personal/ansible_desktop_setup_WSL/kickstart-nvim
+ansible:~/personal/ansible_desktop_setup_WSL
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 application-infrastructure:~/oddball/vanotify-infra/cd/application-infrastructure
 autohotkey:/mnt/c/Users/drane/OneDrive/Documents/AutoHotkey
@@ -129,7 +131,7 @@ dockerless:~/github/DevOpsDialecticAI/dockerless
 dora:~/oddball/vanotify-team/Engineering/DevOps/DORA
 dot-work:~/github/dotfilesWSL/.github/workflows
 dot-workflows:~/github/dotfilesWSL/.github/workflows
-dot:~/github/dotfilesWSL
+dot:~/personal/dotfilesWSL
 dotfilesWSL-workflows:~/github/dotfilesWSL/.github/workflows
 dotfilesWSL:~/github/dotfilesWSL
 drane:/mnt/c/Users/drane
@@ -171,6 +173,7 @@ issue_templates:~/oddball/notification-api/master/.github/ISSUE_TEMPLATE
 kafka:~/oddball/notification-kafka
 keepalive:~/oddball/notification-api/keepalive-duration-70
 kickstart.nvim:~/github/kickstart.nvim
+kickstart:~/personal/kickstart.nvim
 ldraney:~/github/oddball_helps/ldraney-patch-2
 linear-infra:~/github/linear-infra
 linear:~/github/linear-graph-project
@@ -214,7 +217,7 @@ oddball:~/oddball
 oddball_helps:~/github/oddball_helps
 orchestration-linear:~/github/infra-orchestration
 personal-gpt:~/github/personal-gpt
-personal:~/github
+personal:~/personal
 portal:~/oddball/notification-portal
 powershell:/mnt/c/Users/drane/OneDrive/Documents/powershell
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
