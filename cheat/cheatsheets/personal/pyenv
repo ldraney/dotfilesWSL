@@ -1,0 +1,45 @@
+# Setting the Global Python Version
+The global Python version is the default version that will be used in any terminal session or when a specific version isn't specified by a local or shell environment.
+
+- Set the global Python version with `pyenv global <version>`. This version should be the one you use most frequently or the one that most of your projects are compatible with.
+
+# Using Local and Shell Environments
+While the global environment is your default, `pyenv` also allows for local (per-directory) and shell (per-session) environments. These can override the global setting for flexibility in projects that require different Python versions.
+
+- **Local environments**: Use `pyenv local <version>` within a project directory to set a specific Python version for that project. This creates a `.python-version` file in the directory.
+- **Shell environments**: Use `pyenv shell <version>` to temporarily override the Python version for the current shell session.
+
+# Version Management Tips
+- **Keep your Python versions up to date** with `pyenv install` for newer versions and delete older ones you no longer use with `pyenv uninstall <version>`.
+- **List all Python versions** you have installed with `pyenv versions`. This will show you the system, global, local, and shell versions, if set.
+- **Use `.python-version` files** for project-specific versions to ensure consistency across development environments.
+- **Integrate `pyenv` with virtual environments** using `pyenv-virtualenv`, an extension for `pyenv` that allows you to manage virtual Python environments more seamlessly. It's especially useful for managing dependencies on a per-project basis.
+
+
+
+
+
+---
+syntax: bash
+tags: [ python, environments ]
+---
+# Install the specified version of Python:
+pyenv install <version>
+
+# Set the specified version of Python as system's default:
+pyenv global <version>
+
+# Set the specified version of Python to be used in the current directory:
+pyenv local <version>
+
+# Create a virtual environment based on the specified Python version (requires `pyenv-virtualenv` plugin):
+pyenv virtualenv <version> <virtualenv_name>
+
+# Uninstall the specified version of Python:
+pyenv uninstall <version>
+
+# List the versions installed:
+pyenv versions
+
+# Check the version of python currently in use:
+pyenv version

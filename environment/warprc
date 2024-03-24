@@ -170,6 +170,7 @@ iss:~/iss
 issue_templates:~/oddball/notification-api/master/.github/ISSUE_TEMPLATE
 kafka:~/oddball/notification-kafka
 keepalive:~/oddball/notification-api/keepalive-duration-70
+kickstart.nvim:~/github/kickstart.nvim
 ldraney:~/github/oddball_helps/ldraney-patch-2
 linear-infra:~/github/linear-infra
 linear:~/github/linear-graph-project
@@ -215,6 +216,7 @@ orchestration-linear:~/github/infra-orchestration
 personal-gpt:~/github/personal-gpt
 personal:~/github
 portal:~/oddball/notification-portal
+powershell:/mnt/c/Users/drane/OneDrive/Documents/powershell
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
 private-repo:~/github/private-repo
 privateGPT:~/github/privateGPT
