@@ -1,6 +1,9 @@
 git submodule update --init --recursive
 
 
+If you make a change in a submodule, its important you make a branch for that change, push, and then merge.  submodule changes are not saved in the main modules history!
+
+
 
 
 
