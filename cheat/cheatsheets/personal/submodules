@@ -1,0 +1,52 @@
+git submodule update --init --recursive
+
+
+
+
+
+
+
+GPT full response
+
+
+It looks like you're setting up several personal repositories and you want help setting up a submodule for the `kickstart.nvim` repository within your `dotfilesWSL` repository. I can help you with that!
+
+To add `kickstart.nvim` as a submodule to your `dotfilesWSL` repository, you'll follow these steps:
+
+1. **Navigate to Your `dotfilesWSL` Repository Directory:**
+   Ensure you're inside the `dotfilesWSL` repository directory. If you've just cloned it, you might already be there. If not, you need to `cd` into it.
+
+   ```bash
+   cd $HOME/personal/dotfilesWSL
+   ```
+
+2. **Add the Submodule:**
+   Use the `git submodule add` command to add your `kickstart.nvim` repository as a submodule. You can specify the directory where the submodule should be placed. For example, if you want it in a directory named `kickstart.nvim` within the `dotfilesWSL` repository, you would do the following:
+
+   ```bash
+   git submodule add git@github.com:ldraney/kickstart.nvim.git kickstart.nvim
+   ```
+
+3. **Initialize and Update the Submodule:**
+   After adding the submodule, you need to initialize and update it to ensure that the files are checked out:
+
+   ```bash
+   git submodule update --init --recursive
+   ```
+
+4. **Commit the Changes:**
+   Adding a submodule will change the `.gitmodules` file and add a new directory for the submodule. You'll need to commit these changes:
+
+   ```bash
+   git add .gitmodules kickstart.nvim
+   git commit -m "Added kickstart.nvim submodule"
+   ```
+
+5. **Push the Changes:**
+   Finally, push the changes to your remote repository:
+
+   ```bash
+   git push origin master
+   ```
+
+By following these steps, you will successfully add the `kickstart.nvim` repository as a submodule to your `dotfilesWSL` repository. This allows you to keep your `kickstart.nvim` repository updates separate but still integrated within your dotfiles setup.
