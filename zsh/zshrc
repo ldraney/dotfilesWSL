@@ -764,3 +764,8 @@ t() {
 # Git settings
 git config --global branch.sort -committerdate
 # git maintenance start
+
+# solve merge conflict files one by one with vim
+solve() {
+  git ls-files --unmerged | cut -f2 | sort -u | xargs vim
+}

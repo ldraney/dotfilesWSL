@@ -27,6 +27,8 @@
 1668-poc:~/oddball/demo-api
 1668-release:~/oddball/notification-api/1668-pipeline-approval-release
 1668:~/oddball/notification-api/1668-pipeline-approval
+1727-test:~/oddball/notification-api/1727-test
+1727:~/oddball/notification-api/1727-cd-pipeline-versioning
 531-qa-regression-ec2:~/oddball/vanotify-infra/531-qa-regression-ec2
 531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
 538-app:~/oddball/vanotify-infra/538-qa-ec2/cd/application-infrastructure
