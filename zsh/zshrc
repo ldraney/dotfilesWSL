@@ -1,3 +1,9 @@
+#
+#https://gist.github.com/gitaarik/8735255
+#
+git config --global alias.clone-all 'clone --recurse-submodules'
+git config --global alias.pull-all 'pull --recurse-submodules'
+#
 # notification-api app development
  export WORKON_HOME=$HOME/.virtualenvs
  export PROJECT_HOME=$HOME/Devel
