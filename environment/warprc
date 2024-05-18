@@ -27,7 +27,10 @@
 1668-poc:~/oddball/demo-api
 1668-release:~/oddball/notification-api/1668-pipeline-approval-release
 1668:~/oddball/notification-api/1668-pipeline-approval
+<<<<<<< Updated upstream
 1727-test:~/oddball/notification-api/1727-test
+=======
+>>>>>>> Stashed changes
 1727:~/oddball/notification-api/1727-cd-pipeline-versioning
 531-qa-regression-ec2:~/oddball/vanotify-infra/531-qa-regression-ec2
 531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
@@ -83,6 +86,7 @@ HOTFIX-workflows:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger/.github/w
 HOTFIX:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger
 Typora:/mnt/c/Program Files/Typora
 WSL:/mnt/c/Users/drane/WSL
+ad360:~/personal/Adv360-Pro-ZMK
 air:~/github/AirSalesmanDemo
 ansible-kickstart:~/personal/ansible_desktop_setup_WSL/kickstart-nvim
 ansible:~/personal/ansible_desktop_setup_WSL
@@ -168,7 +172,10 @@ infra-workflows:~/oddball/vanotify-infra/.github/workflows
 infra:~/oddball/vanotify-infra
 iss-api:~/iss/iss-setter-api
 iss-app:~/iss/iss-setter-app
+iss-frontend:~/iss/ISS_FrontEnd
 iss-infra:~/iss/iss-setter-infra
+iss-setter-api:~/iss/iss-setter-api
+iss-setter-app:~/iss/iss-setter-app
 iss-setter:~/iss/iss-setter
 iss:~/iss
 issue_templates:~/oddball/notification-api/master/.github/ISSUE_TEMPLATE
@@ -237,7 +244,7 @@ repo:~/oddball/notification-api-qa/repo-on-ec2
 runner:~/oddball/notification-api-qa/109-runner/.github/actions/runner_automation
 scripts:~/github/oddball_helps/master/scripts
 sdk:~/github/oddball_helps/aws_python_SDK
-sensitive:~/github/sensitive
+sensitive:~/personal/sensitive
 setter-2:~/iss/ISS-setter-2
 setter-infra:~/iss/iss-setter-infra
 setter:~/iss/ISS-setter

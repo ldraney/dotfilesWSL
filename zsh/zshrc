@@ -87,7 +87,7 @@ bindkey -M vicmd 'y' vi-yank-xclip
 source $ZSH/oh-my-zsh.sh
 
 # for npm, should have been installed with teh bootstrap.sh
-# source ~/.nvm/nvm.sh
+source ~/.nvm/nvm.sh
 
 #if tmux isn't running, run it:
 if tmux info &> /dev/null; then 
