@@ -113,7 +113,7 @@ alias ltt='ls -lt --color=always | head'
 alias cdg=cd-gitroot
 alias k=kubectl
 alias ter=terraform
-alias vim=nvim
+# alias vim=nvim
 alias cheat='cheat -e'
 
 findfile() {
@@ -775,3 +775,13 @@ git config --global branch.sort -committerdate
 solve() {
   git ls-files --unmerged | cut -f2 | sort -u | xargs vim
 }
+
+
+function nvim_with_cwd() {
+  nvim "$@"
+  if [ -f /tmp/nvim_last_dir ]; then
+    source /tmp/nvim_last_dir
+  fi
+}
+alias vim=nvim_with_cwd
+
