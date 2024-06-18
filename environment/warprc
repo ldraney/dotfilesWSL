@@ -27,10 +27,7 @@
 1668-poc:~/oddball/demo-api
 1668-release:~/oddball/notification-api/1668-pipeline-approval-release
 1668:~/oddball/notification-api/1668-pipeline-approval
-<<<<<<< Updated upstream
 1727-test:~/oddball/notification-api/1727-test
-=======
->>>>>>> Stashed changes
 1727:~/oddball/notification-api/1727-cd-pipeline-versioning
 531-qa-regression-ec2:~/oddball/vanotify-infra/531-qa-regression-ec2
 531-util:~/oddball/vanotify-infra/531-qa-regression-ec2/cd/utility-infrastructure
@@ -76,6 +73,9 @@
 97:~/oddball/notification-api-qa/97-trunc-4
 97trunc:~/oddball/vanotify-infra/97trunc-infra
 98:~/oddball/notification-api-qa/98-cronjob
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 ALB:~/oddball/vanotify-infra/ALB-idle-time-70
 Ai-Conversations:/mnt/c/Users/drane/OneDrive/Documents/AI-Conversations
 Code:/mnt/c/Users/drane/AppData/Local/Programs/Microsoft VS Code
@@ -119,7 +119,7 @@ ddog-workflows:~/oddball/notification-api/ddog-local/.github/workflows
 ddog:~/oddball/notification-api/ddog-local
 ddtrace-update:~/oddball/notification-api/ddtrace-update
 ddtrace:~/oddball/notification-api/ddtrace-error
-demo-api:~/oddball/demo-api
+demo-api:~/iss/demo-api
 depl:~/oddball/vanotify-infra/deploy-to-dev-namechange
 deployment:~/oddball/vanotify-team/Process/Deployment
 desktop:/mnt/c/Users/drane/Desktop
@@ -128,6 +128,9 @@ devi-infra:~/github/DevOpsDialecticAI-infra
 devi:~/github/DevOpsDialecticAI
 devops-scripts:~/oddball/vanotify-team/Engineering/DevOps/scripts
 devops:~/oddball/vanotify-team/Engineering/DevOps
+dia-docs-expo:~/ldraney/dia-docs-expo
+dia-docs-public:~/ldraney/dia-docs-public
+dia-docs:~/ldraney/dia-docs
 dia-infra:~/github/DevOpsDialecticAI-infra
 dia:~/github/DevOpsDialecticAI
 diagrams:~/github/diagrams
@@ -143,6 +146,7 @@ dotfilesWSL:~/github/dotfilesWSL
 drane:/mnt/c/Users/drane
 ec2:~/oddball/notification-api-qa/ec2-documentation
 engineering:~/oddball/vanotify-team/Engineering
+examples:~/ldraney/examples
 github-script:~/github/github-script
 githubPersonal:~/github
 glossary:~/oddball/vanotify-team/Support
@@ -183,7 +187,7 @@ kafka:~/oddball/notification-kafka
 keepalive:~/oddball/notification-api/keepalive-duration-70
 kickstart.nvim:~/github/kickstart.nvim
 kickstart:~/personal/kickstart.nvim
-ldraney:~/github/oddball_helps/ldraney-patch-2
+ldraney:~/ldraney
 linear-infra:~/github/linear-infra
 linear:~/github/linear-graph-project
 lua:~/github/dotfilesWSL/nvim/lua
@@ -197,6 +201,7 @@ mig-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 mig:~/oddball/notification-api/migrations-perf
 migrations-workflows:~/oddball/notification-api/migrations-perf/.github/workflows
 migrations:~/oddball/notification-api/migrations-perf
+mkdocs-material:~/ldraney/mkdocs-material
 neovim-testing-action:~/github/dotfilesWSL/.github/actions/neovim-testing
 netw:~/oddball/vanotify-team/network-topology
 noti-2:~/oddball/noti-2
@@ -255,6 +260,7 @@ team:~/oddball/vanotify-team
 templates:~/oddball/notification-api/master/.github/ISSUE_TEMPLATE
 terraform-aws-wordpress:~/github/terraform-aws-wordpress
 terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
+test:~/test
 testbranch:~/github/DevOpsDialecticAI/master/testbranch-dia
 testy:~/github/oddball_helps/testy-test-3
 total:~/oddball/vanotify-infra/total-terraform-upgrade
