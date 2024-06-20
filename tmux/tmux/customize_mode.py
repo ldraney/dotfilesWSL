@@ -1,6 +1,6 @@
 import libtmux
 
-def print_pane_attributes():
+def activate_customize_mode():
     # Attach to the default tmux Server
     server = libtmux.Server()
 
@@ -13,10 +13,9 @@ def print_pane_attributes():
     # Get the active pane in the window
     pane = window.active_pane
 
-    # Print all attributes of the pane
-    for key, value in pane.show_window_options().items():
-        print(f"{key}: {value}")
+    # Activate customize mode in the active pane
+    pane.cmd('choose-tree', '-Z')  # Put the pane into customize mode
 
 if __name__ == "__main__":
-    print_pane_attributes()
+    activate_customize_mode()
 

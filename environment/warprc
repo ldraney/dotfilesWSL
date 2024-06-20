@@ -263,6 +263,7 @@ terraform-ec2-RDS-wordpress:~/github/terraform-ec2-RDS-wordpress
 test:~/test
 testbranch:~/github/DevOpsDialecticAI/master/testbranch-dia
 testy:~/github/oddball_helps/testy-test-3
+tmux:~/.tmux
 total:~/oddball/vanotify-infra/total-terraform-upgrade
 trigger:~/oddball/notification-api-qa/trigger-test
 twistlock:~/oddball/notification-api/twistlock-daily-check
