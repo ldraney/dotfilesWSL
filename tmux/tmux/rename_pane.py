@@ -1,4 +1,11 @@
 import libtmux
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: rename_pane.py <new_pane_name>")
+    sys.exit(1)
+
+new_name = sys.argv[1]
 
 # Attach to the default tmux Server
 server = libtmux.Server()
@@ -11,9 +18,6 @@ window = session.active_window
 
 # Get the active pane in the window
 pane = window.active_pane
-
-# Prompt for the new pane name
-new_name = input("Enter the new pane name: ")
 
 # Rename the active pane (sending a command to set a title)
 pane.cmd('select-pane', '-T', new_name)
