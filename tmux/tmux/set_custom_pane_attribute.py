@@ -25,4 +25,3 @@ pane.cmd('setenv', 'TMUX_CUSTOM_ATTRIBUTE', attribute_value)
 # Verify the change
 print(f"Custom attribute set: TMUX_CUSTOM_ATTRIBUTE = {attribute_value}")
 
-
