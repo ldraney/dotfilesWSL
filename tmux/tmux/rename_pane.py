@@ -22,11 +22,18 @@ pane = window.active_pane
 # Rename the active pane (sending a command to set a title)
 pane.cmd('select-pane', '-T', new_name)
 
+# Set a custom environment variable with the new pane title, unique to each pane and window
+window_id = window.get('window_id')
+pane_id = pane.get('pane_id')
+attribute_name = f'TMUX_CUSTOM_ATTRIBUTE_{window_id}_{pane_id}'
+pane.cmd('setenv', attribute_name, new_name)
+
 # Verify the change
 print(f"Pane renamed to: {new_name}")
+print(f"Custom attribute set: {attribute_name} = {new_name}")
 
 # Set a new format for the pane border using the current pane title
-session.cmd('set-option', 'pane-border-format', new_name)
+pane.cmd('set-option', 'pane-border-format', new_name)
 
 print(f"Pane border format set to: {new_name}")
 
