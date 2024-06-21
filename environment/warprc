@@ -86,10 +86,10 @@ HOTFIX-workflows:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger/.github/w
 HOTFIX:~/oddball/notification-api-qa/HOTFIX-qa-suite-trigger
 Typora:/mnt/c/Program Files/Typora
 WSL:/mnt/c/Users/drane/WSL
-ad360:~/personal/Adv360-Pro-ZMK
+ad360:~/ldraney/Adv360-Pro-ZMK
 air:~/github/AirSalesmanDemo
-ansible-kickstart:~/personal/ansible_desktop_setup_WSL/kickstart-nvim
-ansible:~/personal/ansible_desktop_setup_WSL
+ansible-kickstart:~/ldraney/ansible_desktop_setup_WSL/kickstart-nvim
+ansible:~/ldraney/ansible_desktop_setup_WSL
 ansible_desktop_setup_WSL:~/github/ansible_desktop_setup_WSL
 application-infrastructure:~/oddball/vanotify-infra/cd/application-infrastructure
 autohotkey:/mnt/c/Users/drane/OneDrive/Documents/AutoHotkey
@@ -103,7 +103,7 @@ aws-dd-forwarder-3.66.0:/mnt/c/Users/drane/Downloads/aws-dd-forwarder-3.66.0
 bootstrap:~/oddball/vanotify-infra/cd/bootstrap
 bug-docker-cache-action:~/oddball/notification-api/bug-docker-cache-action
 celery:~/oddball/vanotify-infra/celery-tasks-hotfix
-cheat:~/github/dotfilesWSL/cheat/cheatsheets/personal
+cheat:~/github/dotfilesWSL/cheat/cheatsheets/ldraney
 cherry-util:~/oddball/vanotify-infra/cherry-picks-ec2-revert/cd/utility-infrastructure
 cherry:~/oddball/vanotify-infra/cherry-picks-ec2-revert
 chroma:~/github/DevOpsDialecticAI/chroma
@@ -140,7 +140,7 @@ dockerless:~/github/DevOpsDialecticAI/dockerless
 dora:~/oddball/vanotify-team/Engineering/DevOps/DORA
 dot-work:~/github/dotfilesWSL/.github/workflows
 dot-workflows:~/github/dotfilesWSL/.github/workflows
-dot:~/personal/dotfilesWSL
+dot:~/ldraney/dotfilesWSL
 dotfilesWSL-workflows:~/github/dotfilesWSL/.github/workflows
 dotfilesWSL:~/github/dotfilesWSL
 drane:/mnt/c/Users/drane
@@ -148,12 +148,12 @@ ec2:~/oddball/notification-api-qa/ec2-documentation
 engineering:~/oddball/vanotify-team/Engineering
 examples:~/ldraney/examples
 github-script:~/github/github-script
-githubPersonal:~/github
+githubldraney:~/github
 glossary:~/oddball/vanotify-team/Support
 go-beyond-kids-token:~/github/oddball_helps/scripts/aws-cli-script/go-beyond-kids-token
 go-beyond-kids:~/github/goBeyondKids
 goBeyondKids:~/github/goBeyondKids
-gpt:~/github/personal-gpt
+gpt:~/github/ldraney-gpt
 gruvboxCustom:/usr/share/regolith-look/gruvboxCustom
 hammer:~/github/oddball_helps/hammer-script
 hello-universe:~/oddball/hello-universe
@@ -186,7 +186,7 @@ issue_templates:~/oddball/notification-api/master/.github/ISSUE_TEMPLATE
 kafka:~/oddball/notification-kafka
 keepalive:~/oddball/notification-api/keepalive-duration-70
 kickstart.nvim:~/github/kickstart.nvim
-kickstart:~/personal/kickstart.nvim
+kickstart:~/ldraney/kickstart.nvim
 ldraney:~/ldraney
 linear-infra:~/github/linear-infra
 linear:~/github/linear-graph-project
@@ -230,8 +230,8 @@ nvim:~/.config/nvim
 oddball:~/oddball
 oddball_helps:~/github/oddball_helps
 orchestration-linear:~/github/infra-orchestration
-personal-gpt:~/github/personal-gpt
-personal:~/personal
+ldraney-gpt:~/github/ldraney-gpt
+ldraney:~/ldraney
 portal:~/oddball/notification-portal
 powershell:/mnt/c/Users/drane/OneDrive/Documents/powershell
 pr-template:~/oddball/vanotify-team/Engineering/DevOps/templates
@@ -249,7 +249,7 @@ repo:~/oddball/notification-api-qa/repo-on-ec2
 runner:~/oddball/notification-api-qa/109-runner/.github/actions/runner_automation
 scripts:~/github/oddball_helps/master/scripts
 sdk:~/github/oddball_helps/aws_python_SDK
-sensitive:~/personal/sensitive
+sensitive:~/ldraney/sensitive
 setter-2:~/iss/ISS-setter-2
 setter-infra:~/iss/iss-setter-infra
 setter:~/iss/ISS-setter
@@ -277,7 +277,7 @@ utility-infrastructure:~/oddball/vanotify-infra/cd/utility-infrastructure
 utils:~/oddball/notification-utils
 va-qa:~/oddball/notification-api-qa
 vanotify-api:~/oddball/notification-api
-vanotify-infra-personal:~/github/vanotify-infra
+vanotify-infra-ldraney:~/github/vanotify-infra
 vanotify-infra-reorganized:~/github/vanotify-infra-reorganized
 vanotify-infra:~/oddball/vanotify-infra
 vanotify-team:~/oddball/vanotify-team
