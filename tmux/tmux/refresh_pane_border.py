@@ -25,6 +25,7 @@ for line in result:
         custom_attribute = line.split('=')[1]
         break
 
+# Noting that once I got this working these print statements stopped showing up... problem for later
 if custom_attribute:
     print(f"Custom attribute exists: {attribute_name} = {custom_attribute}")
     # Update the pane-border-format to the value of the custom attribute

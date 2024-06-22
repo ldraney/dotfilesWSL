@@ -29,11 +29,11 @@ attribute_name = f'TMUX_CUSTOM_ATTRIBUTE_{window_id}_{pane_id}'
 pane.cmd('setenv', attribute_name, new_name)
 
 # Verify the change
-print(f"Pane renamed to: {new_name}")
-print(f"Custom attribute set: {attribute_name} = {new_name}")
+# print(f"Pane renamed to: {new_name}")
+# print(f"Custom attribute set: {attribute_name} = {new_name}")
 
 # Set a new format for the pane border using the current pane title
 pane.cmd('set-option', 'pane-border-format', new_name)
 
-print(f"Pane border format set to: {new_name}")
+# print(f"Pane border format set to: {new_name}")
 
